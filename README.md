@@ -15,19 +15,19 @@ Somos una empresa en proceso de emprendimiento de estudiantes de la universidad 
 
 ## Requisitos del proyecto
 
-- 1. **Composer**
-- 2. **Node js >= 10.0**
-- 3. **PHP >= 7.2.0**
-- 4. **MySQL**
+- **Composer**
+- **Node js >= 10.0**
+- **PHP >= 7.2.0**
+- **MySQL**
 
 ## Instalación del proyecto
 
-- 1. Abrir la terminal de su computador y ubircarse en la carpeta que desea esté ubicado el proyecto
-- 2. Clonar el proyecto **git clone https://github.com/andycr95/pacificode.git**
-- 3. ingresar a la carpeta del proyecto **cd pacificode**
-- 4. Instalar las dependencias **composer install**
-- 5. Instalar otras dependencias **npm install**
-- 5. Copiar archivo .env **cp ./.env-example ./.env**
-- 5. Generar key **php artisan key:genrate**
-- 5. Crear base de datos **$mysql -u usuario -p / CREATE DATABASE pacificode;**
-- 5. Correr migraciones **php artisan migrate**
+- Abrir la terminal de su computador y ubircarse en la carpeta que desea esté ubicado el proyecto
+- Clonar el proyecto **git clone https://github.com/andycr95/pacificode.git**
+- ingresar a la carpeta del proyecto **cd pacificode**
+- Instalar las dependencias **composer install**
+- Instalar otras dependencias **npm install**
+- Copiar archivo .env **cp ./.env-example ./.env**
+- Generar key **php artisan key:genrate**
+- Crear base de datos **$mysql -u usuario -p / CREATE DATABASE pacificode;**
+- Correr migraciones **php artisan migrate**
