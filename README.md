@@ -6,7 +6,7 @@
 
 Somos una empresa en proceso de emprendimiento de estudiantes de la universidad del pacifico de la ciudad de Buenaventura, Este proyecto es uno de los procesos que realizaran para el desarrollo de la compañia, la cual estará conformada por 6 estudiantes de la univesidad antes mencionada:
 
-- [Henry Stiven Montaño](https://laravel.com/docs/routing).
+- [Henry Stivent Montaño](https://laravel.com/docs/routing).
 - [John Edward Valencia](https://laravel.com/docs/container).
 - [Kevin Richard](https://laravel.com/docs/queues).
 - [Daniel Henriquez](https://laravel.com/docs/broadcasting).
