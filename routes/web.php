@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Route::get('/blogs', 'BlogController@index')->name('blogs');
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/about', 'AboutController@index')->name('about');
 Route::post('/contact', 'ContactController@store')->name('createContact');

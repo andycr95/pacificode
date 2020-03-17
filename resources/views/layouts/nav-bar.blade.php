@@ -7,7 +7,7 @@
                 <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Servicios</a>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
                 </li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Nosotros</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('about')}}">Nosotros</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="#">Portafolio</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('blogs')}}">Blog</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('contact')}}">Contacto</a></li>
