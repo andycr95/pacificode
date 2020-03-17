@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/blogs', 'BlogController@index')->name('blogs');
+Route::get('/contact', 'ContactController@index')->name('contact');

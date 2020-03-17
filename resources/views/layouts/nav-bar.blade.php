@@ -10,7 +10,7 @@
                 <li class="nav-item" role="presentation"><a class="nav-link" href="#">Nosotros</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="#">Portafolio</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('blogs')}}">Blog</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contacto</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('contact')}}">Contacto</a></li>
             </ul>
         </div>
     </div>
