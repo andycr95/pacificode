@@ -51,22 +51,23 @@
       </div>
       <div class="row block-9">
         <div class="col-md-6 pr-md-5">
-          <form action="#">
+        <form action="{{route('createContact')}}"  method="post">
+          @csrf
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input type="text" class="form-control" name="nombre" placeholder="Your Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
+              <input type="text" class="form-control" name="email" placeholder="Your Email">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
+              <input type="text" class="form-control" name="tema" placeholder="Subject">
             </div>
             <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              <textarea   cols="30" rows="7" name="mensaje" class="form-control" placeholder="Message"></textarea>
             </div>
-            <div class="col-12 col-md-6 col-xl-7 text-left flex-grow-1 flex-shrink-1 flex-fill justify-content-start align-items-center align-content-center" style="padding-left: 0;padding-right: 0;margin: 0;">
-            <div class="text-left" style="padding-top: 50px;"><a data-bs-hover-animate="pulse" class="btn btn-sm animated-button victoria-one" href="#">CONTÁCTANOS<i class="fa fa-angle-double-right"></i></a></div>
-            </div> 
+           
+            <button type="submit" class="btn btn-success"><i class="fa fa-save fa-2x"></i> Guardar</button>
+            
             </form>
         
         </div>
