@@ -25,7 +25,7 @@
                         
 					</div>
                     <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
-                        <h2 class="mb-4">Bienvenidos A Pacificode</h2>
+                        <h2 class="mb-4">¿Quienes Somos?</h2>
                         <p>Somos una empresa de desarrollo de aplicaciones móviles, expertos en creación de páginas web y desarrolladores web app. Ayudamos a crear sitios web con el mejor precio-calidad. 
 
                             Agencia de diseño especializada en desarrollar apps, diseño web y tiendas online..</p>            
