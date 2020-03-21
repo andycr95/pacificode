@@ -3,10 +3,10 @@
         <div class="collapse navbar-collapse"
             id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
-    
+
                 <li class="dropdown nav-item">
                     <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Servicios</a>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Diseño y publicidad</a><a class="dropdown-item" role="presentation" href="#">Software a la medida</a><a class="dropdown-item" role="presentation" href="#">Desarrollo web</a><a class="dropdown-item" role="presentation" href="#">Desarrollo de aplicaciones híbridas</a><a class="dropdown-item" role="presentation" href="#">Asesorias tecnológicas</a></div>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Diseño y publicidad</a><a class="dropdown-item" role="presentation" href="#">Software a la medida</a><a class="dropdown-item" role="presentation" href="#">Desarrollo web</a></div>
                 </li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('about')}}">Nosotros</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('project')}}">Portafolio</a></li>
