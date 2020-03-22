@@ -1,6 +1,4 @@
-
-
- <nav class="main-menu navbar-expand-md navbar-light">
+<nav class="main-menu navbar-expand-md navbar-light">
     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
         <ul class="navigation clearfix">
             <li class="current dropdown"><a href="#">Home</a>
