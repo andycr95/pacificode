@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Appway - HTML 5 Template Preview</title>
+<title>Pacificode</title>
 
 <!-- Fav Icon -->
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -38,6 +38,12 @@
 <!--================Header Menu Area =================-->
 @include('layouts.header')
 <!--================Header Menu Area =================-->
+<!-- Mobile Menu  -->
+@include('layouts.mobile-menu')
+<!-- End Mobile Menu -->
+<!-- page-title -->
+@include('layouts.name_page')
+<!-- page-title end -->
 
 <!--================Content Area =================-->
 @yield('content')

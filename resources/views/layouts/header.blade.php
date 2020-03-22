@@ -13,40 +13,7 @@
                         <i class="icon-bar"></i>
                         <i class="icon-bar"></i>
                     </div>
-                    
                     @include('layouts.nav-bar')
-
-                    <div class="menu-right-content clearfix">
-                        <div class="search-box-outer">
-                            <div class="dropdown">
-                                <button class="search-box-btn" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fas fa-search"></span></button>
-                                <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                    <li class="panel-outer">
-                                        <div class="form-container">
-                                            <form method="post" action="blog.html">
-                                                <div class="form-group">
-                                                    <input type="search" name="field-name" value="" placeholder="Search...." required="">
-                                                    <button type="submit" class="search-btn"><span class="fas fa-search"></span></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="cart-box-outer">
-                            <a href="#">
-                                <i class="fas fa-shopping-basket"></i>
-                                <span class="number">2</span>
-                            </a>
-                        </div>
-                        <div class="nav-btn nav-toggler navSidebar-button clearfix">
-                            <span class="icon"></span>
-                            <span class="icon"></span>
-                            <span class="icon"></span>
-                        </div>
-                        <div class="btn-box"><a href="#">Started Now</a></div>
-                    </div>
                 </div>
             </div>
         </div>

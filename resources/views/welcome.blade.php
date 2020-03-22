@@ -49,7 +49,7 @@
                             <i class="icon-bar"></i>
                             <i class="icon-bar"></i>
                         </div>
-                       
+                       @include('layouts.nav-bar')
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
     <div class="mobile-menu">
         <div class="menu-backdrop"></div>
         <div class="close-btn"><i class="fas fa-times"></i></div>
-        
+
         <nav class="menu-box">
             <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
             <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
@@ -343,7 +343,7 @@
                                             <h2 class="price">05.00<span>/Mo</span></h2>
                                         </div>
                                         <div class="table-content">
-                                            <ul> 
+                                            <ul>
                                                 <li>One User</li>
                                                 <li>Ui elements 1000</li>
                                                 <li>E-mail support</li>
@@ -364,7 +364,7 @@
                                             <h2 class="price">25.00<span>/Mo</span></h2>
                                         </div>
                                         <div class="table-content">
-                                            <ul> 
+                                            <ul>
                                                 <li>One User</li>
                                                 <li>Ui elements 1000</li>
                                                 <li>E-mail support</li>
@@ -386,7 +386,7 @@
                                             <h2 class="price">50.00<span>/Mo</span></h2>
                                         </div>
                                         <div class="table-content">
-                                            <ul> 
+                                            <ul>
                                                 <li>One User</li>
                                                 <li>Ui elements 1000</li>
                                                 <li>E-mail support</li>
@@ -412,7 +412,7 @@
                                             <h2 class="price">30.00<span>/Mo</span></h2>
                                         </div>
                                         <div class="table-content">
-                                            <ul> 
+                                            <ul>
                                                 <li>One User</li>
                                                 <li>Ui elements 1000</li>
                                                 <li>E-mail support</li>
@@ -433,7 +433,7 @@
                                             <h2 class="price">60.00<span>/Mo</span></h2>
                                         </div>
                                         <div class="table-content">
-                                            <ul> 
+                                            <ul>
                                                 <li>One User</li>
                                                 <li>Ui elements 1000</li>
                                                 <li>E-mail support</li>
@@ -455,7 +455,7 @@
                                             <h2 class="price">99.00<span>/Mo</span></h2>
                                         </div>
                                         <div class="table-content">
-                                            <ul> 
+                                            <ul>
                                                 <li>One User</li>
                                                 <li>Ui elements 1000</li>
                                                 <li>E-mail support</li>
@@ -469,7 +469,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>           
+                    </div>
                 </div>
                 <div class="tab-btn-box">
                     <ul class="tab-btns tab-buttons clearfix">
@@ -498,7 +498,7 @@
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box"><img src="images/resource/testimonial-1.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>  
+                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
                                     <div class="author-info">
                                         <h5 class="name">TeamSnap</h5>
                                         <span class="designation">VP of Customer Experience</span>
@@ -510,7 +510,7 @@
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box"><img src="images/resource/testimonial-2.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>  
+                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
                                     <div class="author-info">
                                         <h5 class="name">Steven smith</h5>
                                         <span class="designation">Programmer Doritibe</span>
@@ -526,7 +526,7 @@
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box"><img src="images/resource/testimonial-2.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>  
+                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
                                     <div class="author-info">
                                         <h5 class="name">Steven smith</h5>
                                         <span class="designation">Programmer Doritibe</span>
@@ -538,7 +538,7 @@
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box"><img src="images/resource/testimonial-1.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>  
+                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
                                     <div class="author-info">
                                         <h5 class="name">TeamSnap</h5>
                                         <span class="designation">VP of Customer Experience</span>
@@ -554,7 +554,7 @@
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box"><img src="images/resource/testimonial-1.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>  
+                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
                                     <div class="author-info">
                                         <h5 class="name">TeamSnap</h5>
                                         <span class="designation">VP of Customer Experience</span>
@@ -566,7 +566,7 @@
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box"><img src="images/resource/testimonial-2.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>  
+                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
                                     <div class="author-info">
                                         <h5 class="name">Steven smith</h5>
                                         <span class="designation">Programmer Doritibe</span>

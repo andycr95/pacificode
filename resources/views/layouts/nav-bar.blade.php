@@ -23,7 +23,7 @@
                     <li><a href="web-hosting.html">Web Hosting</a></li>
                     <li><a href="home-charity.html">Home Charity</a></li>
                 </ul>
-            </li> 
+            </li>
             <li class="dropdown"><a href="#">Pages</a>
                 <ul>
                     <li class="dropdown"><a href="#">Team Page</a>
@@ -215,8 +215,8 @@
                     <li><a href="blog.html">Latest News</a></li>
                     <li><a href="blog-details.html">News Details</a></li>
                 </ul>
-            </li>                              
-            <li><a href="contact.html">Contact</a></li>
+            </li>
+            <li><a href="{{route('contact')}}">Contact</a></li>
         </ul>
     </div>
 </nav>
