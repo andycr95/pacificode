@@ -39,6 +39,7 @@ class ContactController extends Controller
         $contact->nombre= $request->nombre;
         $contact->email= $request->email;
         $contact->tema= $request->tema;
+        $contact->telefono= $request->telefono;
         $contact->mensaje= $request->mensaje;
         $contact->save();
         return redirect()->back();
