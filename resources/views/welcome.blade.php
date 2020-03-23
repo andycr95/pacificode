@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Appway - HTML 5 Template Preview</title>
+<title>Pacificode</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon-logo.ico" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -35,12 +35,19 @@
     <!-- preloader -->
 
     <!-- main header -->
-    <header class="main-header home-1">
+    <header class="main-header">
         <div class="outer-container">
+            <div class="nav-box">
+                <div class="nav-btn nav-toggler navSidebar-button clearfix">
+                    <span class="icon"></span>
+                    <span class="icon"></span>
+                    <span class="icon"></span>
+                </div>
+            </div>
             <div class="container">
                 <div class="main-box clearfix">
                     <div class="logo-box pull-left">
-                        <figure class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index.html"><img src="images/logo-2.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area pull-right">
                         <!--Mobile Navigation Toggler-->
@@ -49,7 +56,232 @@
                             <i class="icon-bar"></i>
                             <i class="icon-bar"></i>
                         </div>
-                       @include('layouts.nav-bar')
+<<<<<<< HEAD
+                        @include('layouts.nav-bar')
+=======
+                        <nav class="main-menu navbar-expand-md navbar-light">
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown"><a href="#">Home</a>
+                                        <ul class="megamenu clearfix">
+                                            <li><a href="index.html">App Landing</a></li>
+                                            <li><a href="e-commerce.html">E-Commerce</a></li>
+                                            <li><a href="seo.html">SEO</a></li>
+                                            <li><a href="account-billing.html">Account & Billing</a></li>
+                                            <li><a href="app-showcase.html">App Showcase</a></li>
+                                            <li><a href="hr-management.html">HR Management</a></li>
+                                            <li><a href="email-marketing.html">Email Marketing</a></li>
+                                            <li><a href="payment-processing.html">Payment Processing</a></li>
+                                            <li><a href="startup.html">Startup</a></li>
+                                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                            <li><a href="cloud-saas.html">Cloud Based Saas</a></li>
+                                            <li><a href="prototype-wireframing.html">Prototype & Wireframing</a></li>
+                                            <li><a href="crm-management.html">CRM Management</a></li>
+                                            <li><a href="project-management.html">Project Management</a></li>
+                                            <li><a href="digital-studio.html">Digital Studio</a></li>
+                                            <li><a href="crypto.html">Crypto</a></li>
+                                            <li><a href="ride-sharing.html">Ride Sharing</a></li>
+                                            <li><a href="web-hosting.html">Web Hosting</a></li>
+                                            <li><a href="home-charity.html">Home Charity</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Pages</a>
+                                        <ul>
+                                            <li class="dropdown"><a href="#">Team Page</a>
+                                                <ul>
+                                                    <li><a href="team.html">Team 01</a></li>
+                                                    <li><a href="team-2.html">Team 02</a></li>
+                                                    <li><a href="team-3.html">Team 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Service Page</a>
+                                                <ul>
+                                                    <li><a href="service.html">Our Services</a></li>
+                                                    <li><a href="service-details.html">Service Details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Pricing Page</a>
+                                                <ul>
+                                                    <li><a href="pricing.html">Pricing 01</a></li>
+                                                    <li><a href="pricing-2.html">Pricing 02</a></li>
+                                                    <li><a href="pricing-3.html">Pricing 03</a></li>
+                                                    <li><a href="pricing-4.html">Pricing 04</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Testimonial Page</a>
+                                                <ul>
+                                                    <li><a href="testimonial.html">Testimonial 01</a></li>
+                                                    <li><a href="testimonial-2.html">Testimonial 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="faq.html">Faq</a></li>
+                                            <li><a href="error.html">Error Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Portfolio 01</a></li>
+                                            <li><a href="portfolio-2.html">Portfolio 02</a></li>
+                                            <li><a href="portfolio-3.html">Portfolio 03</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Element</a>
+                                        <ul>
+                                            <li class="dropdown"><a href="#">Miscellaneous 01</a>
+                                                <ul>
+                                                    <li><a href="optimization-application.html">Optimization Application</a></li>
+                                                    <li><a href="device-friendly.html">Device Friendly</a></li>
+                                                    <li><a href="software-product.html">Software Product</a></li>
+                                                    <li><a href="betterlook-layout.html">Betterlook Layout</a></li>
+                                                    <li><a href="whereyou-layout.html">Whereyou Layout</a></li>
+                                                    <li><a href="popular-causes.html">Popular Causes</a></li>
+                                                    <li><a href="wework-layout.html">We work Layout</a></li>
+                                                    <li><a href="campaing-layout.html">Campaing Layout</a></li>
+                                                    <li><a href="donate-layout.html">Donate Layout</a></li>
+                                                    <li><a href="make-difference.html">Make Difference</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Miscellaneous 02</a>
+                                                <ul>
+                                                    <li><a href="solve-problem.html">Solve Problem</a></li>
+                                                    <li><a href="marketing-benefits.html">Marketing Benefits</a></li>
+                                                    <li><a href="streamline-layout.html">Streamline Layout</a></li>
+                                                    <li><a href="powerful-management.html">Powerful Management</a></li>
+                                                    <li><a href="transactions-work.html">Transactions Work</a></li>
+                                                    <li><a href="increase-website.html">Increase Website</a></li>
+                                                    <li><a href="managed-wordpress.html">Managed Wordpress</a></li>
+                                                    <li><a href="history-layout.html">History Layout</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Feature Layout</a>
+                                                <ul>
+                                                    <li><a href="feature-layout-1.html">Feature Layout 01</a></li>
+                                                    <li><a href="feature-layout-2.html">Feature Layout 02</a></li>
+                                                    <li><a href="feature-layout-3.html">Feature Layout 03</a></li>
+                                                    <li><a href="feature-layout-4.html">Feature Layout 04</a></li>
+                                                    <li><a href="feature-layout-5.html">Feature Layout 05</a></li>
+                                                    <li><a href="feature-layout-6.html">Feature Layout 06</a></li>
+                                                    <li><a href="feature-layout-7.html">Feature Layout 07</a></li>
+                                                    <li><a href="feature-layout-8.html">Feature Layout 08</a></li>
+                                                    <li><a href="feature-layout-9.html">Feature Layout 09</a></li>
+                                                    <li><a href="feature-layout-10.html">Feature Layout 10</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Subscribe Layout</a>
+                                                <ul>
+                                                    <li><a href="subscribe-layout-1.html">Subscribe Layout 01</a></li>
+                                                    <li><a href="subscribe-layout-2.html">Subscribe Layout 02</a></li>
+                                                    <li><a href="subscribe-layout-3.html">Subscribe Layout 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Video Layout</a>
+                                                <ul>
+                                                    <li><a href="video-layout-1.html">Video Layout 01</a></li>
+                                                    <li><a href="video-layout-2.html">Video Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Download Layout</a>
+                                                <ul>
+                                                    <li><a href="download-layout-1.html">Download Layout 01</a></li>
+                                                    <li><a href="download-layout-2.html">Download Layout 02</a></li>
+                                                    <li><a href="download-layout-3.html">Download Layout 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Rider Layout</a>
+                                                <ul>
+                                                    <li><a href="rider-layout-1.html">Rider Layout 01</a></li>
+                                                    <li><a href="rider-layout-2.html">Rider Layout 02</a></li>
+                                                    <li><a href="rider-layout-3.html">Rider Layout 03</a></li>
+                                                    <li><a href="rider-layout-4.html">Rider Layout 04</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Solution Layout</a>
+                                                <ul>
+                                                    <li><a href="solution-layout-1.html">Solution Layout 01</a></li>
+                                                    <li><a href="solution-layout-2.html">Solution Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">News Layout</a>
+                                                <ul>
+                                                    <li><a href="news-layout-1.html">News Layout 01</a></li>
+                                                    <li><a href="news-layout-2.html">News Layout 02</a></li>
+                                                    <li><a href="news-layout-3.html">News Layout 03</a></li>
+                                                    <li><a href="news-layout-4.html">News Layout 04</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Application Layout</a>
+                                                <ul>
+                                                    <li><a href="application-layout-1.html">Application Layout 01</a></li>
+                                                    <li><a href="application-layout-2.html">Application Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Organization Layout</a>
+                                                <ul>
+                                                    <li><a href="organization-layout-1.html">Organization Layout 01</a></li>
+                                                    <li><a href="organization-layout-2.html">Organization Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Work Layout</a>
+                                                <ul>
+                                                    <li><a href="work-layout-1.html">Work Layout 01</a></li>
+                                                    <li><a href="work-layout-2.html">Work Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Service Layout</a>
+                                                <ul>
+                                                    <li><a href="service-layout-1.html">Service Layout 01</a></li>
+                                                    <li><a href="service-layout-2.html">Service Layout 02</a></li>
+                                                    <li><a href="service-layout-3.html">Service Layout 03</a></li>
+                                                    <li><a href="service-layout-4.html">Service Layout 04</a></li>
+                                                    <li><a href="service-layout-5.html">Service Layout 05</a></li>
+                                                    <li><a href="service-layout-6.html">Service Layout 06</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Recruitment Layout</a>
+                                                <ul>
+                                                    <li><a href="recruitment-layout-1.html">Recruitment Layout 01</a></li>
+                                                    <li><a href="recruitment-layout-2.html">Recruitment Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Reasons Layout</a>
+                                                <ul>
+                                                    <li><a href="reasons-layout-1.html">Reasons Layout 01</a></li>
+                                                    <li><a href="reasons-layout-2.html">Reasons Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Hosting Layout</a>
+                                                <ul>
+                                                    <li><a href="hosting-layout-1.html">Hosting Layout 01</a></li>
+                                                    <li><a href="hosting-layout-2.html">Hosting Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Counter Layout</a>
+                                                <ul>
+                                                    <li><a href="counter-layout-1.html">Counter Layout 01</a></li>
+                                                    <li><a href="counter-layout-2.html">Counter Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Pricing Layout</a>
+                                                <ul>
+                                                    <li><a href="pricing-layout-1.html">Pricing Layout 01</a></li>
+                                                    <li><a href="pricing-layout-2.html">Pricing Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Latest News</a>
+                                        <ul>
+                                            <li><a href="blog.html">Latest News</a></li>
+                                            <li><a href="blog-details.html">News Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+>>>>>>> bb2bda8d25dffcc69de6fb858136ade1b4f6f007
                     </div>
                 </div>
             </div>
@@ -70,51 +302,32 @@
     <!-- main-header end -->
 
     <!-- Mobile Menu  -->
-    <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-
-        <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            <div class="contact-info">
-                <h4>Contact Info</h4>
-                <ul>
-                    <li>Chicago 12, Melborne City, USA</li>
-                    <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                    <li><a href="mailto:info@example.com">info@example.com</a></li>
-                </ul>
-            </div>
-            <div class="social-links">
-                <ul class="clearfix">
-                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fab fa-youtube"></span></a></li>
-                </ul>
-            </div>
-        </nav>
-    </div><!-- End Mobile Menu -->
+    @include('layouts.mobile-menu')
+    <!-- End Mobile Menu -->
 
 
     <!-- banner-section -->
-    <section class="banner-section">
-        <div class="bg-layer" style="background-image: url(images/icons/banner-1.png);"></div>
-        <div class="pattern-bg" style="background-image: url(images/icons/vactor-1.png);"></div>
+    <section class="banner-style-two">
+        <div class="anim-icons">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+            <div class="icon icon-3"></div>
+        </div>
+        <div class="image-layer" style="background-image: url(images/icons/banner-bg.png);"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="col-lg-7 col-md-12 col-sm-12 content-column">
                     <div class="content-box">
-                        <h1>Profect App For Boost Your Business</h1>
-                        <div class="text">The collapse of the online-advertising market in 2001 made marketing on the Internet seem even less compelling.</div>
-                        <div class="btn-box"><a href="#">Get App Now</a></div>
+                        <h3>Hagamos el cambio, juntos</h3>
+                        <h1>Creamos productos y servicios digitales brillantes</h1>
+                        <div class="text">Nuestro equipo combina estrategia, conocimiento  e ingeniería tecnológica, creando experiencias digitales que cambian el juego para usted y sus clientes.</div>
+                        <div class="btn-box"><a href="{{route('contact')}}" class="theme-btn-two">Contáctanos</a></div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                    <div class="image-box float-bob-y clearfix">
-                        <figure class="image image-1 wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms"><img src="images/resource/phone-1.png" alt=""></figure>
-                        <figure class="image image-2 wow fadeInUp" data-wow-delay="1500ms" data-wow-duration="1500ms"><img src="images/resource/phone-2.png" alt=""></figure>
+                <div class="col-lg-5 col-md-12 col-sm-12 image-column">
+                    <div class="image-box">
+                        <div class="bg-layer" style="background-image: url(images/icons/shap-4.png);"></div>
+                        <figure class="image image-1 float-bob-x"><img src="images/portfolio/fundamejoremos.png" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -130,7 +343,7 @@
                 <div class="col-lg-5 col-md-12 col-sm-12 image-column">
                     <div id="iamge_block_01">
                         <div class="image-box float-bob-y">
-                            <figure class="image wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/resource/phone-3.png" alt=""></figure>
+                            <figure class="image wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/resource/app_dev.png" alt=""></figure>
                         </div>
                     </div>
                 </div>
@@ -138,8 +351,8 @@
                     <div id="content_block_01">
                         <div class="content-box">
                             <div class="sec-title">
-                                <h2>Amazing Features</h2>
-                                <p>Cumque adipisci anim quisque provident posuere blandit accumsan delectus quam quos interdum sociosqu.</p>
+                                <h2>Nuestra Metodología</h2>
+                                <p>Tenemos un proceso que nos ha permitido manejar proyectos de forma exitosa y cumplir con las expectativas de nuestros clientes.</p>
                             </div>
                             <div class="inner-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                                 <div class="row">
@@ -147,32 +360,32 @@
                                         <div class="single-item">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-app-1"></i></div>
-                                            <h5><a href="#">Unique Design</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Estrategia</a></h5>
+                                            <div class="text">Entendemos las necesidades de su negocio y nuestra experiencia nos permite remomendarle una solución web que genere mejores resultados a corto plazo.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-target"></i></div>
-                                            <h5><a href="#">Easy And New Project</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Diseño</a></h5>
+                                            <div class="text">Nuestro proceso creativo está centrado en obtener la mejor experiencia de usuario y comunicar el mensaje que usted desea que expresar a sus clientes.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-shipping"></i></div>
-                                            <h5><a href="#">Track Anything</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Desarrollo</a></h5>
+                                            <div class="text">Desarrollamos sitios web que son accesibles, compatibles con los estándares, amigables con los buscadores (SEO) y usando las mejores prácticas.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-dashboard"></i></div>
-                                            <h5><a href="#">Unlimited Dashboard</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Mantenimiento</a></h5>
+                                            <div class="text">Le brindamos el soporte técnico que necesita. Desde la actualización de contenidos, aseguramiento del sitio web, hasta la optimización web para mejorar su posicionamiento en Google.</div>
                                         </div>
                                     </div>
                                 </div>
