@@ -35,7 +35,10 @@ class SuscripcionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $suscripcion= new Suscripcion();
+        $suscripcion->email= $request->email;
+        $suscripcion->save();
+        return redirect()->back();
     }
 
     /**
