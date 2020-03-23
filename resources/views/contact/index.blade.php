@@ -3,12 +3,12 @@
 @section('name_page')
     <div class="content-box clearfix">
         <div class="title-box pull-left">
-            <h1>Contact Us</h1>
-            <p>Reach out to the world’s most reliable IT services.</p>
+            <h1>CONTACTA CON NOSOTROS</h1>
+            <p>Somos una empresa especializada en diseño de páginas web, desarrollo de aplicaciones y tiendas online.</p>
         </div>
         <ul class="bread-crumb pull-right">
-            <li>Contact Us</li>
-            <li><a href="index.html">Home</a></li>
+            <li>Contactenos</li>
+            <li><a href="index.html">inicio</a></li>
         </ul>
     </div>
 @endsection
@@ -24,69 +24,77 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                                 <div class="single-info-box">
                                     <figure class="icon-box"><img src="images/icons/info-icon-1.png" alt=""></figure>
-                                    <h2>Phone</h2>
-                                    <div class="text">Start working with Landrick that can provide everything</div>
-                                    <div class="phone"><a href="tel:0665184575181">(+066) 518 - 457 - 5181</a></div>
+                                    <h2>Celular</h2>
+                                    <div class="text">llamamos desde cualquier parte del Mundo ✆</div>
+                                    
+                                    <div class="phone"><a href="tel:3128978597">(+57)312 - 897 - 8597</a></div>
+                                   
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                                 <div class="single-info-box">
                                     <figure class="icon-box"><img src="images/icons/info-icon-2.png" alt=""></figure>
-                                    <h2>E-mail</h2>
-                                    <div class="text">Start working with Landrick that can provide everything</div>
-                                    <div class="phone"><a href="mailto:info@example.com">info@example.com</a></div>
+                                    <h2>Correo Electronico</h2>
+                                    <div class="text"></div>
+                                    <div class="phone"><a href="info@pacificode.co">info@pacificode.co</a></div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                                 <div class="single-info-box">
-                                    <figure class="icon-box"><img src="images/icons/info-icon-3.png" alt=""></figure>
-                                    <h2>Address</h2>
-                                    <div class="text">25 Bedford St. New York City. New Yark</div>
-                                    <div class="phone"><a href="#">View on Google map</a></div>
+                                  
+                                   <figure class="icon-box"><img src="images/icons/info-icon-3.png" alt=""></figure> 
+                                    <h2>Direccion</h2>
+                                    <div class="text">Nuestra sede principal está ubicada en Buenaventura - 
+                                        Valle del Cauca pero ofrecemos servicios a nivel de todo el país.</div>
+                                    <div class="phone"><a href="#">Ver en  Google map</a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="image-container">
-                        <figure class="image-box"><img src="images/resource/contact-1.png" alt=""></figure>
+                    <!--       <figure class="image-box"><img src="images/resource/contact-1.png" alt=""></figure>   -->
                     </div>
                     <div class="contact-form-area">
-                        <div class="sec-title center"><h2>Contact us</h2></div>
+                        <div class="sec-title center"><h2>Si desea conocer más acerca de nuestros servicios y/o 
+                            opciones de contratación puede escribirnos a través de este formulario.</h2></div>
+                        
+                        
                         <div class="form-inner">
-                            <form method="post" action="sendemail.php" id="contact-form" class="default-form">
+                            <form method="post" action="{{route('createContact')}}"  class="default-form">
+                                @csrf 
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 col-sm-12 column">
                                         <div class="form-group">
                                             <i class="fas fa-user"></i>
-                                            <input type="text" name="username" placeholder="Name" required>
+                                            <input type="text" name="nombre" placeholder="Nombre" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 column">
                                         <div class="form-group">
                                             <i class="fas fa-envelope"></i>
-                                            <input type="email" name="email" placeholder="Email" required>
+                                            <input type="email" name="email" placeholder="Correo electronico" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 column">
                                         <div class="form-group">
                                             <i class="fas fa-file"></i>
-                                            <input type="text" name="subject" placeholder="Subject" required>
+                                            <input type="text" name="tema" placeholder="Tema" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 column">
                                         <div class="form-group">
                                             <i class="fas fa-phone"></i>
-                                            <input type="text" name="phone" placeholder="Phone" required>
+                                            <input type="text" name="telefono" placeholder="Telefono" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 column">
                                         <div class="form-group">
-                                            <textarea name="message" placeholder="Write here message"></textarea>
+                                            <textarea name="mensaje" placeholder="Escribe aqui tu mensaje"  required></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 column">
                                         <div class="form-group message-btn centred">
-                                            <button type="submit" class="theme-btn-two" name="submit-form">Submit Now</button>
+                                            <button type="submit" class="theme-btn-two" name="submit-form">Enviar</button>
                                         </div>
                                     </div>
                                 </div>
