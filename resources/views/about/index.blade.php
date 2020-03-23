@@ -63,7 +63,7 @@
                         <div class="content-box wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="sec-title"><h2>MISIÓN</h2></div>
                             <div class="text">
-                             <P>Proporcionar las tecnologías más innovadoras a medida de las necesidades empresariales, con el objetivo de incrementar su competitividad y productividad. Para ello implementamos soluciones prácticas adaptadas a sus necesidades y desarrollamos nuevas soluciones creativas. Nuestra base parte del aprovechamiento de las nuevas redes.</P>
+                             <P>Proporcionarle a su empresa o negocio un incremento en su competitividad y productividad. Para ello implementamos el desarrollo de software a la medida con las buenas prácticas adaptadas a sus requerimientos, le brindamos las mejores soluciones, somos creativos sacando provecho de las nuevas tecnologías que permiten a su negocio o empresa gozar de un sitio web único y adaptado a sus necesidades. </P>
                            
                     </div>
                     </div>
