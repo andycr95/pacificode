@@ -333,13 +333,30 @@
     <section class="download-section">
         <div class="bg-layer wow slideInLeft animated" style="background-image: url(images/icons/shap-3.png);"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                    <div id="content_block_05">
-                        <div class="content-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="sec-title"><h2>Tacnologías</h2></div>
-                            <div class="download-btn">
-
+            <div class="content-column">
+                <div id="content_block_05">
+                    <div class="content-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <div class="sec-title"><h2>Tecnologías</h2></div>
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/ionic.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/nodejs.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/mongodb.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/spring.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/wordpress.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/android.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/angular.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/aws.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/git.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/docker.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/sass.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/java.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/laravel.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/python.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/vue.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/mysql.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/psql.png" alt=""></figure></div>
+                                <div class="col-lg-2 col-md-4 col-sm-12" style="margin: 20px 0; text-align: center;"><figure class="image-box"><img src="images/resource/tech/ios.png" alt=""></figure></div>
                             </div>
                         </div>
                     </div>
@@ -354,8 +371,8 @@
     <section class="news-section">
         <div class="container">
             <div class="sec-title center">
-                <h2>News & Events</h2>
-                <p>Trusted by more than 9,000 businesses in 140 countries.<br />all of our resources are free</p>
+                <h2>Noticias & Eventos</h2>
+                <p>En esta sección podrás encontrar las últimas noticias y eventos <br />sobre tecnología.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 news-column">
