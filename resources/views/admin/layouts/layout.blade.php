@@ -67,7 +67,7 @@
     <!-- Pre-loader end -->
     <div id="pcoded" class="pcoded">
         <div class="pcoded-overlay-box"></div>
-        <div id="app" class="pcoded-container navbar-wrapper">
+        <div class="pcoded-container navbar-wrapper">
 
              <!-- Navbar start -->
              @include('admin.layouts.nav-bar')
@@ -75,13 +75,18 @@
              <!-- Sidebar chat start -->
              @include('admin.layouts.side-bar-chat')
              <!-- Sidebar chat end -->
-             <!-- Sidebar start -->
-             @include('admin.layouts.side-bar')
-             <!-- Sidebar end -->
 
-            <!-- Content start -->
-            @yield('content')
-            <!-- Content end -->
+             <div class="pcoded-main-container">
+                 <div class="pcoded-wrapper">
+                    <!-- Sidebar start -->
+                    @include('admin.layouts.side-bar')
+                    <!-- Sidebar end -->
+
+                    <!-- Content start -->
+                    @yield('content')
+                    <!-- Content end -->
+                </div>
+            </div>
 
         </div>
     </div>
