@@ -189,7 +189,9 @@
                         <div class="content-box">
                             <div class="sec-title"><h2>Suscríbase a nuestro boletín</h2></div>
                             <div class="text">Se el primero en suscribirte. Te sorprenderás con nuestros servicios con la más alta calidad, anímate ya. </div>
-                            <form action="#" method="post" class="subscribe-form">
+
+                            <form action="{{route('createSuscripcion')}}" method="post" class="subscribe-form">
+                                @csrf
                                 <div class="form-group">
                                     <input type="email" name="email" placeholder="Introduce tu correo electrónico" required="">
                                     <button type="submit" class="theme-btn-two">Suscríbase ahora</button>

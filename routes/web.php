@@ -21,3 +21,7 @@ Route::get('/about', 'AboutController@index')->name('about');
 Route::post('/contact', 'ContactController@store')->name('createContact');
 Route::get('/project', 'ProjectController@index')->name('project');
 Route::get('/service', 'SeviceController@index')->name('service');
+Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripcion');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
