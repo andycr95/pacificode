@@ -183,7 +183,7 @@
                                 <div class="content-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                                     <div class="sec-title"><h2>Aplicaciones móviles redefinidas</h2></div>
                                     <div class="text">
-                                        <p>Desarrollamos aplicaciones móviles nativas (iOS / Android) debido a las ventajas que ofrecen sobre otras alternativas: <br/> de usuario mejorada, acceso a todas las funcionalidades del dispositivo sin restricciones y excelente rendimiento.</p>
+                                        <p>Desarrollamos aplicaciones móviles multiplataforma (iOS / Android) debido a las ventajas que ofrecen sobre otras alternativas: <br/> de usuario mejorada, acceso a todas las funcionalidades del dispositivo sin restricciones y excelente rendimiento.</p>
                                     </div>
                                     <div class="btn-box"><a href="#" class="theme-btn">Mas detalles<i class="fas fa-angle-right"></i></a></div>
                                 </div>
