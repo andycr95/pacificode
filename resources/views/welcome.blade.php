@@ -33,12 +33,19 @@
     <!-- preloader -->
 
     <!-- main header -->
-    <header class="main-header home-1">
+    <header class="main-header">
         <div class="outer-container">
+            <div class="nav-box">
+                <div class="nav-btn nav-toggler navSidebar-button clearfix">
+                    <span class="icon"></span>
+                    <span class="icon"></span>
+                    <span class="icon"></span>
+                </div>
+            </div>
             <div class="container">
                 <div class="main-box clearfix">
                     <div class="logo-box pull-left">
-                        <figure class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index.html"><img src="images/logo-2.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area pull-right">
                         <!--Mobile Navigation Toggler-->
@@ -47,6 +54,9 @@
                             <i class="icon-bar"></i>
                             <i class="icon-bar"></i>
                         </div>
+<<<<<<< HEAD
+                        @include('layouts.nav-bar')
+=======
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
@@ -269,6 +279,7 @@
                                 </ul>
                             </div>
                         </nav>
+>>>>>>> bb2bda8d25dffcc69de6fb858136ade1b4f6f007
                     </div>
                 </div>
             </div>
@@ -289,51 +300,32 @@
     <!-- main-header end -->
 
     <!-- Mobile Menu  -->
-    <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-
-        <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            <div class="contact-info">
-                <h4>Contact Info</h4>
-                <ul>
-                    <li>Chicago 12, Melborne City, USA</li>
-                    <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                    <li><a href="mailto:info@example.com">info@example.com</a></li>
-                </ul>
-            </div>
-            <div class="social-links">
-                <ul class="clearfix">
-                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fab fa-youtube"></span></a></li>
-                </ul>
-            </div>
-        </nav>
-    </div><!-- End Mobile Menu -->
+    @include('layouts.mobile-menu')
+    <!-- End Mobile Menu -->
 
 
     <!-- banner-section -->
-    <section class="banner-section">
-        <div class="bg-layer" style="background-image: url(images/icons/banner-1.png);"></div>
-        <div class="pattern-bg" style="background-image: url(images/icons/vactor-1.png);"></div>
+    <section class="banner-style-two">
+        <div class="anim-icons">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+            <div class="icon icon-3"></div>
+        </div>
+        <div class="image-layer" style="background-image: url(images/icons/banner-bg.png);"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="col-lg-7 col-md-12 col-sm-12 content-column">
                     <div class="content-box">
-                        <h1>Profect App For Boost Your Business</h1>
-                        <div class="text">The collapse of the online-advertising market in 2001 made marketing on the Internet seem even less compelling.</div>
-                        <div class="btn-box"><a href="#">Get App Now</a></div>
+                        <h3>Hagamos el cambio, juntos</h3>
+                        <h1>Creamos productos y servicios digitales brillantes</h1>
+                        <div class="text">Nuestro equipo combina estrategia, conocimiento  e ingeniería tecnológica, creando experiencias digitales que cambian el juego para usted y sus clientes.</div>
+                        <div class="btn-box"><a href="{{route('contact')}}" class="theme-btn-two">Contáctanos</a></div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                    <div class="image-box float-bob-y clearfix">
-                        <figure class="image image-1 wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms"><img src="images/resource/phone-1.png" alt=""></figure>
-                        <figure class="image image-2 wow fadeInUp" data-wow-delay="1500ms" data-wow-duration="1500ms"><img src="images/resource/phone-2.png" alt=""></figure>
+                <div class="col-lg-5 col-md-12 col-sm-12 image-column">
+                    <div class="image-box">
+                        <div class="bg-layer" style="background-image: url(images/icons/shap-4.png);"></div>
+                        <figure class="image image-1 float-bob-x"><img src="images/portfolio/fundamejoremos.png" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -349,7 +341,7 @@
                 <div class="col-lg-5 col-md-12 col-sm-12 image-column">
                     <div id="iamge_block_01">
                         <div class="image-box float-bob-y">
-                            <figure class="image wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/resource/phone-3.png" alt=""></figure>
+                            <figure class="image wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/resource/app_dev.png" alt=""></figure>
                         </div>
                     </div>
                 </div>
@@ -357,8 +349,8 @@
                     <div id="content_block_01">
                         <div class="content-box">
                             <div class="sec-title">
-                                <h2>Amazing Features</h2>
-                                <p>Cumque adipisci anim quisque provident posuere blandit accumsan delectus quam quos interdum sociosqu.</p>
+                                <h2>Nuestra Metodología</h2>
+                                <p>Tenemos un proceso que nos ha permitido manejar proyectos de forma exitosa y cumplir con las expectativas de nuestros clientes.</p>
                             </div>
                             <div class="inner-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                                 <div class="row">
@@ -366,32 +358,32 @@
                                         <div class="single-item">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-app-1"></i></div>
-                                            <h5><a href="#">Unique Design</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Estrategia</a></h5>
+                                            <div class="text">Entendemos las necesidades de su negocio y nuestra experiencia nos permite remomendarle una solución web que genere mejores resultados a corto plazo.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-target"></i></div>
-                                            <h5><a href="#">Easy And New Project</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Diseño</a></h5>
+                                            <div class="text">Nuestro proceso creativo está centrado en obtener la mejor experiencia de usuario y comunicar el mensaje que usted desea que expresar a sus clientes.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-shipping"></i></div>
-                                            <h5><a href="#">Track Anything</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Desarrollo</a></h5>
+                                            <div class="text">Desarrollamos sitios web que son accesibles, compatibles con los estándares, amigables con los buscadores (SEO) y usando las mejores prácticas.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-dashboard"></i></div>
-                                            <h5><a href="#">Unlimited Dashboard</a></h5>
-                                            <div class="text">Integer quis mollis lacus maecenas in ornare ex sed scelerisque nec elit nec vehicula duis pretium libero</div>
+                                            <h5><a href="#">Mantenimiento</a></h5>
+                                            <div class="text">Le brindamos el soporte técnico que necesita. Desde la actualización de contenidos, aseguramiento del sitio web, hasta la optimización web para mejorar su posicionamiento en Google.</div>
                                         </div>
                                     </div>
                                 </div>
