@@ -60,7 +60,7 @@
             </li>
             <li class="dropdown"><a href="#">Portfolio</a>
                 <ul>
-                    <li><a href="portfolio.html">Portfolio 01</a></li>
+                    <li><a href="{{ route('project')}}">Portfolio 01</a></li>
                     <li><a href="portfolio-2.html">Portfolio 02</a></li>
                     <li><a href="portfolio-3.html">Portfolio 03</a></li>
                     <li><a href="portfolio-details.html">Portfolio Details</a></li>
