@@ -15,10 +15,10 @@
 
   @endsection
 
-  @section('content') 
+  @section('content')
 
 
-   
+
 
 
     <!-- our-history -->
@@ -33,11 +33,11 @@
                                 <p>Somos un grupo de profesionales en el área de ingeniería de sistemas, apasionados por esta profesión nace pacificode. Empresa de desarrollo web a la medida que tiene como principal objetivo suplir las necesidades y requerimientos de su empresa o negocio.</p>
                                 <p>Pacificode tiene como lema ¡Desarrollo de sitios a la medida!, garantizando competitividad en el mercado.</p>
                                 <p>En los últimos años hemos adquirido las competencias para brindar los mejores servicios, este grupo de profesionales comprometidos con especializarse con las últimas tecnologías desea suplir tus necesidades con un alto nivel de calidad.</p>
-                           
+
                     </div>
                     </div>
-                            
-                    </div> 
+
+                    </div>
 
 
                 </div>
@@ -52,9 +52,9 @@
         </div>
     </section>
     <!-- our-history end -->
-     
-     
-    
+
+
+
     <section class="mision">
         <div class="container">
             <div class="row">
@@ -64,26 +64,26 @@
                             <div class="sec-title"><h2>MISIÓN</h2></div>
                             <div class="text">
                              <P>Proporcionarle a su empresa o negocio un incremento en su competitividad y productividad. Para ello implementamos el desarrollo de software a la medida con las buenas prácticas adaptadas a sus requerimientos, le brindamos las mejores soluciones, somos creativos sacando provecho de las nuevas tecnologías que permiten a su negocio o empresa gozar de un sitio web único y adaptado a sus necesidades. </P>
-                           
+
                     </div>
                     </div>
-                            
-                    </div> 
+
+                    </div>
 
 
                 </div>
 
-         
+
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                     <div id="content_block_53">
                         <div class="content-box wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="sec-title"><h2>VISIÓN</h2></div>
                             <div class="text">
                              <P>Queremos estar comprometidos con los problemas de nuestros clientes de forma transparente y eficaz para convertirnos en su socio de confianza. En nuestra visión queremos ser una empresa de referencia, que camina con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de los estándares y tecnologías libres. Esta labor se debe desempeñar de forma ética y satisfactoria para nosotros, nuestros clientes y el resto de la sociedad.</P>
-                           
+
                            </div>
-                            
-                    </div> 
+
+                    </div>
 
 
                 </div>
@@ -168,42 +168,11 @@
                         </div>
                     </div>
                 </div>
-               
+
     </section>
     <!-- team-style-three end -->
 
-    <!-- subscribe-style-five -->
-    <section class="subscribe-style-five">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                    <div id="image_block_38">
-                        <div class="image-box">
-                            <div class="bg-layer" style="background-image: url(images/icons/user-icon.png);"></div>
-                            <figure class="image float-bob-y clearfix"><img src="images/resource/newsletter.png" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                    <div id="content_block_41">
-                        <div class="content-box">
-                            <div class="sec-title"><h2>Suscríbase a nuestro boletín</h2></div>
-                            <div class="text">Se el primero en suscribirte. Te sorprenderás con nuestros servicios con la más alta calidad, anímate ya. </div>
-
-                            <form action="{{route('createSuscripcion')}}" method="post" class="subscribe-form">
-                                @csrf
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Introduce tu correo electrónico" required="">
-                                    <button type="submit" class="theme-btn-two">Suscríbase ahora</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- subscribe-style-five end -->
+   @include('components.news_letter')
 
 
     <!-- clients-style-four -->
