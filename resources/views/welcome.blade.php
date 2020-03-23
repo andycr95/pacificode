@@ -56,232 +56,7 @@
                             <i class="icon-bar"></i>
                             <i class="icon-bar"></i>
                         </div>
-<<<<<<< HEAD
                         @include('layouts.nav-bar')
-=======
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="current dropdown"><a href="#">Home</a>
-                                        <ul class="megamenu clearfix">
-                                            <li><a href="index.html">App Landing</a></li>
-                                            <li><a href="e-commerce.html">E-Commerce</a></li>
-                                            <li><a href="seo.html">SEO</a></li>
-                                            <li><a href="account-billing.html">Account & Billing</a></li>
-                                            <li><a href="app-showcase.html">App Showcase</a></li>
-                                            <li><a href="hr-management.html">HR Management</a></li>
-                                            <li><a href="email-marketing.html">Email Marketing</a></li>
-                                            <li><a href="payment-processing.html">Payment Processing</a></li>
-                                            <li><a href="startup.html">Startup</a></li>
-                                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
-                                            <li><a href="cloud-saas.html">Cloud Based Saas</a></li>
-                                            <li><a href="prototype-wireframing.html">Prototype & Wireframing</a></li>
-                                            <li><a href="crm-management.html">CRM Management</a></li>
-                                            <li><a href="project-management.html">Project Management</a></li>
-                                            <li><a href="digital-studio.html">Digital Studio</a></li>
-                                            <li><a href="crypto.html">Crypto</a></li>
-                                            <li><a href="ride-sharing.html">Ride Sharing</a></li>
-                                            <li><a href="web-hosting.html">Web Hosting</a></li>
-                                            <li><a href="home-charity.html">Home Charity</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Pages</a>
-                                        <ul>
-                                            <li class="dropdown"><a href="#">Team Page</a>
-                                                <ul>
-                                                    <li><a href="team.html">Team 01</a></li>
-                                                    <li><a href="team-2.html">Team 02</a></li>
-                                                    <li><a href="team-3.html">Team 03</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Service Page</a>
-                                                <ul>
-                                                    <li><a href="service.html">Our Services</a></li>
-                                                    <li><a href="service-details.html">Service Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Pricing Page</a>
-                                                <ul>
-                                                    <li><a href="pricing.html">Pricing 01</a></li>
-                                                    <li><a href="pricing-2.html">Pricing 02</a></li>
-                                                    <li><a href="pricing-3.html">Pricing 03</a></li>
-                                                    <li><a href="pricing-4.html">Pricing 04</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Testimonial Page</a>
-                                                <ul>
-                                                    <li><a href="testimonial.html">Testimonial 01</a></li>
-                                                    <li><a href="testimonial-2.html">Testimonial 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="error.html">Error Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Portfolio</a>
-                                        <ul>
-                                            <li><a href="portfolio.html">Portfolio 01</a></li>
-                                            <li><a href="portfolio-2.html">Portfolio 02</a></li>
-                                            <li><a href="portfolio-3.html">Portfolio 03</a></li>
-                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Element</a>
-                                        <ul>
-                                            <li class="dropdown"><a href="#">Miscellaneous 01</a>
-                                                <ul>
-                                                    <li><a href="optimization-application.html">Optimization Application</a></li>
-                                                    <li><a href="device-friendly.html">Device Friendly</a></li>
-                                                    <li><a href="software-product.html">Software Product</a></li>
-                                                    <li><a href="betterlook-layout.html">Betterlook Layout</a></li>
-                                                    <li><a href="whereyou-layout.html">Whereyou Layout</a></li>
-                                                    <li><a href="popular-causes.html">Popular Causes</a></li>
-                                                    <li><a href="wework-layout.html">We work Layout</a></li>
-                                                    <li><a href="campaing-layout.html">Campaing Layout</a></li>
-                                                    <li><a href="donate-layout.html">Donate Layout</a></li>
-                                                    <li><a href="make-difference.html">Make Difference</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Miscellaneous 02</a>
-                                                <ul>
-                                                    <li><a href="solve-problem.html">Solve Problem</a></li>
-                                                    <li><a href="marketing-benefits.html">Marketing Benefits</a></li>
-                                                    <li><a href="streamline-layout.html">Streamline Layout</a></li>
-                                                    <li><a href="powerful-management.html">Powerful Management</a></li>
-                                                    <li><a href="transactions-work.html">Transactions Work</a></li>
-                                                    <li><a href="increase-website.html">Increase Website</a></li>
-                                                    <li><a href="managed-wordpress.html">Managed Wordpress</a></li>
-                                                    <li><a href="history-layout.html">History Layout</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Feature Layout</a>
-                                                <ul>
-                                                    <li><a href="feature-layout-1.html">Feature Layout 01</a></li>
-                                                    <li><a href="feature-layout-2.html">Feature Layout 02</a></li>
-                                                    <li><a href="feature-layout-3.html">Feature Layout 03</a></li>
-                                                    <li><a href="feature-layout-4.html">Feature Layout 04</a></li>
-                                                    <li><a href="feature-layout-5.html">Feature Layout 05</a></li>
-                                                    <li><a href="feature-layout-6.html">Feature Layout 06</a></li>
-                                                    <li><a href="feature-layout-7.html">Feature Layout 07</a></li>
-                                                    <li><a href="feature-layout-8.html">Feature Layout 08</a></li>
-                                                    <li><a href="feature-layout-9.html">Feature Layout 09</a></li>
-                                                    <li><a href="feature-layout-10.html">Feature Layout 10</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Subscribe Layout</a>
-                                                <ul>
-                                                    <li><a href="subscribe-layout-1.html">Subscribe Layout 01</a></li>
-                                                    <li><a href="subscribe-layout-2.html">Subscribe Layout 02</a></li>
-                                                    <li><a href="subscribe-layout-3.html">Subscribe Layout 03</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Video Layout</a>
-                                                <ul>
-                                                    <li><a href="video-layout-1.html">Video Layout 01</a></li>
-                                                    <li><a href="video-layout-2.html">Video Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Download Layout</a>
-                                                <ul>
-                                                    <li><a href="download-layout-1.html">Download Layout 01</a></li>
-                                                    <li><a href="download-layout-2.html">Download Layout 02</a></li>
-                                                    <li><a href="download-layout-3.html">Download Layout 03</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Rider Layout</a>
-                                                <ul>
-                                                    <li><a href="rider-layout-1.html">Rider Layout 01</a></li>
-                                                    <li><a href="rider-layout-2.html">Rider Layout 02</a></li>
-                                                    <li><a href="rider-layout-3.html">Rider Layout 03</a></li>
-                                                    <li><a href="rider-layout-4.html">Rider Layout 04</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Solution Layout</a>
-                                                <ul>
-                                                    <li><a href="solution-layout-1.html">Solution Layout 01</a></li>
-                                                    <li><a href="solution-layout-2.html">Solution Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">News Layout</a>
-                                                <ul>
-                                                    <li><a href="news-layout-1.html">News Layout 01</a></li>
-                                                    <li><a href="news-layout-2.html">News Layout 02</a></li>
-                                                    <li><a href="news-layout-3.html">News Layout 03</a></li>
-                                                    <li><a href="news-layout-4.html">News Layout 04</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Application Layout</a>
-                                                <ul>
-                                                    <li><a href="application-layout-1.html">Application Layout 01</a></li>
-                                                    <li><a href="application-layout-2.html">Application Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Organization Layout</a>
-                                                <ul>
-                                                    <li><a href="organization-layout-1.html">Organization Layout 01</a></li>
-                                                    <li><a href="organization-layout-2.html">Organization Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Work Layout</a>
-                                                <ul>
-                                                    <li><a href="work-layout-1.html">Work Layout 01</a></li>
-                                                    <li><a href="work-layout-2.html">Work Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Service Layout</a>
-                                                <ul>
-                                                    <li><a href="service-layout-1.html">Service Layout 01</a></li>
-                                                    <li><a href="service-layout-2.html">Service Layout 02</a></li>
-                                                    <li><a href="service-layout-3.html">Service Layout 03</a></li>
-                                                    <li><a href="service-layout-4.html">Service Layout 04</a></li>
-                                                    <li><a href="service-layout-5.html">Service Layout 05</a></li>
-                                                    <li><a href="service-layout-6.html">Service Layout 06</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Recruitment Layout</a>
-                                                <ul>
-                                                    <li><a href="recruitment-layout-1.html">Recruitment Layout 01</a></li>
-                                                    <li><a href="recruitment-layout-2.html">Recruitment Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Reasons Layout</a>
-                                                <ul>
-                                                    <li><a href="reasons-layout-1.html">Reasons Layout 01</a></li>
-                                                    <li><a href="reasons-layout-2.html">Reasons Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Hosting Layout</a>
-                                                <ul>
-                                                    <li><a href="hosting-layout-1.html">Hosting Layout 01</a></li>
-                                                    <li><a href="hosting-layout-2.html">Hosting Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Counter Layout</a>
-                                                <ul>
-                                                    <li><a href="counter-layout-1.html">Counter Layout 01</a></li>
-                                                    <li><a href="counter-layout-2.html">Counter Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Pricing Layout</a>
-                                                <ul>
-                                                    <li><a href="pricing-layout-1.html">Pricing Layout 01</a></li>
-                                                    <li><a href="pricing-layout-2.html">Pricing Layout 02</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Latest News</a>
-                                        <ul>
-                                            <li><a href="blog.html">Latest News</a></li>
-                                            <li><a href="blog-details.html">News Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav>
->>>>>>> bb2bda8d25dffcc69de6fb858136ade1b4f6f007
                     </div>
                 </div>
             </div>
@@ -399,55 +174,6 @@
     <!-- feature-section -->
 
 
-    <!-- feature-style-two -->
-    <section class="feature-style-two centred">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                    <div class="feature-block-one wow flipInY animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box js-tilt">
-                            <div class="hover-content"></div>
-                            <div class="icon-box">
-                                <div class="bg-layer" style="background-image: url(images/icons/feature-icon-1.png);"></div>
-                                <i class="flaticon-smartphone"></i>
-                            </div>
-                            <h5><a href="#">Flexiable to Use</a></h5>
-                            <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                    <div class="feature-block-one wow flipInY animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box js-tilt">
-                            <div class="hover-content"></div>
-                            <div class="icon-box">
-                                <div class="bg-layer" style="background-image: url(images/icons/feature-icon-2.png);"></div>
-                                <i class="flaticon-seo-and-web"></i>
-                            </div>
-                            <h5><a href="#">Fully Responsive</a></h5>
-                            <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                    <div class="feature-block-one wow flipInY animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box js-tilt">
-                            <div class="hover-content"></div>
-                            <div class="icon-box">
-                                <div class="bg-layer" style="background-image: url(images/icons/feature-icon-3.png);"></div>
-                                <i class="flaticon-app"></i>
-                            </div>
-                            <h5><a href="#">Easy to Customize</a></h5>
-                            <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- feature-style-two end -->
-
-
     <!-- feature-style-three -->
     <section class="feature-style-three">
         <div class="container">
@@ -478,25 +204,21 @@
                     </div>
                 </div>
                 <div class="inner-box">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                            <div id="iamge_block_03">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 col-md-12 col-sm-12 image-column">
+                            <div id="image_block_12">
                                 <div class="image-box">
-                                    <div class="bg-layer" style="background-image: url(images/icons/image-shap-2.png);"></div>
-                                    <figure class="image image-1 wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/resource/dashbord-3.jpg" alt=""></figure>
-                                    <figure class="image image-2 wow slideInLeft" data-wow-delay="300ms" data-wow-duration="1500ms"><img src="images/resource/dashbord-4.jpg" alt=""></figure>
+                                    <figure class="image image-1 wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/portfolio/vitam.png" alt=""></figure>
+                                    <figure class="image image-2 wow slideInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/portfolio/vitam-2.png" alt=""></figure>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                            <div id="content_block_03">
-                                <div class="content-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                    <div class="sec-title"><h2>Easy access to business information</h2></div>
-                                    <div class="text">
-                                        <p>On the other hand we denounce with righteous indignation and dislike men who are so beguiled and demoralized.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                    </div>
-                                    <div class="btn-box"><a href="#" class="theme-btn">Learn More<i class="fas fa-angle-right"></i></a></div>
+                        <div class="col-lg-5 col-md-12 col-sm-12 content-column">
+                            <div id="content_block_14">
+                                <div class="content-box margin_left_30 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                    <div class="sec-title"><h2>Creamos aplicaciones web que generan resultados.</h2></div>
+                                    <div class="text">Somos especialistas en diseño y desarrollo de aplicaciones Web a medida de tus necesidades, acumulamos una amplia experiencia en programación Web para asesorarte y guiarte en tu proyecto, con nosotros conseguirás alcanzar tus metas y objetivos.</div>
+                                    <div class="btn-box"><a href="#" class="theme-btn">Más Detalles<i class="fas fa-angle-right"></i></a></div>
                                 </div>
                             </div>
                         </div>
@@ -508,201 +230,13 @@
     <!-- feature-style-three -->
 
 
-    <!-- video-section -->
-    <section class="video-section">
-        <div class="bg-column" style="background-image: url(images/background/video-bg.jpg);"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 video-column">
-                    <div class="video-inner">
-                        <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image" data-caption="">
-                            <i class="flaticon-play-button"></i>
-                            <span class="ripple"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                    <div id="content_block_04">
-                        <div class="content-box">
-                            <div class="sec-title"><h2>Video Demo App</h2></div>
-                            <div class="text">Retarget past customers with second-chance offers and reach new audiences with geo-targeted campaigns during peak dining times using Forks’ push notifications.</div>
-                            <div class="btn-box"><a href="#" class="theme-btn-two">Play Video Now</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- video-section end -->
-
-
-    <!-- pricing-section -->
-    <section class="pricing-section centred">
-        <div class="container">
-            <div class="sec-title center">
-                <h2>Our Best Price Plan</h2>
-                <p>We provide best price plan for our customer check the list now<br />and slect now plan.</p>
-            </div>
-            <div class="tabs-box">
-                <div class="tabs-content">
-                    <div class="tab active-tab" id="tab-1">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="images/icons/price-icon-1.png" alt=""></figure>
-                                        <div class="table-header">
-                                            <h3 class="title">Basic</h3>
-                                            <h2 class="price">05.00<span>/Mo</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>One User</li>
-                                                <li>Ui elements 1000</li>
-                                                <li>E-mail support</li>
-                                            </ul>
-                                        </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Purchase</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="images/icons/price-icon-2.png" alt=""></figure>
-                                        <div class="table-header">
-                                            <h3 class="title">Premium</h3>
-                                            <h2 class="price">25.00<span>/Mo</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>One User</li>
-                                                <li>Ui elements 1000</li>
-                                                <li>E-mail support</li>
-                                                <li>Phone Support</li>
-                                            </ul>
-                                        </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Purchase</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="images/icons/price-icon-3.png" alt=""></figure>
-                                        <div class="table-header">
-                                            <h3 class="title">PROFESSIONAL</h3>
-                                            <h2 class="price">50.00<span>/Mo</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>One User</li>
-                                                <li>Ui elements 1000</li>
-                                                <li>E-mail support</li>
-                                                <li>Phone Support</li>
-                                            </ul>
-                                        </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Purchase</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab" id="tab-2">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="images/icons/price-icon-1.png" alt=""></figure>
-                                        <div class="table-header">
-                                            <h3 class="title">Basic</h3>
-                                            <h2 class="price">30.00<span>/Mo</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>One User</li>
-                                                <li>Ui elements 1000</li>
-                                                <li>E-mail support</li>
-                                            </ul>
-                                        </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Purchase</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="images/icons/price-icon-2.png" alt=""></figure>
-                                        <div class="table-header">
-                                            <h3 class="title">Premium</h3>
-                                            <h2 class="price">60.00<span>/Mo</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>One User</li>
-                                                <li>Ui elements 1000</li>
-                                                <li>E-mail support</li>
-                                                <li>Phone Support</li>
-                                            </ul>
-                                        </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Purchase</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="images/icons/price-icon-3.png" alt=""></figure>
-                                        <div class="table-header">
-                                            <h3 class="title">PROFESSIONAL</h3>
-                                            <h2 class="price">99.00<span>/Mo</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>One User</li>
-                                                <li>Ui elements 1000</li>
-                                                <li>E-mail support</li>
-                                                <li>Phone Support</li>
-                                            </ul>
-                                        </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Purchase</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-btn-box">
-                    <ul class="tab-btns tab-buttons clearfix">
-                        <li class="tab-btn active-btn" data-tab="#tab-1">Monthly</li>
-                        <li class="tab-btn" data-tab="#tab-2">Yearly</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- pricing-section end -->
-
-
     <!-- testimonial-section -->
     <section class="testimonial-section centred">
         <div class="image-layer" style="background-image: url(images/icons/testimonial-bg.png);"></div>
         <div class="container">
             <div class="sec-title center">
-                <h2>Our Users Review</h2>
-                <p>Trusted by more than 9,000 businesses in 140 countries.<br />all of our resources are free</p>
+                <h2>Testimonios</h2>
+                <p>Enfocamos todos nuestros esfuerzos en satisfacer las necesidades de nuestros clientes<br /> y en impulsar sus negocios.</p>
             </div>
             <div class="testimonial-carousel owl-carousel owl-theme">
                 <div class="testimonial-inner">
@@ -803,28 +337,10 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                     <div id="content_block_05">
                         <div class="content-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="sec-title"><h2>Get The App Now!</h2></div>
-                            <div class="text">Have you ever heard the expression,<br />“Do not count your chickens before they hatch?”  Maybe an older, wiser individual</div>
+                            <div class="sec-title"><h2>Tacnologías</h2></div>
                             <div class="download-btn">
-                                <a href="#" class="app-store-btn">
-                                    <i class="fab fa-apple"></i>
-                                    <span>Download on the</span>
-                                    App Store
-                                </a>
-                                <a href="#" class="google-play-btn">
-                                    <i class="fab fa-android"></i>
-                                    <span>Get on it</span>
-                                    Google Play
-                                </a>
+
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                    <div id="iamge_block_04">
-                        <div class="image-box">
-                            <figure class="image image-1 wow slideInUp" data-wow-delay="300ms" data-wow-duration="1500ms"><img src="images/resource/phone-4.png" alt=""></figure>
-                            <figure class="image image-2 wow slideInUp" data-wow-delay="600ms" data-wow-duration="1500ms"><img src="images/resource/phone-5.png" alt=""></figure>
                         </div>
                     </div>
                 </div>
