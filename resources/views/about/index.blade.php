@@ -52,8 +52,42 @@
         </div>
     </section>
     <!-- our-history end -->
------------------------------------------------------
+     
+     
+    
+    <section class="mision">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                    <div id="content_block_53">
+                        <div class="content-box wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="sec-title"><h2>MISIÓN</h2></div>
+                            <div class="text">
+                             <P>Proporcionar las tecnologías más innovadoras a medida de las necesidades empresariales, con el objetivo de incrementar su competitividad y productividad. Para ello implementamos soluciones prácticas adaptadas a sus necesidades y desarrollamos nuevas soluciones creativas. Nuestra base parte del aprovechamiento de las nuevas redes.</P>
+                           
+                    </div>
+                    </div>
+                            
+                    </div> 
 
+
+                </div>
+
+         
+                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                    <div id="content_block_53">
+                        <div class="content-box wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="sec-title"><h2>VISIÓN</h2></div>
+                            <div class="text">
+                             <P>Queremos estar comprometidos con los problemas de nuestros clientes de forma transparente y eficaz para convertirnos en su socio de confianza. En nuestra visión queremos ser una empresa de referencia, que camina con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de los estándares y tecnologías libres. Esta labor se debe desempeñar de forma ética y satisfactoria para nosotros, nuestros clientes y el resto de la sociedad.</P>
+                           
+                           </div>
+                            
+                    </div> 
+
+
+                </div>
+    </section>
     <!-- our-team -->
     <section class="team-style-three centred">
         <div class="container">
@@ -146,7 +180,7 @@
                     <div id="image_block_38">
                         <div class="image-box">
                             <div class="bg-layer" style="background-image: url(images/icons/user-icon.png);"></div>
-                            <figure class="image float-bob-y clearfix"><img src="images/resource/user-16.png" alt=""></figure>
+                            <figure class="image float-bob-y clearfix"><img src="images/resource/newsletter.png" alt=""></figure>
                         </div>
                     </div>
                 </div>
