@@ -47,8 +47,8 @@
         <div class="container">
             <div class="content-box clearfix">
                 <div class="title-box pull-left">
-                    <h1>About Us</h1>
-                    <p>Reach out to the world’s most reliable IT services.</p>
+                    <h1>NOSOTROS</h1>
+                    <p>Pacificode te ofrece tener un sitio web o App unico a la medida.</p>
                 </div>
                 <ul class="bread-crumb pull-right">
                     <li>About</li>
@@ -67,12 +67,13 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                     <div id="content_block_53">
                         <div class="content-box wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="sec-title"><h2>Our History</h2></div>
+                            <div class="sec-title"><h2>Nuestra historia</h2></div>
                             <div class="text">
-                                <p>Over the years we have grown in all aspects — and continue to every day — but our goals have remained the same. Have fun while working with the best technology at hand. Design and create the finest product we can. Compete with the top in the industry. Learn from the best.</p>
-                                <p>Focus on the essential. Cultivate openness and respect in all communication. Be friends with one another. Learn constantly. Share what we know.</p>
+                                <p>Somos un grupo de profesionales en el área de ingeniería de sistemas, apasionados por esta profesión nace pacificode. Empresa de desarrollo web a la medida que tiene como principal objetivo suplir las necesidades y requerimientos de su empresa o negocio.</p>
+                                <p>Pacificode tiene como lema ¡Desarrollo de sitios a la medida!, garantizando competitividad en el mercado.</p>
+                                <p>En los últimos años hemos adquirido las competencias para brindar los mejores servicios, este grupo de profesionales comprometidos con especializarse con las últimas tecnologías desea suplir tus necesidades con un alto nivel de calidad.</p>
                             </div>
-                            <h5>M. Ronica, CEO Colin.</h5>
+                            <h5>PACIFICODE</h5>
                             <figure class="signatur"><img src="images/icons/signatur.png" alt=""></figure>
                         </div>
                     </div>
@@ -137,7 +138,7 @@
                         <div class="count-outer count-box">
                             <span class="count-text" data-speed="1500" data-stop="693">0</span>
                         </div>
-                        <div class="text">Happy Clients</div>
+                        <div class="text">Clientes felices</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
@@ -146,7 +147,7 @@
                         <div class="count-outer count-box">
                             <span class="count-text" data-speed="1500" data-stop="453">0</span>
                         </div>
-                        <div class="text">Trusted Users</div>
+                        <div class="text">Usuarios de confianza</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
@@ -155,7 +156,7 @@
                         <div class="count-outer count-box">
                             <span class="count-text" data-speed="1500" data-stop="276">0</span>
                         </div>
-                        <div class="text">Our Projects</div>
+                        <div class="text">Nuestros Proyectos</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
@@ -164,7 +165,7 @@
                         <div class="count-outer count-box">
                             <span class="count-text" data-speed="1500" data-stop="93">0</span>
                         </div>
-                        <div class="text">Our Awards</div>
+                        <div class="text">Nuestros premios</div>
                     </div>
                 </div>
             </div>
