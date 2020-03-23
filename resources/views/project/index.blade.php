@@ -121,7 +121,7 @@
                   <div id="image_block_38">
                       <div class="image-box">
                           <div class="bg-layer" style="background-image: url(images/icons/user-icon.png);"></div>
-                          <figure class="image float-bob-y clearfix"><img src="images/resource/user-16.png" alt=""></figure>
+                          <figure class="image float-bob-y clearfix"><img src="images/resource/newsletter.png" alt=""></figure>
                       </div>
                   </div>
               </div>
@@ -129,7 +129,7 @@
                   <div id="content_block_41">
                       <div class="content-box">
                           <div class="sec-title"><h2>Subscribe our Newsletter</h2></div>
-                          <div class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit donec tempus pellentesque dui vel tristique purus justo</div>
+                          <div class="text">Subscribe now! and receive all the information about our services, projects, blogs, human talent and much more. You just have to enter your email, come on animate.</div>
                           <form action="#" method="post" class="subscribe-form">
                               <div class="form-group">
                                   <input type="email" name="email" placeholder="Enter Your Email" required="">
