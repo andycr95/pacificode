@@ -72,8 +72,13 @@
 <script src="js/validation.js"></script>
 <script src="js/jquery.fancybox.js"></script>
 <script src="js/appear.js"></script>
+<script src="js/circle-progress.js"></script>
+<script src="js/jquery.countTo.js"></script>
 <script src="js/scrollbar.js"></script>
+<script src="js/nav-tool.js"></script>
+<script src="js/jquery.paroller.min.js"></script>
 <script src="js/tilt.jquery.js"></script>
+<script src="js/isotope.js"></script>
 
 <!-- main-js -->
 <script src="js/script.js"></script>
