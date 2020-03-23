@@ -291,8 +291,7 @@
 <![endif]-->
     <!-- Warning Section Ends -->
     <!-- Required Jquery -->
-    <script data-cfasync="false" src="..\..\..\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js\jquery.min.js"></script>
     <script type="text/javascript" src="files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
     <script type="text/javascript" src="files\bower_components\popper.js\js\popper.min.js"></script>
     <script type="text/javascript" src="files\bower_components\bootstrap\js\bootstrap.min.js"></script>

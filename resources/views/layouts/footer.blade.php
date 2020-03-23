@@ -18,7 +18,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                             <div class="links-widget footer-widget">
                                 <h4 class="widget-title">Support</h4>
                                 <div class="widget-content">
@@ -48,7 +48,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                            <div class="links-widget footer-widget">
+                                <h4 class="widget-title">About Company</h4>
+                                <div class="widget-content">
+                                    <ul class="list clearfix">
+                                        <li><a href="#">Appway Online</a></li>
+                                        <li><a href="#">Our Leadership</a></li>
+                                        <li><a href="#">Carrers</a></li>
+                                        <li><a href="#">What We Do</a></li>
+                                        <li><a href="{{ route('admin')}}">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                             <div class="contact-widget footer-widget">
                                 <h4 class="widget-title">Contact Info</h4>
                                 <div class="widget-content">

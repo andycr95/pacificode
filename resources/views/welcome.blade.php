@@ -350,6 +350,9 @@
 
 
     <!-- main-footer -->
+    @include('layouts.footer')
+    <!-- main-footer end -->
+    <!--
     <footer class="main-footer">
         <div class="image-layer" style="background-image: url(images/icons/footer-bg.png);"></div>
         <div class="container">
@@ -426,6 +429,7 @@
             </div>
         </div>
     </footer>
+    -->
     <!-- main-footer end -->
 
 
