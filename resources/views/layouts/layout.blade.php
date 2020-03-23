@@ -8,7 +8,7 @@
 <title>Pacificode</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon-logo.ico" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -79,6 +79,11 @@
 <script src="js/jquery.paroller.min.js"></script>
 <script src="js/tilt.jquery.js"></script>
 <script src="js/isotope.js"></script>
+
+<!-- map script -->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
+<script src="js/gmaps.js"></script>
+<script src="js/map-helper.js"></script>
 
 <!-- main-js -->
 <script src="js/script.js"></script>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="main-box clearfix">
                 <div class="logo-box pull-left">
-                    <figure class="logo"><a href="index.html"><img src="images/logo-4.png" alt=""></a></figure>
+                    <figure class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></figure>
                 </div>
                 <div class="menu-area pull-right clearfix">
                     <!--Mobile Navigation Toggler-->
