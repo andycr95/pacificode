@@ -96,7 +96,7 @@
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-4.png" alt="">
+                                <img src="images/resource/edward2.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -115,7 +115,7 @@
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-5.png" alt="">
+                                <img src="images/resource/richard.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -134,7 +134,7 @@
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-6.png" alt="">
+                                <img src="images/resource/henry.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -153,7 +153,7 @@
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-7.png" alt="">
+                                <img src="images/resource/andy.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
