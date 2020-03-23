@@ -58,13 +58,15 @@
                     <li><a href="error.html">Error Page</a></li>
                 </ul>
             </li>
-            <li class="dropdown"><a href="#">Portfolio</a>
+            <li><a href="{{ route('project')}}">Portfolio</a>
+              <!--
                 <ul>
-                    <li><a href="{{ route('project')}}">Portfolio 01</a></li>
+                    <li><a href="">Portfolio 01</a></li>
                     <li><a href="portfolio-2.html">Portfolio 02</a></li>
                     <li><a href="portfolio-3.html">Portfolio 03</a></li>
                     <li><a href="portfolio-details.html">Portfolio Details</a></li>
                 </ul>
+              -->
             </li>
             <li class="dropdown"><a href="#">Element</a>
                 <ul>
