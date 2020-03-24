@@ -25,3 +25,4 @@ Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripc
 Auth::routes(['register' => false]);
 
 Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/users', 'UserController@index')->name('users');
