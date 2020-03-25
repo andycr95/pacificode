@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="copyright">&copy; 2020 <a href="#">appway</a>. All rights reserved</div>
+                <div class="copyright">&copy; 2020 <a href="#">pacificode</a>. All rights reserved</div>
             </div>
         </div>
     </footer>

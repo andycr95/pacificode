@@ -10,7 +10,7 @@
                 </ul>
             </li>
             <li><a href="{{route('project')}}">Portafolio</a></li>
-            <li><a href="{{route('about')}}">Nosotros</a></li>>
+            <li><a href="{{route('about')}}">Nosotros</a></li>
             <li><a href="pricing-layout-1.html">Blog</a></li>
             <li><a href="{{route('contact')}}">Contácto</a></li>
         </ul>
