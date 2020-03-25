@@ -1,5 +1,7 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    <example-component></example-component>
+    <transition name="slide-fade">
+        <router-view :key="$route.fullPath"></router-view>
+    </transition>
 @endsection

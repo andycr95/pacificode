@@ -14,7 +14,7 @@
     <meta name="description" content="#">
     <meta name="author" content="#">
     <!-- Favicon icon -->
-    <link rel="icon" href="/files/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <!-- Required Fremwork -->
@@ -25,6 +25,19 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/files/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/files/assets/css/jquery.mCustomScrollbar.css">
+    <style>
+        .slide-fade-enter-active {
+            transition: all .3s ease;
+        }
+        .slide-fade-leave-active {
+            transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+        }
+        .slide-fade-enter, .slide-fade-leave-to
+        /* .slide-fade-leave-active below version 2.1.8 */ {
+            transform: translateX(10px);
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +93,7 @@
              <div class="pcoded-main-container">
                  <div class="pcoded-wrapper">
                     <!-- Sidebar start -->
-                    @include('admin.layouts.side-bar')
+                    <sidebar-component></sidebar-component>
                     <!-- Sidebar end -->
 
                     <!-- Content start -->
@@ -102,24 +115,25 @@
     <script type="text/javascript" src="/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
     <!-- modernizr js -->
     <script type="text/javascript" src="/files/bower_components/modernizr/js/modernizr.js"></script>
-    @stack('scripts')
+    <script type="text/javascript" src="/files/bower_components/modernizr/js/css-scrollbars.js"></script>
     <!-- Chart js -->
     <script type="text/javascript" src="/files/bower_components/chart.js/js/Chart.js"></script>
-    <!-- amchart js -->
+    <!-- Google map js -->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="/files/assets/pages/google-maps/gmaps.js"></script>
+    <!-- gauge js -->
+    <script src="/files/assets/pages/widget/gauge/gauge.min.js"></script>
     <script src="/files/assets/pages/widget/amchart/amcharts.js"></script>
     <script src="/files/assets/pages/widget/amchart/serial.js"></script>
+    <script src="/files/assets/pages/widget/amchart/gauge.js"></script>
+    <script src="/files/assets/pages/widget/amchart/pie.js"></script>
     <script src="/files/assets/pages/widget/amchart/light.js"></script>
+    <script type="text/javascript" src="/files/assets/pages/dashboard/crm-dashboard.min.js"></script>
+    <!-- Custom js -->
+    @stack('scripts')
+    <script type="text/javascript" src="/js/admin-custom.js"></script>
     <script src="/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="/files/assets/js/SmoothScroll.js"></script>
-    <script src="/files/assets/js/pcoded.min.js"></script>
-    <!-- custom js -->
-    <script src="/files/assets/js/vartical-layout.min.js"></script>
-    <script type="text/javascript" src="/files/assets/js/script.min.js"></script>
-    <script src="/files/assets/pages/data-table/js/data-table-custom.js"></script>
-    <script src="/files/assets/js/pcoded.min.js"></script>
-    <script src="/files/assets/js/vartical-layout.min.js"></script>
-    <script src="/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="/files/assets/js/script.js"></script>
 
     <script src="{{ asset('js/app.js') }}" defer></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->

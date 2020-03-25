@@ -22,7 +22,6 @@ Route::post('/contact', 'ContactController@store')->name('createContact');
 Route::get('/project', 'ProjectController@index')->name('project');
 Route::get('/service', 'SeviceController@index')->name('service');
 Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripcion');
-Auth::routes(['register' => false]);
+Auth::routes();
 
-Route::get('/admin', 'AdminController@index')->name('admin');
-Route::get('/admin/users', 'UserController@index')->name('users');
+Route::get('/admin/{any?}', 'AdminController@index')->name('admin');
