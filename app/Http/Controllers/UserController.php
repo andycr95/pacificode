@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 
 
@@ -25,7 +25,7 @@ class UserController extends Controller
     {
         $user = new user();
         $user->name = $request->name;
-        $user->password = Crypt::encryptString($request->password);
+        $user->password = Hash::make($request->password);
         $user->email = $request->email;
         $user->gender = $request->gender;
         $Validate = $this->ValidateUser($request);

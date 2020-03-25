@@ -26,16 +26,11 @@
     <link rel="stylesheet" type="text/css" href="/files/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/files/assets/css/jquery.mCustomScrollbar.css">
     <style>
-        .slide-fade-enter-active {
-            transition: all .3s ease;
+        .v-enter-active, .v-leave-active {
+        transition: opacity .5s
         }
-        .slide-fade-leave-active {
-            transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-        }
-        .slide-fade-enter, .slide-fade-leave-to
-        /* .slide-fade-leave-active below version 2.1.8 */ {
-            transform: translateX(10px);
-            opacity: 0;
+        .v-enter, .v-leave-to /* .v-leave-active below version 2.1.8 */ {
+        opacity: 0
         }
     </style>
 </head>

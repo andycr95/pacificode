@@ -22,13 +22,13 @@
                 </li>
             </ul>
             <ul class="pcoded-item pcoded-left-item">
-                <li class="pcoded-hasmenu active pcoded-trigger">
+                <li class="pcoded-hasmenu">
                     <a href="javascript:void(0)">
                         <span class="pcoded-micon"><i class="feather icon-message-square"></i></span>
                         <span class="pcoded-mtext">Blog</span>
                     </a>
                     <ul class="pcoded-submenu">
-                        <li class="active">
+                        <li class="">
                             <router-link :to="{name: 'Usuarios'}">
                                 <span class="pcoded-mtext">posts</span>
                             </router-link>

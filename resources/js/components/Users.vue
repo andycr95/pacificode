@@ -107,7 +107,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <a data-dismiss="modal" @click="clearForm" class="btn">Cancelar</a>
-                                        <a @click="saveUser" data-dismiss="modal" class="btn btn-primary">Guardar</a>
+                                        <a @click="saveUser" class="btn btn-primary">Guardar</a>
                                     </div>
                                 </div>
                             </div>
@@ -124,9 +124,10 @@
    import toastr from "toastr";
     export default {
         mounted() {
+            this.show = true;
             this.getUsers()
         },
-        data(params) {
+        data() {
             return {
                 users: [],
                 errors: [],
@@ -134,7 +135,8 @@
                 email:null,
                 password:null,
                 password_confirmation: null,
-                gender:0
+                gender:0,
+                show: false
             }
         },
         methods: {
@@ -149,6 +151,8 @@
                         }
                     }
                     this.users = res.data;
+                }).catch(err =>{
+                    console.log(err);
                 })
             },
             saveUser(e) {
@@ -204,6 +208,5 @@
                 this.gender = 0
             }
         }
-
     }
 </script>
