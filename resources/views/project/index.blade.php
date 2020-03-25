@@ -33,7 +33,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 masonry-item small-column all graphic design branding">
                         <div class="portfolio-block-one">
                             <div class="image-box">
-                                <figure class="image"><img src="images/gallery/p1.jpg" alt=""></figure>
+                                <figure class="image"><img src="images/gallery/projects-01.jpg" alt=""></figure>
                                 <div class="content-box">
                                     <div class="inner">
                                         <div class="title">Photo. Ui - Ux</div>
