@@ -4,8 +4,8 @@
 
       <div class="content-box clearfix">
           <div class="title-box pull-left">
-              <h1>Portfolio</h1>
-              <p>Reach out to the world’s most reliable IT services.</p>
+              <h1>Portafolio</h1>
+              <p>Nuestros proyectos al servicio del cliente.</p>
           </div>
           <ul class="bread-crumb pull-right">
               <li>Testimonial</li>
@@ -23,10 +23,10 @@
             <div class="sortable-masonry">
                 <div class="filters">
                     <ul class="filter-tabs filter-btns centred clearfix">
-                        <li class="active filter" data-role="button" data-filter=".all">All</li>
-                        <li class="filter" data-role="button" data-filter=".design">Design</li>
-                        <li class="filter" data-role="button" data-filter=".branding">Branding</li>
-                        <li class="filter" data-role="button" data-filter=".graphic">Graphic</li>
+                        <li class="active filter" data-role="button" data-filter=".all">Todos</li>
+                        <li class="filter" data-role="button" data-filter=".design">Diseño</li>
+                        <li class="filter" data-role="button" data-filter=".branding">Marca</li>
+                        <li class="filter" data-role="button" data-filter=".graphic">Gráfico</li>
                     </ul>
                 </div>
                 <div class="items-container row clearfix">
@@ -121,19 +121,19 @@
                   <div id="image_block_38">
                       <div class="image-box">
                           <div class="bg-layer" style="background-image: url(images/icons/user-icon.png);"></div>
-                          <figure class="image float-bob-y clearfix"><img src="images/resource/user-16.png" alt=""></figure>
+                          <figure class="image float-bob-y clearfix"><img src="images/resource/newsletter.png" alt=""></figure>
                       </div>
                   </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                   <div id="content_block_41">
                       <div class="content-box">
-                          <div class="sec-title"><h2>Subscribe our Newsletter</h2></div>
-                          <div class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit donec tempus pellentesque dui vel tristique purus justo</div>
+                          <div class="sec-title"><h2>Suscríbete a nuestro boletín</h2></div>
+                          <div class="text">Te sorprenderás con nuestros servicios con la más alta calidad, anímate ya.</div>
                           <form action="#" method="post" class="subscribe-form">
                               <div class="form-group">
-                                  <input type="email" name="email" placeholder="Enter Your Email" required="">
-                                  <button type="submit" class="theme-btn-two">Subscribe Now</button>
+                                  <input type="email" name="email" placeholder="Introduce tu correo electrónico" required="">
+                                  <button type="submit" class="theme-btn-two">Suscríbase ahora</button>
                               </div>
                           </form>
                       </div>

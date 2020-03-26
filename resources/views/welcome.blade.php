@@ -183,7 +183,7 @@
                                 <div class="content-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                                     <div class="sec-title"><h2>Aplicaciones móviles redefinidas</h2></div>
                                     <div class="text">
-                                        <p>Desarrollamos aplicaciones móviles nativas (iOS / Android) debido a las ventajas que ofrecen sobre otras alternativas: <br/> de usuario mejorada, acceso a todas las funcionalidades del dispositivo sin restricciones y excelente rendimiento.</p>
+                                        <p>Desarrollamos aplicaciones móviles multiplataforma (iOS / Android) debido a las ventajas que ofrecen sobre otras alternativas: <br/> de usuario mejorada, acceso a todas las funcionalidades del dispositivo sin restricciones y excelente rendimiento.</p>
                                     </div>
                                     <div class="btn-box"><a href="#" class="theme-btn">Mas detalles<i class="fas fa-angle-right"></i></a></div>
                                 </div>
@@ -238,7 +238,7 @@
             <div class="testimonial-carousel owl-carousel owl-theme">
                 <div class="testimonial-inner">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 testimonial-block">
+                        <div class="col-lg-12 col-md-12 col-sm-12 testimonial-block">
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box"><img src="images/resource/testimonial-1.png" alt=""></figure>
@@ -246,74 +246,6 @@
                                     <div class="author-info">
                                         <h5 class="name">TeamSnap</h5>
                                         <span class="designation">VP of Customer Experience</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 testimonial-block">
-                            <div class="testimonial-block-one">
-                                <div class="inner-box">
-                                    <figure class="image-box"><img src="images/resource/testimonial-2.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
-                                    <div class="author-info">
-                                        <h5 class="name">Steven smith</h5>
-                                        <span class="designation">Programmer Doritibe</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-inner">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 testimonial-block">
-                            <div class="testimonial-block-one">
-                                <div class="inner-box">
-                                    <figure class="image-box"><img src="images/resource/testimonial-2.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
-                                    <div class="author-info">
-                                        <h5 class="name">Steven smith</h5>
-                                        <span class="designation">Programmer Doritibe</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 testimonial-block">
-                            <div class="testimonial-block-one">
-                                <div class="inner-box">
-                                    <figure class="image-box"><img src="images/resource/testimonial-1.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
-                                    <div class="author-info">
-                                        <h5 class="name">TeamSnap</h5>
-                                        <span class="designation">VP of Customer Experience</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-inner">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 testimonial-block">
-                            <div class="testimonial-block-one">
-                                <div class="inner-box">
-                                    <figure class="image-box"><img src="images/resource/testimonial-1.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
-                                    <div class="author-info">
-                                        <h5 class="name">TeamSnap</h5>
-                                        <span class="designation">VP of Customer Experience</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 testimonial-block">
-                            <div class="testimonial-block-one">
-                                <div class="inner-box">
-                                    <figure class="image-box"><img src="images/resource/testimonial-2.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
-                                    <div class="author-info">
-                                        <h5 class="name">Steven smith</h5>
-                                        <span class="designation">Programmer Doritibe</span>
                                     </div>
                                 </div>
                             </div>
@@ -414,38 +346,13 @@
     <!-- news-section end -->
 
 
-    <!-- subscribe-section -->
-    <section class="subscribe-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                    <div id="iamge_block_05">
-                        <div class="image-box wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <figure class="image float-bob-y"><img src="images/resource/subscribe-1.png" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                    <div id="content_block_06">
-                        <div class="content-box">
-                            <div class="sec-title"><h2>Subscribe our Newsletter</h2></div>
-                            <div class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit donec tempus pellentesque dui vel tristique purus justo</div>
-                            <form action="#" method="post" class="subscribe-form">
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Enter Your Email" required="">
-                                    <button type="submit" class="theme-btn-two">Subscribe Now</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- subscribe-section end -->
+    @include('components.news_letter')
 
 
     <!-- main-footer -->
+    @include('layouts.footer')
+    <!-- main-footer end -->
+    <!--
     <footer class="main-footer">
         <div class="image-layer" style="background-image: url(images/icons/footer-bg.png);"></div>
         <div class="container">
@@ -522,6 +429,7 @@
             </div>
         </div>
     </footer>
+    -->
     <!-- main-footer end -->
 
 
