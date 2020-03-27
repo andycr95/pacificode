@@ -63,8 +63,9 @@
                                     </div>
                                     <div style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;">
                                         <div class="form-group">
+                                            <img v-if="show_photo" style="width:100%" v-bind:src="post_photo" alt="" srcset="">
                                           <label for="image-post">Imagen principal del post</label>
-                                          <input type="file" class="form-control-file" name="image-post" placeholder="" aria-describedby="fileHelpId">
+                                          <input type="file" class="form-control-file" name="image-post" v-on:change="onImageChange" placeholder="" aria-describedby="fileHelpId">
                                         </div>
                                         <hr>
                                         <div class="form-group">
@@ -106,7 +107,9 @@
                 editorConfig: {
                     // The configuration of the editor.
                 },
-                tags: []
+                tags: [],
+                post_photo:null,
+                show_photo:false,
             }
         },
         methods: {
@@ -114,6 +117,19 @@
                 Axios.get('/api/tags').then(res =>{
                     this.tags = res.data
                 })
+            },
+            onImageChange(e){
+                let input = e.target;
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    let vm = this;
+                    reader.onload = e => {
+                        this.previewImageUrl = e.target.result;
+                        vm.post_photo = e.target.result;
+                        vm.show_photo = true;
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
             }
         }
     }

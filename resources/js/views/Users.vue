@@ -183,7 +183,6 @@
             'b-modal': VBModal
         },
         mounted() {
-            this.show = true;
             this.getUsers()
         },
         data() {
@@ -212,8 +211,8 @@
             showModal() {
                 this.$refs['modal-1'].show()
             },
-            getUsers() {
-                Axios.get('/api/user').then(res =>{
+            async getUsers() {
+                await Axios.get('/api/user').then(res =>{
                     for (let i = 0; i < res.data.length; i++) {
                         const e = res.data[i];
                         if (e.gender == 1) {
@@ -227,7 +226,7 @@
                     console.log(err);
                 })
             },
-            saveUser(e) {
+            async saveUser(e) {
                 let me =this;
                 let url = '/api/user' //Ruta que hemos creado para enviar una usuario y guardarlo
                 this.$v.$touch()
@@ -235,7 +234,7 @@
                     this.submitStatus = 'ERROR'
                 } else {
                     Axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
-                    Axios.post(url,{ //estas variables son las que enviaremos para que crear la tarea
+                    await Axios.post(url,{ //estas variables son las que enviaremos para que crear el usuario
                     'name':this.name,
                     'email':this.email,
                     'birth_date':this.customFormatter(this.birth_date),

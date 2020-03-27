@@ -64,7 +64,7 @@ class UserController extends Controller
     public function ValidateUser(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:25', 'unique:users'],
         ]);
 
         if ($validator->fails()) {
