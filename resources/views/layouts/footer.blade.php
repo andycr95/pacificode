@@ -57,7 +57,7 @@
                                         <li><a href="#">Our Leadership</a></li>
                                         <li><a href="#">Carrers</a></li>
                                         <li><a href="#">What We Do</a></li>
-                                        <li><a href="{{ route('home')}}">Login</a></li>
+                                        <li><a href="{{ route('login')}}">Login</a></li>
                                     </ul>
                                 </div>
                             </div>

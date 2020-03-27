@@ -19,9 +19,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('home-component', require('./components/Home.vue').default);
-Vue.component('users-component', require('./components/Users.vue').default);
-Vue.component('sidebar-component', require('./components/SideBar.vue').default);
+Vue.component('sidebar-component', require('./views/components/SideBar.vue').default);
+Vue.component('posts-component', require('./views/PostsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -30,11 +29,21 @@ Vue.component('sidebar-component', require('./components/SideBar.vue').default);
  */
 
 import router from './routes';
+import Vuelidate from 'vuelidate'
+// This imports <b-modal> as well as the v-b-modal directive as a plugin:
+import { ModalPlugin } from 'bootstrap-vue'
+import CKEditor from '@ckeditor/ckeditor5-vue';
+import vSelect from 'vue-select'
 
+Vue.component('v-select', vSelect)
+Vue.use(CKEditor);
+Vue.use(Vuelidate)
+Vue.use(ModalPlugin)
 const app = new Vue({
     el: '#pcoded',
     router
 });
+
 
 import VueToastr2 from 'vue-toastr-2'
 import 'vue-toastr-2/dist/vue-toastr-2.min.css'
