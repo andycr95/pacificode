@@ -34,10 +34,10 @@
                                     <table class="table table-striped table-bordered nowrap">
                                         <thead>
                                             <tr>
-                                                <th>Nombres</th>
-                                                <th>Correo</th>
-                                                <th>Cargo</th>
-                                                <th>Genero</th>
+                                                <th>Nombre</th>
+                                                <th>Extracto</th>
+                                                <th>Descripcion</th>
+                                               
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -45,10 +45,10 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Nombres</th>
-                                                <th>Correo</th>
-                                                <th>Cargo</th>
-                                                <th>Genero</th>
+                                                <th>Nombre</th>
+                                                <th>Extracto</th>
+                                                <th>Descripcion</th>
+                                               
                                             </tr>
                                         </tfoot>
                                     </table>
