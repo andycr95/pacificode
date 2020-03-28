@@ -562,7 +562,7 @@
         },
         methods: {
             async getUser() {
-                await Axios.get(`/api/user/${this.$route.params.id}`).then(res =>{
+                await Axios.get(`/api/user/${this.$route.params.id}`,{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
                     this.user = res.data
                 })
 
