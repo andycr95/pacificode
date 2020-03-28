@@ -1,5 +1,6 @@
 import admin from './views/Home.vue';
 import Users from './views/Users/Users.vue';
+import Services from './views/Services/Services.vue';
 import Profile from './views/Users/Profile.vue';
 import Posts from './views/Posts/Posts.vue';
 import NewPosts from './views/Posts/NewPost.vue';
@@ -15,6 +16,7 @@ export default new Router({
             path: '/admin',
             component: admin,
         },
+
         {
             name: 'users',
             path: '/admin/users',
@@ -28,6 +30,11 @@ export default new Router({
             name: 'posts',
             path: '/admin/posts',
             component: Posts
+        },
+        {
+            name: 'services',
+            path: '/admin/services',
+            component: Services
         },
         {
             name: 'newpost',

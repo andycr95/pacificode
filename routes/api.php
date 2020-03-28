@@ -32,6 +32,9 @@ Route::group(['middleware' => ['auth:api']], function () {
     //posts
     Route::post('/post', 'PostController@store');
 
+     //service
+     Route::post('/service', 'ServiceController@store');
+
 });
 
 Route::group(['middleware' => ['api']], function () {
@@ -42,6 +45,10 @@ Route::group(['middleware' => ['api']], function () {
     //posts
     Route::get('/posts', 'PostController@getPosts');
     Route::get('/post/{id}', 'PostController@getPost');
+
+     //services
+     Route::get('/services', 'ServiceController@getServices');
+     Route::get('/services/{id}', 'ServiceController@getServices');
 
     //categories
     Route::get('/categories', 'CategoryController@getCategories');
