@@ -13,18 +13,22 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/blogs', 'PostController@index')->name('blogs');
+Route::get('/blog', 'PostController@show')->name('blog');
+
 Route::get('/contact', 'ContactController@index')->name('contact');
-Route::get('/about', 'AboutController@index')->name('about');
 Route::post('/contact', 'ContactController@store')->name('createContact');
+
 Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
+
+Route::get('/about', 'AboutController@index')->name('about');
+
 Route::get('/service', 'SeviceController@index')->name('service');
+
 Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripcion');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/{any?}', 'AdminController@index')->name('admin');
 Route::get('/admin/{any?}/{id}', 'AdminController@index')->name('admin');

@@ -13,12 +13,36 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('api')->get('/user', 'UserController@getUsers');
-Route::middleware('api')->get('/user/{id}', 'UserController@getUser');
-Route::middleware('api')->get('/tags', 'TagController@getTags');
 
-Route::middleware('api')->post('/user', 'UserController@store');
-Route::middleware('api')->put('/user/{id}', 'UserController@update');
-Route::middleware('api')->put('/user/photo/{id}', 'UserController@updatePhoto');
-Route::middleware('api')->put('/user/photoport/{id}', 'UserController@updatePhotoPort');
-Route::middleware('api')->put('/user/desc/{id}', 'UserController@updateDesc');
+Route::post('/login', 'AuthController@login');
+
+Route::group(['middleware' => ['auth:api']], function () {
+    //login api
+    Route::post('/logout', 'AuthController@logout');
+
+    //User routes
+    Route::get('/user', 'UserController@getUsers');
+    Route::post('/user', 'UserController@store');
+    Route::get('/user/{id}', 'UserController@getUser');
+    Route::put('/user/{id}', 'UserController@update');
+    Route::put('/user/photo/{id}', 'UserController@updatePhoto');
+    Route::put('/user/photoport/{id}', 'UserController@updatePhotoPort');
+    Route::put('/user/desc/{id}', 'UserController@updateDesc');
+
+    //posts
+    Route::post('/post', 'PostController@store');
+
+});
+
+Route::group(['middleware' => ['api']], function () {
+
+    //tags
+    Route::get('/tags', 'TagController@getTags');
+
+    //posts
+    Route::get('/posts', 'PostController@getPosts');
+    Route::get('/post/{id}', 'PostController@getPost');
+
+    //categories
+    Route::get('/categories', 'CategoryController@getCategories');
+});

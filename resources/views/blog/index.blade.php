@@ -10,12 +10,12 @@
     <div class="container">
         <div class="content-box clearfix">
             <div class="title-box pull-left">
-                <h1>Latest News</h1>
-                <p>Reach out to the world’s most reliable IT services.</p>
+                <h1>Blog</h1>
+                <p>Información actual e interesante</p>
             </div>
             <ul class="bread-crumb pull-right">
                 <li>Blog</li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Inicio</a></li>
             </ul>
         </div>
     </div>
