@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\project;
+use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -36,7 +36,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-      $project = new project();
+      $project = new Project();
       $project->project_title = $request->project_title;
       $project->project_customer = $request->project_customer;
       $project->project_autor = $request->project_autor;
@@ -57,10 +57,10 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\project  $project
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function show(project $project)
+    public function show(Project $project)
     {
         //
         //return view('portfolio.detail');
@@ -69,10 +69,10 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\project  $project
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(project $project)
+    public function edit(Project $project)
     {
         //
     }
@@ -81,7 +81,7 @@ class ProjectController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\project  $project
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, project $project)
@@ -92,10 +92,10 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\project  $project
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function destroy(project $project)
+    public function destroy(Project $project)
     {
         //
     }
