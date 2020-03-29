@@ -8,8 +8,8 @@
                             <div class="col-lg-8">
                                 <div class="page-header-title">
                                     <div class="d-inline">
-                                        <h4>Servicios</h4>
-                                        <span>En esta sección se encuentran todos los Servicios del sistema</span>
+                                        <h4>Testimonios</h4>
+                                        <span>En esta sección se encuentran todos los testimonios</span>
                                     </div>
                                 </div>
                             </div>
@@ -19,7 +19,7 @@
                                         <li class="breadcrumb-item">
                                             <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
                                         </li>
-                                        <li class="breadcrumb-item"><a href="#!">Servicios</a>
+                                        <li class="breadcrumb-item"><a href="#!">Testimonios</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -36,14 +36,16 @@
                                             <tr>
                                                 <th>Nombre</th>
                                                 <th>Extracto</th>
+                                             
                                                 
                                                
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           <tr v-for="service in services" v-bind:key="service.id">
-                                               <td><p>{{service.service_name}}</p></td>
-                                               <td><p>{{service.service_extract}}</p></td>
+                                           <tr v-for="testimonies in testimonies" v-bind:key="testimonies.id">
+                                               <td><p>{{testimonies.testimony_name}}</p></td>
+                                               <td><p>{{testimonies.testimony_extract}}</p></td>
+                                              
                                                
                                            </tr>
                                         </tbody>
@@ -51,6 +53,7 @@
                                             <tr>
                                                 <th>Nombre</th>
                                                 <th>Extracto</th>
+                                             
                                                 
                                                
                                             </tr>
@@ -73,13 +76,13 @@
 import Axios from "axios";
     export default {
         mounted() {
-            this.getServices();
+            this.getTestimonies();
 
         },
         data(){
 
             return {
-                services:[]
+                testimonies:[]
             }
         },
 
@@ -87,11 +90,11 @@ import Axios from "axios";
             showModal(){
 
             },
-             async getServices() {
-                await Axios.get('/api/services',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
+             async getTestimonies() {
+                await Axios.get('/api/testimonies',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
                     
-                    this.services = res.data;
-                     console.log(this.services);
+                    this.testimonies = res.data;
+                     console.log(this.testimonies);
                 }).catch(err =>{
                     console.log(err);
                 })

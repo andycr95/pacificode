@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Service;
+use App\testimony;
 use Illuminate\Http\Request;
 
-class ServiceController extends Controller
+class TestimonyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,24 +13,22 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function getServices()
+    public function getTestimonies()
     {
-        $services = Service::all();
-        return response()->json($services, 200);
+        $testimonies = Testimony::all();
+        return response()->json($testimonies, 200);
     }
 
-    public function getservice(Request $request)
+    public function gettestimony(Request $request)
     {
-        $service = Service::where('id', $request->id)->get();
-        return response()->json($service, 200);
+        $testimony = Testimony::where('id', $request->id)->get();
+        return response()->json($testimony, 200);
     }
 
-
-
+    
     public function index()
     {
         //
-
     }
 
     /**
@@ -51,30 +49,31 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        $service = new Service();
-        $service->service_name = $request->service_name;
-        $service->category_id = $request->category_service;
-        $service->service_extract = $request->service_extract;
-        $service->service_body = $request->service_body;
-        if ($request->service_photo) {
-            $base64_str = substr($request->service_photo, strpos($request->service_photo, ",")+1);
+        $testimony = new Testimony();
+        $testimony->testimony_title = $request->testimony_title;
+        $testimony->testimony_name = $request->testimony_name;
+        $testimony->testimony_extract = $request->testimony_extract;
+        $testimony->testimony_body = $request->testimony_body;
+        if ($request->testimony_photo) {
+            $base64_str = substr($request->testimony_photo, strpos($request->testimony_photo, ",")+1);
             $image = base64_decode($base64_str);
             $timestampName = microtime(true) . '.jpg';
-            $service->service_photo ='https://cloud.pacificode.co/services/'.$timestampName;
+            $testimony->testimony_photo ='https://cloud.pacificode.co/testimonies/'.$timestampName;
             Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
         }
-        $service->save();
+        $testimony->save();
        
         return response()->json(true, 200);
     }
 
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\service  $service
+     * @param  \App\testimony  $testimony
      * @return \Illuminate\Http\Response
      */
-    public function show(service $service)
+    public function show(testimony $testimony)
     {
         //
     }
@@ -82,10 +81,10 @@ class ServiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\service  $service
+     * @param  \App\testimony  $testimony
      * @return \Illuminate\Http\Response
      */
-    public function edit(service $service)
+    public function edit(testimony $testimony)
     {
         //
     }
@@ -94,10 +93,10 @@ class ServiceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\service  $service
+     * @param  \App\testimony  $testimony
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, service $service)
+    public function update(Request $request, testimony $testimony)
     {
         //
     }
@@ -105,10 +104,10 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\service  $service
+     * @param  \App\testimony  $testimony
      * @return \Illuminate\Http\Response
      */
-    public function destroy(service $service)
+    public function destroy(testimony $testimony)
     {
         //
     }
