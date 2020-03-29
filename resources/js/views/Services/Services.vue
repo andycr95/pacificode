@@ -29,7 +29,7 @@
                     <div class="page-body">
                         <div class="card">
                             <div class="card-block">
-                              
+
                                 <div class="table-responsive dt-responsive">
                                     <table class="table table-striped table-bordered nowrap">
                                         <thead>
@@ -37,18 +37,18 @@
                                                 <th>Nombre</th>
                                                 <th>Extracto</th>
                                                 <th>Descripcion</th>
-                                               
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           
+
                                         </tbody>
                                         <tfoot>
                                             <tr>
                                                 <th>Nombre</th>
                                                 <th>Extracto</th>
                                                 <th>Descripcion</th>
-                                               
+
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -56,7 +56,7 @@
                             </div>
                         </div>
 
-                        
+
 
                     </div>
                 </div>
@@ -84,7 +84,7 @@ import Axios from "axios";
             },
              async getServices() {
                 await Axios.get('/api/services',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
-                    
+
                     this.services = res.data;
                 }).catch(err =>{
                     console.log(err);

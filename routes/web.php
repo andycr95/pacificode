@@ -22,6 +22,7 @@ Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact', 'ContactController@store')->name('createContact');
 
 Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
+//Route::post('/portfolio', 'ProjectController@store')->name('createProject');
 
 Route::get('/about', 'AboutController@index')->name('about');
 

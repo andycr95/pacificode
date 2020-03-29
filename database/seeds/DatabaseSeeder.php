@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'service_extract'=>'Desarrollo y creación de páginas web a medida.
                                 Empresa para crear página web a medida sin plantillas.
                                 Disponemos de diseñadores web para personalizar el diseño
-                                de tu página web totalmente personalizada en Bootstrap. 
+                                de tu página web totalmente personalizada en Bootstrap.
                                 Páginas web construidas en HTML, css, sass y javascript.',
             'service_body'=>'Para diseñar una página web para mi empresa a medida y una aplicación móvil, necesitas una sistema multiplataforma. En nuestra empresa utilizamos Bootstrap, Ionic, React Native y Flutter, los mejores sistemas que existen actualmente para desarrolladores. Bootstrap facilitará el trabajo, con ella podrás construir los tres puntos claves para crear tu web:
 
@@ -39,27 +39,22 @@ class DatabaseSeeder extends Seeder
 
         DB::table('users')->insert([
             'id'=>1,
-            'name'=>'kevin jair ',
-            'email'=>'kjrichard@unipacifico.co',
+            'name'=>'henry stivent ',
+            'email'=>'henrystiven7@pacificode.co',
             'password'=>Hash::make('123456'),
             'remember_token'=>'123456',
-            'created_at'=>'12-02-02',
-            'updated_at'=>'12-02-02',
+            'created_at'=>'28-03-20',
+            'updated_at'=>'28-03-20',
             'gender'=>'1',
             'state'=>'1',
             'birth_date'=>'12-02-02',
-            'position'=>'desarrollador',
+            'position'=>'desarrollador front-end',
             'marital_status'=>'1',
-            'address'=>'pampalinda adentro',
+            'address'=>'carmelita por la linea',
             'phone'=>'3188027594',
-            'twitter'=>'dfjkndfk',
-            'facebook'=>'https://www.facebook.com/krichardrosero'
-          
-
-            
-
-
-
+            'twitter'=>'https://www.twitter.com/HenryRos7',
+            'facebook'=>'https://www.facebook.com/henrypes',
+            'linkedin'=>'https://www.linkedin.com/in/henry-ramirez-178a1415b/'
         ]);
     }
 }
