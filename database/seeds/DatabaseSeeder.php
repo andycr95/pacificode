@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Services;
 use App\User;
+use App\Testimonies;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +16,19 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-      /*  DB::table('services')->insert([
+/*
+        DB::table('categories')->insert([
+            'id'=>1,
+            'name'=>'Diseño apps y web a medida',
+            'type'=>'1'
+        ]);
+        DB::table('categories')->insert([
+            'id'=>2,
+            'name'=>'desarrollo de software',
+            'type'=>'1'
+        ]);  
+      
+       DB::table('services')->insert([
             'id'=>1,
             'service_name'=>'Diseño apps y web a medida',
             'service_photo'=>'https://d1v0hpr0y8vhtu.cloudfront.net/wp-content/uploads/2018/09/creamos-pa%CC%81gina-web-a-medida-1024x689.png',
@@ -35,7 +48,18 @@ class DatabaseSeeder extends Seeder
 
 
         ]);
-*/
+
+          DB::table('testimonies')->insert([
+            'id'=>1,
+            'testimony_name'=>'kevin jair ',
+            'testimony_title'=>'coronavirus',
+            'testimony_photo'=>'https://d1v0hpr0y8vhtu.cloudfront.net/wp-content/uploads/2018/09/creamos-pa%CC%81gina-web-a-medida-1024x689.png',
+            'testimony_extract'=>'Los testimonios de la esperanza frente al coronavirus: hablan los recuperados',
+            'testimony_body'=>'En las últimas 24 horas han fallecido 832 personas más en España, los contagiados superan los 72.000, pero crecen, como días atrás, a un ritmo menor. Otra buena noticia, viene de la mano de los enfermos dados de alta. Entre ayer y hoy 12.000 personas han abandonado nuestros hospitales.'
+            
+
+        ]);  */
+
 
         DB::table('users')->insert([
             'id'=>1,
@@ -54,12 +78,10 @@ class DatabaseSeeder extends Seeder
             'phone'=>'3188027594',
             'twitter'=>'dfjkndfk',
             'facebook'=>'https://www.facebook.com/krichardrosero'
-          
-
-            
 
 
+        ]);   
 
-        ]);
+     
     }
 }

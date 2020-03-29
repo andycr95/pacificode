@@ -54,10 +54,26 @@
                             </router-link>
                         </li>
                         <li class="">
-                            <router-link :to="{name: 'newservices'}">
+                            <router-link :to="{name: 'newservice'}">
                                 <span class="pcoded-mtext">Nuevo servicios</span>
                             </router-link>
                         </li>
+                    </ul>
+                </li>
+            </ul>
+               <ul class="pcoded-item pcoded-left-item">
+                <li class="pcoded-hasmenu">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="feather icon-message-square"></i></span>
+                        <span class="pcoded-mtext">Testimonios</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="">
+                            <router-link :to="{name: 'testimonies'}">
+                                <span class="pcoded-mtext">Testimonios</span>
+                            </router-link>
+                        </li>
+                      
                     </ul>
                 </li>
             </ul>

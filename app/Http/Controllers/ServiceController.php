@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\service;
+use App\Service;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -12,9 +12,25 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function getServices()
+    {
+        $services = Service::all();
+        return response()->json($services, 200);
+    }
+
+    public function getservice(Request $request)
+    {
+        $service = Service::where('id', $request->id)->get();
+        return response()->json($service, 200);
+    }
+
+
+
     public function index()
     {
         //
+
     }
 
     /**

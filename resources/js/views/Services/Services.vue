@@ -36,18 +36,22 @@
                                             <tr>
                                                 <th>Nombre</th>
                                                 <th>Extracto</th>
-                                                <th>Descripcion</th>
+                                                
                                                
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           
+                                           <tr v-for="service in services" v-bind:key="service.id">
+                                               <td><p>{{service.service_name}}</p></td>
+                                               <td><p>{{service.service_extract}}</p></td>
+                                               
+                                           </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
                                                 <th>Nombre</th>
                                                 <th>Extracto</th>
-                                                <th>Descripcion</th>
+                                                
                                                
                                             </tr>
                                         </tfoot>
@@ -69,6 +73,7 @@
 import Axios from "axios";
     export default {
         mounted() {
+            this.getServices();
 
         },
         data(){
@@ -86,6 +91,7 @@ import Axios from "axios";
                 await Axios.get('/api/services',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
                     
                     this.services = res.data;
+                     console.log(this.services);
                 }).catch(err =>{
                     console.log(err);
                 })

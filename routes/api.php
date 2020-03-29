@@ -50,6 +50,9 @@ Route::group(['middleware' => ['api']], function () {
      Route::get('/services', 'ServiceController@getServices');
      Route::get('/services/{id}', 'ServiceController@getServices');
 
+       //testimonios
+       Route::get('/testimonies', 'TestimonyController@gettestimonies');
+
     //categories
     Route::get('/categories', 'CategoryController@getCategories');
 });
