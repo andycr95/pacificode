@@ -2,6 +2,7 @@ import admin from './views/Home.vue';
 import Users from './views/Users/Users.vue';
 import Services from './views/Services/Services.vue';
 import NewServices from './views/Services/NewServices.vue';
+import UpdateServices from './views/Services/UpdateServices.vue';
 import Profile from './views/Users/Profile.vue';
 import Posts from './views/Posts/Posts.vue';
 import NewPosts from './views/Posts/NewPost.vue';
@@ -53,6 +54,11 @@ export default new Router({
             name: 'newservice',
             path: '/admin/services/create',
             component: NewServices
+        },
+        {
+            name: 'updateservice',
+            path: '/admin/services/updateService/:id',
+            component: UpdateServices
         }
        
 
