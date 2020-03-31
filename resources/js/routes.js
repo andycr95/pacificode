@@ -6,7 +6,8 @@ import UpdateServices from './views/Services/UpdateServices.vue';
 import Profile from './views/Users/Profile.vue';
 import Posts from './views/Posts/Posts.vue';
 import NewPosts from './views/Posts/NewPost.vue';
-import Testimonies from './views/Testimonies/Testimonies.vue';
+import Projects from './views/Projects/Projects.vue';
+import NewProjects from './views/Projects/NewProject.vue';
 import Vue from 'vue';
 import Router from 'vue-router';
 
@@ -36,14 +37,19 @@ export default new Router({
             component: Posts
         },
         {
+            name: 'newpost',
+            path: '/admin/posts/create',
+            component: NewPosts
+        },
+        {
             name: 'services',
             path: '/admin/services',
             component: Services
         },
         {
-            name: 'testimonies',
-            path: '/admin/testimonies',
-            component: Testimonies
+            name: 'projects',
+            path: '/admin/projects',
+            component: Projects
         },
         {
             name: 'newpost',
@@ -59,9 +65,12 @@ export default new Router({
             name: 'updateservice',
             path: '/admin/services/updateService/:id',
             component: UpdateServices
+        },
+          {  
+            name: 'newprojects',
+            path: '/admin/projects/create',
+            component: NewProjects
         }
-       
-
     ],
     linkExactActiveClass: 'active',
     mode: 'history'
