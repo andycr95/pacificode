@@ -97,9 +97,25 @@ class ServiceController extends Controller
      * @param  \App\service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, service $service)
+    public function updateService($id, Request $request)
     {
-        //
+        $service = Service::find($request->id);
+        $service = new Service();
+        $service->service_name = $request->service_name;
+        $service->category_id = $request->category_service;
+        $service->service_extract = $request->service_extract;
+        $service->service_body = $request->service_body;
+        if ($request->service_photo) {
+            $base64_str = substr($request->service_photo, strpos($request->service_photo, ",")+1);
+            $image = base64_decode($base64_str);
+            $timestampName = microtime(true) . '.jpg';
+            $service->service_photo ='https://cloud.pacificode.co/services/'.$timestampName;
+            Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
+        }
+        $service->save();
+       
+        return response()->json(true, 200);
+
     }
 
     /**
