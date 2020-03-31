@@ -4,7 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class project extends Model
+class Project extends Model
 {
-    //
+  protected $table = 'projects';
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

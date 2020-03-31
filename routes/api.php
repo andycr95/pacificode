@@ -13,6 +13,49 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::post('/login', 'AuthController@login');
+
+Route::group(['middleware' => ['auth:api']], function () {
+    //login api
+    Route::post('/logout', 'AuthController@logout');
+
+    //User routes
+    Route::get('/user', 'UserController@getUsers');
+    Route::post('/user', 'UserController@store');
+    Route::get('/user/{id}', 'UserController@getUser');
+    Route::put('/user/{id}', 'UserController@update');
+    Route::put('/user/photo/{id}', 'UserController@updatePhoto');
+    Route::put('/user/photoport/{id}', 'UserController@updatePhotoPort');
+    Route::put('/user/desc/{id}', 'UserController@updateDesc');
+
+    //posts
+    Route::post('/post', 'PostController@store');
+
+    //project
+    Route::post('/project', 'ProjectController@store');
+
+     //service
+     Route::post('/service', 'ServiceController@store');
+
+});
+
+Route::group(['middleware' => ['api']], function () {
+
+    //tags
+    Route::get('/tags', 'TagController@getTags');
+
+    //posts
+    Route::get('/posts', 'PostController@getPosts');
+    Route::get('/post/{id}', 'PostController@getPost');
+
+     //services
+     Route::get('/services', 'ServiceController@getServices');
+     Route::get('/services/{id}', 'ServiceController@getServices');
+
+       //testimonios
+       Route::get('/testimonies', 'TestimonyController@gettestimonies');
+
+    //categories
+    Route::get('/categories', 'CategoryController@getCategories');
 });

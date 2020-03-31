@@ -57,7 +57,7 @@
                                         <li><a href="#">Our Leadership</a></li>
                                         <li><a href="#">Carrers</a></li>
                                         <li><a href="#">What We Do</a></li>
-                                        <li><a href="{{ route('admin')}}">Login</a></li>
+                                        <li><a href="{{ route('login')}}">Login</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="copyright">&copy; 2020 <a href="#">appway</a>. All rights reserved</div>
+                <div class="copyright">&copy; 2020 <a href="#">pacificode</a>. All rights reserved</div>
             </div>
         </div>
     </footer>

@@ -7,23 +7,23 @@
 
 <title>Pacificode</title>
 
-<!-- Fav Icon -->
-<link rel="icon" href="images/favicon-logo.ico" type="image/x-icon">
-<meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Mobile, iOS, Android, apple, creative app">
+    <!-- Fav Icon -->
+    <link rel="icon" href="images/favicon-logo.ico" type="image/x-icon">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Mobile, iOS, Android, apple, creative app">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
-<!-- Stylesheets -->
-<link href="css/font-awesome-all.css" rel="stylesheet">
-<link href="css/flaticon.css" rel="stylesheet">
-<link href="css/owl.css" rel="stylesheet">
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/jquery.fancybox.min.css" rel="stylesheet">
-<link href="css/animate.css" rel="stylesheet">
-<link href="css/imagebg.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link href="css/font-awesome-all.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/owl.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/imagebg.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 
 </head>
 
@@ -47,7 +47,9 @@
 <!-- page-title end -->
 
 <!--================Content Area =================-->
-@yield('content')
+<div class="container" id="pcoded">
+    @yield('content')
+</div>
 <!--================Content Area =================-->
 <!--================Footer Area =================-->
 @include('layouts.footer')
@@ -80,6 +82,7 @@
 <script src="js/jquery.paroller.min.js"></script>
 <script src="js/tilt.jquery.js"></script>
 <script src="js/isotope.js"></script>
+<script src="{{ asset('js/app.js') }}" defer></script>
 
 <!-- map script -->
 <script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
