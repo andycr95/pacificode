@@ -31,6 +31,8 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     //posts
     Route::post('/post', 'PostController@store');
+    Route::put('/post/{id}', 'PostController@update');
+    Route::delete('/post/{id}', 'PostController@destroy');
 
 });
 
@@ -45,4 +47,9 @@ Route::group(['middleware' => ['api']], function () {
 
     //categories
     Route::get('/categories', 'CategoryController@getCategories');
+
+    //Uploads
+    Route::group(['prefix' => 'upload'], function () {
+        Route::post('/images/post', 'UploadController@imagePost');
+    });
 });

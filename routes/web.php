@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $posts = App\Post::orderBy('created_at', 'desc')->limit(3)->select('post_photo', 'post_title','id', 'created_at')->get();
+    return view('welcome', compact('posts'));
 })->name('home');
 
 Route::get('/blogs', 'PostController@index')->name('blogs');

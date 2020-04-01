@@ -45,10 +45,10 @@ class PostController extends Controller
     {
         $post = new Post();
         $post->post_title = $request->post_title;
-        $post->category_id = $request->category_post;
         $post->post_extract = $request->post_extract;
         $post->user_id = $request->user_id;
         $post->post_body = $request->post_body;
+        $post->category_id = $request->category_post;
         if ($request->post_photo) {
             $base64_str = substr($request->post_photo, strpos($request->post_photo, ",")+1);
             $image = base64_decode($base64_str);
@@ -90,9 +90,28 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request)
     {
-        //
+        $post = Post::find($request->id);
+        $post->post_title = $request->post_title;
+        $post->post_extract = $request->post_extract;
+        $post->user_id = $request->user_id;
+        $post->post_body = $request->post_body;
+        if ($request->category_post) {
+            $post->category_id = $request->category_post;
+        }
+        if ($request->post_photo != $post->post_photo) {
+            $base64_str = substr($request->post_photo, strpos($request->post_photo, ",")+1);
+            $image = base64_decode($base64_str);
+            $timestampName = microtime(true) . '.jpg';
+            $post->post_photo ='https://cloud.pacificode.co/posts/'.$timestampName;
+            Storage::disk('do')->put('posts/'.$timestampName, $image, 'public');
+        }
+        $post->save();
+        if ($request->tags) {
+            $post->tags()->attach($request->tags);
+        }
+        return response()->json("Post actualizado", 200);
     }
 
     /**
@@ -101,8 +120,11 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Request $request)
     {
-        //
+        $post = Post::find($request->id);
+        $post->delete();
+        return response()->json("Post eliminado", 200);
+
     }
 }

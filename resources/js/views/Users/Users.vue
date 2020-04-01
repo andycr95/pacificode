@@ -204,8 +204,7 @@
                 facebook:null,
                 linkedin:null,
                 show: false,
-                es: es,
-                token: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMjViYTc3NDJlMmJiZGEwMTViMmM0YTljZDkyMmYwMjIwOTNlNTY2M2U5MWNjMjE5ZWQzOGFkMWNlNzYwYzA4OWUwZjNjMjhlNzIxZjc3YWIiLCJpYXQiOjE1ODUzNTc0MTAsIm5iZiI6MTU4NTM1NzQxMCwiZXhwIjoxNjE2ODkzNDEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.O8Wrh4gS1qj7MshyQFrintHbAt0Rv-y5F8niEWNjw_NZ7AF7bVnmg9f7zeHx4qIsZ0v0z5j_aDD68WqWyrzgLagwGYM12FWdZz4KVCxPbbqt08wRKKwjOTSRPjSvsjnMEhLSZcKdvrPIyub3JR161fYE918MQqoEjC01TPHxXcpVBC0c0i4mQ5jQJYotiCzjU6aUyolDSqkm99fKBY68ykkwe3To8_2oKZYrz9IZ9roYSyQdu62Qlz06iJmSqdHvKuxUnC9VXKVq8B3Xyo2UiteeagqFV0Nz-HKeI4xMEj2-fS4NqJBAHs2pU_YVnBPR3MNIzHY4-xjmR_DrkVpB7dozzXe6P9p3T18-TGlRB6egfBlmZWyjV36s3UvPAk43m4Gv8LSygB7Dqvgs8EqPcbcTL1pY8sHDIhzxmMB0Ot8vCd7NyK2ylMZfWOOe9hWBwYeEmdz13F2T7DO5g9zoZphon-A9WAGaXdWH1gHw8uShY7FRIq37gx_i2lHTzFAaguJmivPFHXBjOkkeB9J69_7mb-A0-DWHjaeMk7rRRgnpyiIHEiuq_PpEWzEoHt961eNW133N3vPMvqorpOJG6regdksEmT8RzxV4Uyr7mJj2PuRsbcGhf7EyjwHmJpDIvHbDBHYTjdNtBvZEZfoY-M-gHBO3mM6uw7nHUEL_J84'
+                es: es
             }
         },
         methods: {
