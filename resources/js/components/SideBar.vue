@@ -54,7 +54,7 @@
                             </router-link>
                         </li>
                         <li class="">
-                            <router-link :to="{name: 'newservices'}">
+                            <router-link :to="{name: 'newservice'}">
                                 <span class="pcoded-mtext">Nuevo servicios</span>
                             </router-link>
                         </li>

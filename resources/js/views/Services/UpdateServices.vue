@@ -10,8 +10,8 @@
                             <div class="col-lg-8">
                                 <div class="page-header-title">
                                     <div class="d-inline">
-                                        <h4>crear un nuevo servicio</h4>
-                                        <span>En esta sección se crearan los servicios</span>
+                                        <h4>actualizar la informacion de un nuevo servicio</h4>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -76,10 +76,10 @@
                                             </div>
                                         </div>
                                         <hr>
-
+                                       
                                     </div>
                                     <div style="padding: 0 5px 10px;">
-                                        <button type="button" style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;" @click="saveService" class="btn btn-primary btn-lg btn-block">Guardar servicio</button>
+                                        <button type="button" style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;" @click="updateService" class="btn btn-primary btn-lg btn-block">Guardar servicio</button>
                                     </div>
                                 </div>
                             </div>
@@ -101,8 +101,9 @@
             'b-select-option': BFormSelectOption
         },
         mounted() {
-
+           
             this.getCategories()
+            this.getService()
         },
         data(){
             return {
@@ -112,15 +113,36 @@
                 show_photo:false,
                 categories: [],
                 category_service:null,
+                 service_name:null,
                 service_extract:null,
-                service_name:null
+                service_title:null
             }
         },
         methods: {
-
+          
             getCategories(){
                 Axios.get('/api/categories').then(res =>{
                     this.categories = res.data
+                })
+            },
+            
+           async getService() {
+                await Axios.get("/api/service/"+this.$route.params.id).then(res =>{
+                   
+                    for (let index = 0; index < res.data.length; index++) {
+                        const element = res.data[index];
+
+                    this.service_name = element.service_name
+                    this.service_extract = element.service_extract
+                    this.service_photo = element.service_photo
+                    this.service_body = element.service_body
+                    this.category_id = element.category_id
+                    console.log(res)
+                        
+                    }
+                }).catch(err =>{
+                    console.log(err);
+                     
                 })
             },
             onImageChange(e){
@@ -136,7 +158,7 @@
                     reader.readAsDataURL(input.files[0]);
                 }
             },
-            async saveService(e) {
+            async updateService(e) {
                 let me =this;
                 let url = '/api/service' //Ruta que hemos creado para enviar una usuario y guardarlo
                 this.$v.$touch()
@@ -144,14 +166,19 @@
                     this.submitStatus = 'ERROR'
                 } else {
                     console.log(this.$session.get('Authorization'));
-                    Axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
-                    Axios.defaults.headers.post['Authorization'] = this.$session.get('Authorization');
-                    await Axios.post(url,{ //estas variables son las que enviaremos para que crear el usuario
+                   
+                    await Axios.put(url,{ //estas variables son las que enviaremos para queactualizar el servicio
                     'service_name':this.service_name,
                     'service_photo':this.service_photo,
                     'service_extract':this.service_extract,
                     'service_body':this.service_body,
                     'category_service':this.category_service,
+                    },{
+                        headers:{
+                           'Content-Type' : 'multipart/form-data',
+                           'Authorization' :this.$session.get('Authorization')
+
+                        }
                     }).then(function (res) {
                         console.log(res);
                     })
@@ -162,6 +189,7 @@
                 e.preventDefault();
 
             },
+
         },
         validations: {
 
