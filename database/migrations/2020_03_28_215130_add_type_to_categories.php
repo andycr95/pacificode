@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ModificColumsMaritialOfUsersTable extends Migration
+class AddTypeToCategories extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class ModificColumsMaritialOfUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('marital_status')->nullable();
+        Schema::table('categories', function (Blueprint $table) {
+            //
+            $table->enum('type', ['1', '0'])->default('0');
         });
     }
 
@@ -25,6 +26,9 @@ class ModificColumsMaritialOfUsersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('categories', function (Blueprint $table) {
+          
+            //
+        });
     }
 }

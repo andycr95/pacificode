@@ -8,7 +8,7 @@
 <title>Pacificode</title>
 
     <!-- Fav Icon -->
-    <link rel="icon" href="images/favicon-logo.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Mobile, iOS, Android, apple, creative app">
 
     <!-- Google Fonts -->

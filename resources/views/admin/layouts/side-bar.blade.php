@@ -93,6 +93,50 @@
                 </li>
             @endif
         </ul>
+        <ul class="pcoded-item pcoded-left-item">
+            @if (strpos(url()->current(), "admin/blogs"))
+                <li class="pcoded-hasmenu active pcoded-trigger">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="feather icon-message-square"></i></span>
+                        <span class="pcoded-mtext">Servicios</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="active">
+                            <a href="index-1.htm">
+                                <span class="pcoded-mtext">servicios</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="dashboard-crm.htm">
+                                <span class="pcoded-mtext">Nuevo servicio</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @else
+                <li class="pcoded-hasmenu">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="feather icon-message-square"></i></span>
+                        <span class="pcoded-mtext">Servicios</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="">
+                            <a href="index-1.htm">
+                                <span class="pcoded-mtext">servicios</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="dashboard-crm.htm">
+                                <span class="pcoded-mtext">Nuevo servicio</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+        </ul>
+
+       
+
     </div>
 </nav>
 
