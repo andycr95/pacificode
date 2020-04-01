@@ -164,8 +164,10 @@
                 this.$v.$touch()
                 if (this.$v.$invalid) {
                     this.submitStatus = 'ERROR'
+
                 } else {
-                    console.log(this.$session.get('Authorization'));
+                    
+                
                    
                     await Axios.put(url,{ //estas variables son las que enviaremos para queactualizar el servicio
                     'service_name':this.service_name,
@@ -175,7 +177,7 @@
                     'category_service':this.category_service,
                     },{
                         headers:{
-                           'Content-Type' : 'multipart/form-data',
+                           'Accept' : 'aplication/json',
                            'Authorization' :this.$session.get('Authorization')
 
                         }
@@ -187,6 +189,7 @@
                     });
                 }
                 e.preventDefault();
+
 
             },
 

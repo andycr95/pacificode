@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ServiceController extends Controller
 {
@@ -100,7 +101,6 @@ class ServiceController extends Controller
     public function updateService( Request $request)
 
     {
-        $service = service::find($request->get("id"));
 
         $service = Service::find($request->id);
         $service->service_name = $request->service_name;
@@ -116,12 +116,9 @@ class ServiceController extends Controller
         }
         $service->save();
         
-        $data = [
-            'service' => $service
-        ];
-        return $this->sendResponse($data, "service modificada correctamente");
        
         return response()->json(true, 200);
+        
 
     }
 

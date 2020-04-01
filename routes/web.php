@@ -33,3 +33,5 @@ Auth::routes();
 
 Route::get('/admin/{any?}', 'AdminController@index')->name('admin');
 Route::get('/admin/{any?}/{id}', 'AdminController@index')->name('admin');
+
+
