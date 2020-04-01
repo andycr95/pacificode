@@ -35,9 +35,9 @@ Route::group(['middleware' => ['auth:api']], function () {
     //project
     Route::post('/project', 'ProjectController@store');
 
-     //service
-     Route::post('/service', 'ServiceController@store');
-     Route::put('/service/{id}', 'ServiceController@updateService');
+    //service
+    Route::post('/service', 'ServiceController@store');
+    Route::put('/service/{id}', 'ServiceController@updateService');
 
 });
 
@@ -45,18 +45,22 @@ Route::group(['middleware' => ['api']], function () {
 
     //tags
     Route::get('/tags', 'TagController@getTags');
-    
+
 
     //posts
     Route::get('/posts', 'PostController@getPosts');
     Route::get('/post/{id}', 'PostController@getPost');
 
-     //services
-     Route::get('/services', 'ServiceController@getServices');
-     Route::get('/service/{id}', 'ServiceController@getService');
+    //services
+    Route::get('/services', 'ServiceController@getServices');
+    Route::get('/service/{id}', 'ServiceController@getService');
 
-       //testimonios
-       Route::get('/testimonies', 'TestimonyController@gettestimonies');
+    //projects
+    Route::get('/projects', 'ProjectController@getProjects');
+    Route::get('/project/{id}', 'ProjectController@getProject');
+
+    //testimonios
+    Route::get('/testimonies', 'TestimonyController@gettestimonies');
 
     //categories
     Route::get('/categories', 'CategoryController@getCategories');

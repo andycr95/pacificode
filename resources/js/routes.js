@@ -47,11 +47,6 @@ export default new Router({
             component: Services
         },
         {
-            name: 'newservice',
-            path: '/admin/services/create',
-            component: Services
-        },
-        {
             name: 'projects',
             path: '/admin/projects',
             component: Projects
@@ -71,7 +66,7 @@ export default new Router({
             path: '/admin/services/updateService/:id',
             component: UpdateServices
         },
-          {  
+          {
             name: 'newprojects',
             path: '/admin/projects/create',
             component: NewProjects

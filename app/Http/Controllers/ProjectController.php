@@ -13,6 +13,19 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function getProjects()
+     {
+         $projects = Project::all();
+         return response()->json($projects, 200);
+     }
+
+     public function getProject(Request $request)
+     {
+         $project = Project::where('id', $request->id)->get();
+         return response()->json($project, 200);
+     } 
+
     public function index()
     {
         return view('project.index');
