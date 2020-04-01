@@ -76,7 +76,7 @@
                                             </div>
                                         </div>
                                         <hr>
-                                       
+
                                     </div>
                                     <div style="padding: 0 5px 10px;">
                                         <button type="button" style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;" @click="saveService" class="btn btn-primary btn-lg btn-block">Guardar servicio</button>
@@ -101,7 +101,7 @@
             'b-select-option': BFormSelectOption
         },
         mounted() {
-           
+
             this.getCategories()
         },
         data(){
@@ -113,11 +113,11 @@
                 categories: [],
                 category_service:null,
                 service_extract:null,
-                service_title:null
+                service_name:null
             }
         },
         methods: {
-          
+
             getCategories(){
                 Axios.get('/api/categories').then(res =>{
                     this.categories = res.data

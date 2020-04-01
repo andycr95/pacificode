@@ -47,6 +47,11 @@ export default new Router({
             component: Services
         },
         {
+            name: 'newservice',
+            path: '/admin/services/create',
+            component: Services
+        },
+        {
             name: 'projects',
             path: '/admin/projects',
             component: Projects
