@@ -97,10 +97,12 @@ class ServiceController extends Controller
      * @param  \App\service  $service
      * @return \Illuminate\Http\Response
      */
-    public function updateService($id, Request $request)
+    public function updateService( Request $request)
+
     {
+        $service = service::find($request->get("id"));
+
         $service = Service::find($request->id);
-        $service = new Service();
         $service->service_name = $request->service_name;
         $service->category_id = $request->category_service;
         $service->service_extract = $request->service_extract;
@@ -113,6 +115,11 @@ class ServiceController extends Controller
             Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
         }
         $service->save();
+        
+        $data = [
+            'service' => $service
+        ];
+        return $this->sendResponse($data, "service modificada correctamente");
        
         return response()->json(true, 200);
 

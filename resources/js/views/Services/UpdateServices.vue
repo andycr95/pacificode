@@ -160,7 +160,7 @@
             },
             async updateService(e) {
                 let me =this;
-                let url = '/api/service' //Ruta que hemos creado para enviar una usuario y guardarlo
+                let url = '/api/service/'+this.$route.params.id //Ruta que hemos creado para enviar una usuario y guardarlo
                 this.$v.$touch()
                 if (this.$v.$invalid) {
                     this.submitStatus = 'ERROR'
