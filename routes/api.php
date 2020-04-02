@@ -42,6 +42,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     //service
     Route::post('/service', 'ServiceController@store');
     Route::put('/service/{id}', 'ServiceController@updateService');
+    Route::delete('/service/{id}', 'ServiceController@destroy');
 
 });
 
@@ -62,6 +63,10 @@ Route::group(['middleware' => ['api']], function () {
     //projects
     Route::get('/projects', 'ProjectController@getProjects');
     Route::get('/project/{id}', 'ProjectController@getProject');
+
+    //comments
+    Route::get('/comments/{id}', 'CommentController@getComments');
+    Route::post('/comment', 'CommentController@store');
 
     //testimonios
     Route::get('/testimonies', 'TestimonyController@gettestimonies');

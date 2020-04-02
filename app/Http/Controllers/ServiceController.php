@@ -30,7 +30,7 @@ class ServiceController extends Controller
 
     public function index()
     {
-        //
+        return view('service.index');
 
     }
 
@@ -61,11 +61,11 @@ class ServiceController extends Controller
             $base64_str = substr($request->service_photo, strpos($request->service_photo, ",")+1);
             $image = base64_decode($base64_str);
             $timestampName = microtime(true) . '.jpg';
-            $service->service_photo ='https://cloud.pacificode.co/services/'.$timestampName;
+            $service->service_photo ='https://cloud.pacificode.co/service/'.$timestampName;
             Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
         }
         $service->save();
-       
+
         return response()->json(true, 200);
     }
 
@@ -111,14 +111,14 @@ class ServiceController extends Controller
             $base64_str = substr($request->service_photo, strpos($request->service_photo, ",")+1);
             $image = base64_decode($base64_str);
             $timestampName = microtime(true) . '.jpg';
-            $service->service_photo ='https://cloud.pacificode.co/services/'.$timestampName;
-            Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
+            $service->service_photo ='https://cloud.pacificode.co/service/'.$timestampName;
+            Storage::disk('do')->put('service/'.$timestampName, $image, 'public');
         }
         $service->save();
-        
-       
+
+
         return response()->json(true, 200);
-        
+
 
     }
 
@@ -128,8 +128,10 @@ class ServiceController extends Controller
      * @param  \App\service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(service $service)
+    public function destroy(Request $request)
     {
-        //
+        $service = service::find($request->id);
+        $service->delete();
+        return response()->json("servicio eliminado", 200);
     }
 }

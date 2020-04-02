@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Pacificode</title>
+<title>@yield('meta-title', config('app.name'))</title>
+<meta name="description" content="@yield('meta-content', 'Empresa de Desarrollo de Software, Aplicaciones Móviles, Sistemas de Gestión a Medida, Gestión en la Nube. Ayudamos a EMPRENDEDORES a potenciar sus negocios con gran escalabilidad')">
 
 <!-- Fav Icon -->
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -32,7 +33,6 @@
     <div class="preloader"></div>
     <!-- preloader -->
 
-    <!-- main header -->
     <header class="main-header">
         <div class="outer-container">
             <div class="nav-box">
@@ -48,7 +48,6 @@
                         <figure class="logo"><a href="index.html"><img src="images/logo-2.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area pull-right">
-                        <!--Mobile Navigation Toggler-->
                         <div class="mobile-nav-toggler">
                             <i class="icon-bar"></i>
                             <i class="icon-bar"></i>
@@ -60,26 +59,19 @@
             </div>
         </div>
 
-        <!--sticky Header-->
         <div class="sticky-header">
             <div class="container clearfix">
                 <figure class="logo-box"><a href="index.html"><img src="images/small-logo.png" alt=""></a></figure>
                 <div class="menu-area">
                     <nav class="main-menu clearfix">
-                        <!--Keep This Empty / Menu will come through Javascript-->
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- main-header end -->
 
-    <!-- Mobile Menu  -->
     @include('layouts.mobile-menu')
-    <!-- End Mobile Menu -->
 
-
-    <!-- banner-section -->
     <section class="banner-style-two">
         <div class="anim-icons">
             <div class="icon icon-1"></div>
@@ -106,10 +98,7 @@
             </div>
         </div>
     </section>
-    <!-- banner-section end -->
 
-
-    <!-- feature-section -->
     <section class="feature-section">
         <div class="container">
             <div class="row">
@@ -169,10 +158,7 @@
             </div>
         </div>
     </section>
-    <!-- feature-section -->
 
-
-    <!-- feature-style-three -->
     <section class="feature-style-three">
         <div class="container">
             <div class="inner-container">
@@ -224,10 +210,7 @@
             </div>
         </div>
     </section>
-    <!-- feature-style-three -->
 
-
-    <!-- testimonial-section -->
     <section class="testimonial-section centred">
         <div class="image-layer" style="background-image: url(images/icons/testimonial-bg.png);"></div>
         <div class="container">
@@ -255,10 +238,7 @@
             </div>
         </div>
     </section>
-    <!-- testimonial-section end -->
 
-
-    <!-- download-section -->
     <section class="download-section">
         <div class="bg-layer wow slideInLeft animated" style="background-image: url(images/icons/shap-3.png);"></div>
         <div class="container">
@@ -293,10 +273,7 @@
             </div>
         </div>
     </section>
-    <!-- download-section end -->
 
-
-    <!-- news-section -->
     <section class="news-section">
         <div class="container">
             <div class="sec-title center">
@@ -308,11 +285,11 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 news-column">
                         <div class="news-block-one wow flipInY animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <figure class="image-box"><a href="{{ route('blog', 'id='.$post->id)}}"><img style="width: 100%; height: 270px;" src="{{$post->post_photo}}" alt=""></a></figure>
+                                <figure class="image-box"><a href="{{ route('blog', $post->id)}}"><img style="width: 100%; height: 270px;" src="{{$post->post_photo}}" alt=""></a></figure>
                                 <div class="lower-content">
                                     <div class="post-date"><i class="fas fa-calendar-alt"></i>{{ $post->created_at->diffForHumans() }}</div>
-                                <h3><a href="{{ route('blog', 'id='.$post->id)}}">{{ $post->post_title }}</a></h3>
-                                    <div class="link-btn"><a href="{{ route('blog', 'id='.$post->id)}}">Leer más</a></div>
+                                <h3><a href="{{ route('blog', $post->id)}}">{{ $post->post_title }}</a></h3>
+                                    <div class="link-btn"><a href="{{ route('blog',$post->id)}}">Leer más</a></div>
                                 </div>
                             </div>
                         </div>
@@ -321,117 +298,30 @@
             </div>
         </div>
     </section>
-    <!-- news-section end -->
-
 
     @include('components.news_letter')
 
-
-    <!-- main-footer -->
     @include('layouts.footer')
-    <!-- main-footer end -->
-    <!--
-    <footer class="main-footer">
-        <div class="image-layer" style="background-image: url(images/icons/footer-bg.png);"></div>
-        <div class="container">
-            <div class="footer-top">
-                <div class="widget-section">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                            <div class="about-widget footer-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="images/footer-logo.png" alt=""></a></figure>
-                                <div class="text">Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim lorem sed do eiusmod.</div>
-                                <ul class="social-links">
-                                    <li><h6>Follow Us :</h6></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-skype"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="links-widget footer-widget">
-                                <h4 class="widget-title">Support</h4>
-                                <div class="widget-content">
-                                    <ul class="list clearfix">
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Submit a Ticket</a></li>
-                                        <li><a href="#">Visit Knowledge Base</a></li>
-                                        <li><a href="#">Support System</a></li>
-                                        <li><a href="#">Refund Policy</a></li>
-                                        <li><a href="#">Professional Services</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
-                            <div class="links-widget footer-widget">
-                                <h4 class="widget-title">Links</h4>
-                                <div class="widget-content">
-                                    <ul class="list clearfix">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Price Plan</a></li>
-                                        <li><a href="#">Testimonials</a></li>
-                                        <li><a href="#">News</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="contact-widget footer-widget">
-                                <h4 class="widget-title">Contact Info</h4>
-                                <div class="widget-content">
-                                    <ul class="list clearfix">
-                                        <li><i class="fas fa-map-marker-alt"></i>25 Bedford St.<br />New York City, N.Y.</li>
-                                        <li>
-                                            <i class="fas fa-phone-volume"></i>
-                                            <a href="tel:+0665184575181">(+066) 518 - 457 - 5181</a><br />
-                                            <a href="tel:+0665184575182">(+066) 518 - 457 - 5182</a>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-envelope"></i>
-                                            <a href="mailto:info@example.com">info@example.com</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="copyright">&copy; 2020 <a href="#">appway</a>. All rights reserved</div>
-            </div>
-        </div>
-    </footer>
-    -->
-    <!-- main-footer end -->
+
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-arrow-up"></span>
+    </button>
 
 
+    <!-- jequery plugins -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/scrollbar.js"></script>
+    <script src="js/tilt.jquery.js"></script>
 
-<!--Scroll to top-->
-<button class="scroll-top scroll-to-target" data-target="html">
-    <span class="fa fa-arrow-up"></span>
-</button>
-
-
-<!-- jequery plugins -->
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/validation.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/scrollbar.js"></script>
-<script src="js/tilt.jquery.js"></script>
-
-<!-- main-js -->
-<script src="js/script.js"></script>
+    <!-- main-js -->
+    <script src="js/script.js"></script>
 
 </body><!-- End of .page_wrapper -->
 </html>

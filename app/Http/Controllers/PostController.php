@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Category;
+use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,9 +15,29 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('blog.index');
+        if ($request->tag) {
+            $tag = Tag::find($request->tag);
+            $posts = $tag->posts()->paginate(3);
+            $categories = Category::all();
+            $tags = Tag::all();
+            $last_posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
+            return view('blog.index', compact('posts', 'categories', 'last_posts', 'tags', 'tag'));
+        } elseif ($request->category) {
+            $category = Category::find($request->category);
+            $posts = $category->posts()->paginate(3);
+            $categories = Category::all();
+            $tags = Tag::all();
+            $last_posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
+            return view('blog.index', compact('posts', 'categories', 'last_posts', 'tags', 'category'));
+        } else {
+            $posts = Post::orderBy('created_at', 'desc')->with('tags', 'category', 'user')->paginate(3);
+            $categories = Category::all();
+            $tags = Tag::all();
+            $last_posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
+            return view('blog.index', compact('posts', 'categories', 'last_posts', 'tags'));
+        }
     }
 
     /**
@@ -67,9 +89,13 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Request $request)
     {
-        return view('blog.detail');
+        $post = Post::find($request->id);
+        $categories = Category::all();
+        $tags = Tag::all();
+        $last_posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
+        return view('blog.detail', compact('post', 'categories', 'tags', 'last_posts'));
     }
 
     /**

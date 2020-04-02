@@ -1,5 +1,8 @@
 @extends('layouts.layout')
 
+@section('meta-title')
+Pacificode | Nosotros
+@endsection
 
   @section('name_page')
   <div class="content-box clearfix">

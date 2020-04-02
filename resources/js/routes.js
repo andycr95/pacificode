@@ -13,8 +13,6 @@ import UpdateProject from "./views/Projects/UpdateProject.vue";
 import Vue from "vue";
 import Router from "vue-router";
 
-Vue.use(Router);
-
 export default new Router({
     routes: [
         {
@@ -79,9 +77,9 @@ export default new Router({
             component: NewProjects
         },
         {
-          name: "updateproject",
-          path: "/admin/projects/:id",
-          component: UpdateProject
+            name: "updateproject",
+            path: "/admin/projects/:id",
+            component: UpdateProject
         }
     ],
     linkExactActiveClass: "active",
