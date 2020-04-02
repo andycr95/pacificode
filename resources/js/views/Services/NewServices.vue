@@ -108,7 +108,7 @@
         data(){
             return {
                 editor: ClassicEditor,
-                service_body: '',
+                service_body: null,
                 service_photo:null,
                 show_photo:false,
                 categories: [],
@@ -131,7 +131,7 @@
                     let vm = this;
                     reader.onload = e => {
                         this.previewImageUrl = e.target.result;
-                        vm.post_photo = e.target.result;
+                        vm.service_photo = e.target.result;
                         vm.show_photo = true;
                     }
                     reader.readAsDataURL(input.files[0]);
