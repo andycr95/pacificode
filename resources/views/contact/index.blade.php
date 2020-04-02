@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('meta-title')
+Pacificode | Contacto
+@endsection
+
 @section('name_page')
     <div class="content-box clearfix">
         <div class="title-box pull-left">
@@ -26,9 +30,9 @@
                                     <figure class="icon-box"><img src="images/icons/info-icon-1.png" alt=""></figure>
                                     <h2>Celular</h2>
                                     <div class="text">llamamos desde cualquier parte del Mundo ✆</div>
-                                    
+
                                     <div class="phone"><a href="tel:3128978597">(+57)312 - 897 - 8597</a></div>
-                                   
+
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 info-column">
@@ -41,10 +45,10 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                                 <div class="single-info-box">
-                                  
-                                   <figure class="icon-box"><img src="images/icons/info-icon-3.png" alt=""></figure> 
+
+                                   <figure class="icon-box"><img src="images/icons/info-icon-3.png" alt=""></figure>
                                     <h2>Direccion</h2>
-                                    <div class="text">Nuestra sede principal está ubicada en Buenaventura - 
+                                    <div class="text">Nuestra sede principal está ubicada en Buenaventura -
                                         Valle del Cauca pero ofrecemos servicios a nivel de todo el país.</div>
                                     <div class="phone"><a href="#">Ver en  Google map</a></div>
                                 </div>
@@ -55,13 +59,13 @@
                     <!--       <figure class="image-box"><img src="images/resource/contact-1.png" alt=""></figure>   -->
                     </div>
                     <div class="contact-form-area">
-                        <div class="sec-title center"><h2>Si desea conocer más acerca de nuestros servicios y/o 
+                        <div class="sec-title center"><h2>Si desea conocer más acerca de nuestros servicios y/o
                             opciones de contratación puede escribirnos a través de este formulario.</h2></div>
-                        
-                        
+
+
                         <div class="form-inner">
                             <form method="post" action="{{route('createContact')}}"  class="default-form">
-                                @csrf 
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 col-sm-12 column">
                                         <div class="form-group">

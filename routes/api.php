@@ -64,6 +64,10 @@ Route::group(['middleware' => ['api']], function () {
     Route::get('/projects', 'ProjectController@getProjects');
     Route::get('/project/{id}', 'ProjectController@getProject');
 
+    //comments
+    Route::get('/comments/{id}', 'CommentController@getComments');
+    Route::post('/comment', 'CommentController@store');
+
     //testimonios
     Route::get('/testimonies', 'TestimonyController@gettestimonies');
 
