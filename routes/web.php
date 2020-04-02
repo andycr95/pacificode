@@ -16,9 +16,6 @@ Route::get('/', function () {
     return view('welcome', compact('posts'));
 })->name('home');
 
-Route::get('/blogs', 'PostController@index')->name('blogs');
-Route::get('/blog', 'PostController@show')->name('blog');
-
 Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact', 'ContactController@store')->name('createContact');
 
@@ -27,7 +24,7 @@ Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
 
 Route::get('/about', 'AboutController@index')->name('about');
 
-Route::get('/service', 'SeviceController@index')->name('service');
+Route::get('/service', 'ServiceController@index')->name('service');
 
 Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripcion');
 Auth::routes();
@@ -35,4 +32,6 @@ Auth::routes();
 Route::get('/admin/{any?}', 'AdminController@index')->name('admin');
 Route::get('/admin/{any?}/{id}', 'AdminController@index')->name('admin');
 
+Route::get('/blogs', 'PostController@index')->name('blogs');
+Route::get('/blogs/{id}', 'PostController@show')->name('blog');
 

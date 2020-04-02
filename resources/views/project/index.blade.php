@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('meta-title')
+Pacificode | Portafolio
+@endsection
+
 @section('name_page')
 
       <div class="content-box clearfix">

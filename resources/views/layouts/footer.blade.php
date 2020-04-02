@@ -1,13 +1,13 @@
     <!-- main-footer -->
     <footer class="main-footer">
-        <div class="image-layer" style="background-image: url(images/icons/footer-bg.png);"></div>
+        <div class="image-layer" style="background-image: url(/images/icons/footer-bg.png);"></div>
         <div class="container">
             <div class="footer-top">
                 <div class="widget-section">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="about-widget footer-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="images/footer-logo.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index.html"><img src="/images/footer-logo.png" alt=""></a></figure>
                                 <div class="text">Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim lorem sed do eiusmod.</div>
                                 <ul class="social-links">
                                     <li><h6>Follow Us :</h6></li>

@@ -2,21 +2,18 @@ window.Vue = require("vue");
 
 Vue.component("sidebar-component", require("./components/SideBar.vue").default);
 Vue.component(
-    "posts-component",
-    require("./components/PostsComponent.vue").default
-);
-Vue.component(
-    "post-detail-component",
-    require("./components/PostDetailComponent.vue").default
+    "comments-component",
+    require("./components/Comments.vue").default
 );
 
-import router from "./routes";
+import { routes } from "./routes";
 import Vuelidate from "vuelidate";
 import { ModalPlugin } from "bootstrap-vue";
 import CKEditor from "@ckeditor/ckeditor5-vue";
 import vSelect from "vue-select";
 import VueSession from "vue-session";
 import VuejsDialog from "vuejs-dialog";
+import VueRouter from "vue-router";
 import "vuejs-dialog/dist/vuejs-dialog.min.css";
 
 Vue.component("v-select", vSelect);
@@ -25,6 +22,12 @@ Vue.use(Vuelidate);
 Vue.use(ModalPlugin);
 Vue.use(VueSession);
 Vue.use(VuejsDialog);
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    mode: "history",
+    routes
+});
 
 const app = new Vue({
     el: "#pcoded",

@@ -24,7 +24,7 @@ class ProjectController extends Controller
      {
          $project = Project::where('id', $request->id)->get();
          return response()->json($project, 200);
-     } 
+     }
 
     public function index()
     {
@@ -59,7 +59,7 @@ class ProjectController extends Controller
           $base64_str = substr($request->project_photo, strpos($request->project_photo, ",")+1);
           $image = base64_decode($base64_str);
           $timestampName = microtime(true) . '.jpg';
-          $project->project_photo ='https://cloud.pacificode.co/posts/'.$timestampName;
+          $project->project_photo ='https://cloud.pacificode.co/projects/'.$timestampName;
           Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
       }
       $project->category_id = $request->project_category;

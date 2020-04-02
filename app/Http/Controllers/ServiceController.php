@@ -30,7 +30,7 @@ class ServiceController extends Controller
 
     public function index()
     {
-        //
+        return view('service.index');
 
     }
 
@@ -65,7 +65,7 @@ class ServiceController extends Controller
             Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
         }
         $service->save();
-       
+
         return response()->json(true, 200);
     }
 
@@ -115,10 +115,10 @@ class ServiceController extends Controller
             Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
         }
         $service->save();
-        
-       
+
+
         return response()->json(true, 200);
-        
+
 
     }
 

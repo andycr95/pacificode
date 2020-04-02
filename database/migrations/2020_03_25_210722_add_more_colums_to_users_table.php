@@ -16,7 +16,7 @@ class AddMoreColumsToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->date('birth_date')->nullable();
             $table->string('position');
-            $table->enum('marital_status', ['1', '0'])->default('1');
+            $table->string('marital_status')->nullable();
             $table->string('address');
             $table->string('phone');
             $table->string('twitter')->nullable();
