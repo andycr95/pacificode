@@ -9,67 +9,79 @@ import Post from "./views/Posts/UpdatePost.vue";
 import NewPosts from "./views/Posts/NewPost.vue";
 import Projects from "./views/Projects/Projects.vue";
 import NewProjects from "./views/Projects/NewProject.vue";
+import UpdateProject from "./views/Projects/UpdateProject.vue";
+import Vue from "vue";
+import Router from "vue-router";
 
-export const routes = [
-    {
-        name: "home",
-        path: "/admin",
-        component: admin
-    },
+export default new Router({
+    routes: [
+        {
+            name: "home",
+            path: "/admin",
+            component: admin
+        },
 
-    {
-        name: "users",
-        path: "/admin/users",
-        component: Users
-    },
-    {
-        path: "/admin/user/:id",
-        name: "user",
-        component: Profile
-    },
-    {
-        name: "posts",
-        path: "/admin/posts",
-        component: Posts
-    },
-    {
-        name: "newpost",
-        path: "/admin/posts/create",
-        component: NewPosts
-    },
-    {
-        name: "updatepost",
-        path: "/admin/post/:id",
-        component: Post
-    },
-    {
-        name: "services",
-        path: "/admin/services",
-        component: Services
-    },
-    {
-        name: "projects",
-        path: "/admin/projects",
-        component: Projects
-    },
-    {
-        name: "newpost",
-        path: "/admin/posts/create",
-        component: NewPosts
-    },
-    {
-        name: "newservice",
-        path: "/admin/services/create",
-        component: NewServices
-    },
-    {
-        name: "updateservice",
-        path: "/admin/services/updateService/:id",
-        component: UpdateServices
-    },
-    {
-        name: "newprojects",
-        path: "/admin/projects/create",
-        component: NewProjects
-    }
-];
+        {
+            name: "users",
+            path: "/admin/users",
+            component: Users
+        },
+        {
+            path: "/admin/user/:id",
+            name: "user",
+            component: Profile
+        },
+        {
+            name: "posts",
+            path: "/admin/posts",
+            component: Posts
+        },
+        {
+            name: "newpost",
+            path: "/admin/posts/create",
+            component: NewPosts
+        },
+        {
+            name: "updatepost",
+            path: "/admin/post/:id",
+            component: Post
+        },
+        {
+            name: "services",
+            path: "/admin/services",
+            component: Services
+        },
+        {
+            name: "projects",
+            path: "/admin/projects",
+            component: Projects
+        },
+        {
+            name: "newpost",
+            path: "/admin/posts/create",
+            component: NewPosts
+        },
+        {
+            name: "newservice",
+            path: "/admin/services/create",
+            component: NewServices
+        },
+        {
+            name: "updateservice",
+            path: "/admin/services/updateService/:id",
+            component: UpdateServices
+        },
+        {
+            name: "newprojects",
+            path: "/admin/projects/create",
+            component: NewProjects
+        },
+        {
+            name: "updateproject",
+            path: "/admin/projects/:id",
+            component: UpdateProject
+        }
+    ],
+    linkExactActiveClass: "active",
+    mode: "history"
+});
