@@ -9,6 +9,7 @@ import Post from "./views/Posts/UpdatePost.vue";
 import NewPosts from "./views/Posts/NewPost.vue";
 import Projects from "./views/Projects/Projects.vue";
 import NewProjects from "./views/Projects/NewProject.vue";
+import UpdateProject from "./views/Projects/UpdateProject.vue";
 import Vue from "vue";
 import Router from "vue-router";
 
@@ -76,6 +77,11 @@ export default new Router({
             name: "newprojects",
             path: "/admin/projects/create",
             component: NewProjects
+        },
+        {
+          name: "updateproject",
+          path: "/admin/projects/:id",
+          component: UpdateProject
         }
     ],
     linkExactActiveClass: "active",
