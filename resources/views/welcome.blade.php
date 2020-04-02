@@ -304,42 +304,20 @@
                 <p>En esta sección podrás encontrar las últimas noticias y eventos <br />sobre tecnología.</p>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 news-column">
-                    <div class="news-block-one wow flipInY animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-single.html"><img src="images/resource/news-1.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <div class="post-date"><i class="fas fa-calendar-alt"></i>January 11, 2019</div>
-                                <h3><a href="blog-single.html">Design your apps in your own way Business Startegies</a></h3>
-                                <div class="link-btn"><a href="blog-single.html">Read More</a></div>
+                @foreach ($posts as $post)
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-column">
+                        <div class="news-block-one wow flipInY animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box"><a href="{{ route('blog', 'id='.$post->id)}}"><img style="width: 100%; height: 270px;" src="{{$post->post_photo}}" alt=""></a></figure>
+                                <div class="lower-content">
+                                    <div class="post-date"><i class="fas fa-calendar-alt"></i>{{ $post->created_at->diffForHumans() }}</div>
+                                <h3><a href="{{ route('blog', 'id='.$post->id)}}">{{ $post->post_title }}</a></h3>
+                                    <div class="link-btn"><a href="{{ route('blog', 'id='.$post->id)}}">Leer más</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-column">
-                    <div class="news-block-one wow flipInY animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-single.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <div class="post-date"><i class="fas fa-calendar-alt"></i>January 10, 2019</div>
-                                <h3><a href="blog-single.html">We support our user every time and upgarad our app.</a></h3>
-                                <div class="link-btn"><a href="blog-single.html">Read More</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-column">
-                    <div class="news-block-one wow flipInY animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-single.html"><img src="images/resource/news-3.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <div class="post-date"><i class="fas fa-calendar-alt"></i>January 09, 2019</div>
-                                <h3><a href="blog-single.html">We developed the app for our customer to easy to use it.</a></h3>
-                                <div class="link-btn"><a href="blog-single.html">Read More</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

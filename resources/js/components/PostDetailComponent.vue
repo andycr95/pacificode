@@ -7,9 +7,9 @@
                         <figure class="image-box"><img :src="post.post_photo" alt=""></figure>
                         <div class="inner-box">
                             <div class="upper-box">
-                                <div class="post-date"><i class="fas fa-calendar-alt"></i>January 09, 2019</div>
+                                <div class="post-date"><i class="fas fa-calendar-alt"></i>{{post.created_at}}</div>
                                 <h3>{{post.post_title}}</h3>
-                                <div class="text">{{post.post_body}}</div>
+                                <div class="text" v-html="post.post_body"></div>
                             </div>
                             <div class="lower-box clearfix">
                                 <div class="left-content pull-left">

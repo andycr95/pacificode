@@ -13,6 +13,19 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function getProjects()
+     {
+         $projects = Project::all();
+         return response()->json($projects, 200);
+     }
+
+     public function getProject(Request $request)
+     {
+         $project = Project::where('id', $request->id)->get();
+         return response()->json($project, 200);
+     }
+
     public function index()
     {
         return view('project.index');
@@ -46,7 +59,7 @@ class ProjectController extends Controller
           $base64_str = substr($request->project_photo, strpos($request->project_photo, ",")+1);
           $image = base64_decode($base64_str);
           $timestampName = microtime(true) . '.jpg';
-          $project->project_photo ='https://cloud.pacificode.co/posts/'.$timestampName;
+          $project->project_photo ='https://cloud.pacificode.co/projects/'.$timestampName;
           Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
       }
       $project->category_id = $request->project_category;
@@ -86,7 +99,27 @@ class ProjectController extends Controller
      */
     public function update(Request $request, project $project)
     {
-        //
+      $project = Project::find($request->id);
+      $project->project_title = $request->project_title;
+      $project->project_customer = $request->project_customer;
+      $project->project_autor = $request->project_autor;
+      $project->project_link = $request->project_link;
+      $project->project_extract = $request->project_extract;
+      if ($request->project_category) {
+          $project->category_id = $request->project_category;
+      }
+      if ($request->project_photo != $project->project_photo) {
+          $base64_str = substr($request->project_photo, strpos($request->project_photo, ",")+1);
+          $image = base64_decode($base64_str);
+          $timestampName = microtime(true) . '.jpg';
+          $project->project_photo ='https://cloud.pacificode.co/projects/'.$timestampName;
+          Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
+      }
+      $project->save();
+      if ($request->tags) {
+          $project->tags()->attach($request->tags);
+      }
+      return response()->json("Project actualizado", 200);
     }
 
     /**
@@ -95,8 +128,10 @@ class ProjectController extends Controller
      * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Project $project)
+    public function destroy(Request $request)
     {
-        //
+      $project = Project::find($request->id);
+      $project->delete();
+      return response()->json("Proyecto eliminado", 200);
     }
 }

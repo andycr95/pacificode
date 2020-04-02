@@ -11,7 +11,7 @@
                                 <div class="page-header-title">
                                     <div class="d-inline">
                                         <h4>actualizar la informacion de un nuevo servicio</h4>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                             </div>
                                         </div>
                                         <hr>
-                                       
+
                                     </div>
                                     <div style="padding: 0 5px 10px;">
                                         <button type="button" style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;" @click="updateService" class="btn btn-primary btn-lg btn-block">Guardar servicio</button>
@@ -101,7 +101,7 @@
             'b-select-option': BFormSelectOption
         },
         mounted() {
-           
+
             this.getCategories()
             this.getService()
         },
@@ -119,16 +119,16 @@
             }
         },
         methods: {
-          
+
             getCategories(){
                 Axios.get('/api/categories').then(res =>{
                     this.categories = res.data
                 })
             },
-            
+
            async getService() {
                 await Axios.get("/api/service/"+this.$route.params.id).then(res =>{
-                   
+
                     for (let index = 0; index < res.data.length; index++) {
                         const element = res.data[index];
 
@@ -136,13 +136,13 @@
                     this.service_extract = element.service_extract
                     this.service_photo = element.service_photo
                     this.service_body = element.service_body
-                    this.category_id = element.category_id
+                    this.category_service = element.category_id
                     console.log(res)
-                        
+
                     }
                 }).catch(err =>{
                     console.log(err);
-                     
+
                 })
             },
             onImageChange(e){
@@ -160,13 +160,15 @@
             },
             async updateService(e) {
                 let me =this;
-                let url = '/api/service' //Ruta que hemos creado para enviar una usuario y guardarlo
+                let url = '/api/service/'+this.$route.params.id //Ruta que hemos creado para enviar una usuario y guardarlo
                 this.$v.$touch()
                 if (this.$v.$invalid) {
                     this.submitStatus = 'ERROR'
+
                 } else {
-                    console.log(this.$session.get('Authorization'));
-                   
+
+
+
                     await Axios.put(url,{ //estas variables son las que enviaremos para queactualizar el servicio
                     'service_name':this.service_name,
                     'service_photo':this.service_photo,
@@ -175,7 +177,7 @@
                     'category_service':this.category_service,
                     },{
                         headers:{
-                           'Content-Type' : 'multipart/form-data',
+                           'Accept' : 'aplication/json',
                            'Authorization' :this.$session.get('Authorization')
 
                         }
@@ -187,6 +189,7 @@
                     });
                 }
                 e.preventDefault();
+
 
             },
 
