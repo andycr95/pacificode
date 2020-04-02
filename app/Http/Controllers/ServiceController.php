@@ -128,8 +128,10 @@ class ServiceController extends Controller
      * @param  \App\service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(service $service)
+    public function destroy(Request $request)
     {
-        //
+        $service = service::find($request->id);
+        $service->delete();
+        return response()->json("servicio eliminado", 200);
     }
 }
