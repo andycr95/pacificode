@@ -16,6 +16,8 @@ Route::get('/', function () {
     return view('welcome', compact('posts'));
 })->name('home');
 
+
+
 Route::get('/about', 'AboutController@index')->name('about');
 Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripcion');
 
