@@ -1,28 +1,33 @@
 @extends('layouts.layout')
 
-@section('name_page')
-    <div class="content-box clearfix">
-        <div class="title-box pull-left">
-            <h1>Contact Us</h1>
-            <p>Reach out to the world’s most reliable IT services.</p>
-        </div>
-        <ul class="bread-crumb pull-right">
-            <li>Contact Us</li>
-            <li><a href="index.html">Home</a></li>
-        </ul>
-    </div>
+@section('meta-title')
+Pacificode | Servicio
 @endsection
 
-@section('content')
+  @section('name_page')
+  <div class="content-box clearfix">
+                <div class="title-box pull-left">
+                    <h1>SERVICIOS</h1>
+                    <p>Software a la medida de tu empresa.</p>
+                </div>
+                <ul class="bread-crumb pull-right">
+                    <li>SERVICIOS</li>
+                    <li><a href="index.html">INICIO</a></li>
+                </ul>
+            </div>
+
+  @endsection
+
+  @section('content')
 
  <!-- Mobile Menu  -->
-    <div class="mobile-menu">
+    <!--<div class="mobile-menu">
         <div class="menu-backdrop"></div>
         <div class="close-btn"><i class="fas fa-times"></i></div>
         
         <nav class="menu-box">
             <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            <div class="menu-outer"></div>
             <div class="contact-info">
                 <h4>Contact Info</h4>
                 <ul>
@@ -41,25 +46,7 @@
                 </ul>
             </div>
         </nav>
-    </div><!-- End Mobile Menu -->
-
-
-    <!-- page-title -->
-    <section class="page-title style-two">
-        <div class="container">
-            <div class="content-box clearfix">
-                <div class="title-box pull-left">
-                    <h1>SERVICIOS</h1>
-                    <p>Software a la medida de tu empresa.</p>
-                </div>
-                <ul class="bread-crumb pull-right">
-                    <li>Element</li>
-                    <li><a href="index.html">Home</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- page-title end -->
+    </div> -->   <!-- End Mobile Menu -->
 
 
     <!-- service-section -->
@@ -127,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-               <!-- <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="col-lg-4 col-md-6 col-sm-12 service-block">
                     <div class="service-block-one wow flipInY animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="inner-box">
                             <div class="bg-layer" style="background-image: url(images/icons/shap-5.png);"></div>
@@ -139,7 +126,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section> 
     <!-- service-section end -->
 
 

@@ -6,7 +6,7 @@ Vue.component(
     require("./components/Comments.vue").default
 );
 
-import { routes } from "./routes";
+import router from "./routes";
 import Vuelidate from "vuelidate";
 import { ModalPlugin } from "bootstrap-vue";
 import CKEditor from "@ckeditor/ckeditor5-vue";
@@ -24,10 +24,7 @@ Vue.use(VueSession);
 Vue.use(VuejsDialog);
 Vue.use(VueRouter);
 
-const router = new VueRouter({
-    mode: "history",
-    routes
-});
+
 
 const app = new Vue({
     el: "#pcoded",

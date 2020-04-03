@@ -11,8 +11,8 @@ Pacificode | Nosotros
                     <p>Pacificode te ofrece tener un sitio web o App unico a la medida.</p>
                 </div>
                 <ul class="bread-crumb pull-right">
-                    <li>About</li>
-                    <li><a href="index.html">Home</a></li>
+                    <li>NOSOTROS</li>
+                    <li><a href="index.html">INICIO</a></li>
                 </ul>
             </div>
 
