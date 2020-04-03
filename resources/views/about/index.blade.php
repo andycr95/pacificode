@@ -11,8 +11,8 @@ Pacificode | Nosotros
                     <p>Pacificode te ofrece tener un sitio web o App unico a la medida.</p>
                 </div>
                 <ul class="bread-crumb pull-right">
-                    <li>About</li>
-                    <li><a href="index.html">Home</a></li>
+                    <li>NOSOTROS</li>
+                    <li><a href="index.html">INICIO</a></li>
                 </ul>
             </div>
 
@@ -82,7 +82,9 @@ Pacificode | Nosotros
                         <div class="content-box wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="sec-title"><h2>VISIÓN</h2></div>
                             <div class="text">
-                             <P>Queremos estar comprometidos con los problemas de nuestros clientes de forma transparente y eficaz para convertirnos en su socio de confianza. En nuestra visión queremos ser una empresa de referencia, que camina con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de los estándares y tecnologías libres. Esta labor se debe desempeñar de forma ética y satisfactoria para nosotros, nuestros clientes y el resto de la sociedad.</P>
+
+                             <P>Estamos plenamente comprometidos con las necesidades de nuestros clientes generándoles total confianza. Nuestro mayor interés es ser dignamente referenciados, en aras del aprovechamiento de las nuevas tecnologías nos encaminamos a conocer la sociedad versátil, homogénea aplicando la ética profesional que es la base de nuestros servicios, es placentero para nosotros saber que nuestros clientes se sienten satisfechos con nuestros servicios.</P>
+                           
 
                            </div>
 
@@ -99,7 +101,7 @@ Pacificode | Nosotros
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-4.png" alt="">
+                                <img src="images/resource/edward2.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -118,7 +120,7 @@ Pacificode | Nosotros
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-5.png" alt="">
+                                <img src="images/resource/richard.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -137,7 +139,7 @@ Pacificode | Nosotros
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-6.png" alt="">
+                                <img src="images/resource/henry.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -156,7 +158,7 @@ Pacificode | Nosotros
                     <div class="team-block-three">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="images/resource/team-7.png" alt="">
+                                <img src="images/resource/andy.jpg" alt="">
                                 <ul class="social-links clearfix">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
