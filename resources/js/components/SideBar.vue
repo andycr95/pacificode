@@ -58,6 +58,11 @@
                                 <span class="pcoded-mtext">Nuevo servicios</span>
                             </router-link>
                         </li>
+                         <li class="">
+                            <router-link :to="{name: 'servicefeatures'}">
+                                <span class="pcoded-mtext">caracteristicas del servicio</span>
+                            </router-link>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -10,6 +10,7 @@ import NewPosts from "./views/Posts/NewPost.vue";
 import Projects from "./views/Projects/Projects.vue";
 import NewProjects from "./views/Projects/NewProject.vue";
 import UpdateProject from "./views/Projects/UpdateProject.vue";
+import FeatureService from "./views/Services/FeatureService.vue";
 import Vue from "vue";
 import Router from "vue-router";
 
@@ -80,6 +81,11 @@ export default new Router({
             name: "updateproject",
             path: "/admin/projects/:id",
             component: UpdateProject
+        },
+        {
+            name: "servicefeatures",
+            path: "/admin/service_features/create",
+            component: FeatureService
         }
     ],
     linkExactActiveClass: "active",
