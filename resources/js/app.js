@@ -6,7 +6,11 @@ Vue.component(
     require("./components/Comments.vue").default
 );
 
+<<<<<<< HEAD
+import  router  from "./routes";
+=======
 import router from "./routes";
+>>>>>>> 547a88b6d4a4270eb1e5140974d899f282583961
 import Vuelidate from "vuelidate";
 import { ModalPlugin } from "bootstrap-vue";
 import CKEditor from "@ckeditor/ckeditor5-vue";

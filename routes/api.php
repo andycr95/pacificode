@@ -44,6 +44,9 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::put('/service/{id}', 'ServiceController@updateService');
     Route::delete('/service/{id}', 'ServiceController@destroy');
 
+     //features services
+     Route::post('/service_features', 'ServicefeaturesController@store');
+
 });
 
 Route::group(['middleware' => ['api']], function () {
