@@ -64,8 +64,8 @@
                                     <div style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;">
                                         <div class="form-group">
                                             <img v-if="show_photo" style="width:100%" v-bind:src="service_photo" alt="" srcset="">
-                                          <label for="image-service">Imagen principal del servicio</label>
-                                          <input type="file" class="form-control-file"  name="service-post" v-on:change="onImageChange" placeholder="" aria-describedby="fileHelpId">
+                                          <label for="image-post">Imagen principal del proyecto</label>
+                                          <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange" placeholder="" aria-describedby="fileHelpId">
                                         </div>
                                         <hr>
                                         <div class="form-group">
@@ -152,7 +152,7 @@
                     let vm = this;
                     reader.onload = e => {
                         this.previewImageUrl = e.target.result;
-                        vm.post_photo = e.target.result;
+                        vm.service_photo = e.target.result;
                         vm.show_photo = true;
                     }
                     reader.readAsDataURL(input.files[0]);

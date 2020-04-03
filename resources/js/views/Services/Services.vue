@@ -25,58 +25,57 @@
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
-                    <div class="page-body"  v-for="service in services" v-bind:key="service.id">
-                        <div class="card" >
-                            <div class="card-block" >
-                              <div class="card">
-                                <h5 class="card-header">{{service.created_at}}</h5>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{service.service_name}}</h5>
-                                     <p class="card-text">{{service.service_extract}}</p>
-                                     <router-link :to="{ name: 'updateservice', params: { id: service.id }}">
-                                         
-                                     <span class="btn btn-outline-primary">Actualizar</span>
-                                    </router-link>
-                                    <router-link :to="{ name: 'updateservice', params: { id: service.id }}">
-                                     <span class="btn btn-outline-primary">Actualizar</span>
-                                    </router-link>
-                                  <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                       detalles
-                                        </button>
 
-                                        <!-- Modal -->
-                                        <div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">{{service.service_name}}</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>{{service.service_body}}</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                  <!-- end modal -->
+
+                        <div class="page-body"  v-for="service in services" v-bind:key="service.id">
+                            <div class="card" >
+                                <div class="card-block" >
+                                <div class="card card mb-3">
+                                    <h5 class="card-header">{{service.created_at}}</h5>
+                                            <div class="card-body">
+                                                        <div
+                                                    id="lightgallery"
+                                                    class="card-img-top mb-3"
+                                                >
+                                                    <img
+                                                        :src="service.service_photo"
+                                                        class="img-fluid width-100"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h5 class="card-title">{{service.service_name}}</h5>
+                                                <p class="card-text">{{service.service_extract}}</p>
+
+                                                <router-link :to="{ name: 'updateservice', params: { id: service.id }}">
+                                                <span class="btn btn-outline-primary">Actualizar</span>
+                                                </router-link>
+                                                <span class="btn btn-outline-primary"  @click="showModal(service)">detalles</span>
+                                                <span class="btn btn-outline-primary" @click="deleteService(service.id)">eliminar</span>
+                                             </div>
                                 </div>
                                 </div>
-                             
-
                             </div>
                         </div>
 
-                        
+                        <div class="page-body">
+                            <div class="card">
 
-                    </div>
+                            </div>
+                        </div>
+                                
+                        </div>
+
+                            <b-modal ref="modal-1" hide-backdrop content-class="shadow" :title="modaldata.service_name" hide-footer>
+                                        <div class="modal-body">
+                                            <p v-html="modaldata.service_body"></p>
+                                        </div>
+                                    <div class="modal-footer">
+                                    <p>{{modaldata.created_at}}</p>
+                                </div>
+                            </b-modal>
+                        
                 </div>
 
         </div>
@@ -85,7 +84,20 @@
 
 <script>
 import Axios from "axios";
+import Datepicker from 'vuejs-datepicker';
+import { BModal, VBModal } from 'bootstrap-vue'
+import { required, minLength, sameAs } from 'vuelidate/lib/validators'
     export default {
+        components: {
+            Datepicker,
+            'b-modal': BModal
+        },
+        directives: {
+            // Note that Vue automatically prefixes directive names with `v-`
+            'b-modal': VBModal
+        },
+
+   
         mounted() {
             this.getServices();
 
@@ -93,14 +105,13 @@ import Axios from "axios";
         data(){
 
             return {
+                modaldata:{},
                 services:[]
             }
         },
 
         methods:{
-            showModal(){
-
-            },
+          
              async getServices() {
                 await Axios.get('/api/services',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
                     
@@ -109,7 +120,43 @@ import Axios from "axios";
                 }).catch(err =>{
                     console.log(err);
                 })
-            }
+            },
+              showModal(s) {
+                this.modaldata=s
+                this.$refs['modal-1'].show()
+            },
+            async deleteService(id) {
+            let options = {
+                html: false,
+                loader: false,
+                reverse: false,
+                cancelText: "Cancelar",
+                animation: "zoom",
+                type: "fade",
+                clicksCount: 3,
+                backdropClose: true,
+                customClass: ""
+            };
+            let auth = this;
+            this.$dialog
+                .confirm("Está seguro de eliminar esteservicio?", options)
+                .then(async function(dialog) {
+                    await Axios.delete(`/api/service/` + id, {
+                        headers: {
+                            Accept: "application/json",
+                            Authorization: auth.$session.get("Authorization")
+                        }
+                    })
+                        .then(res => {
+                            auth.getServices();
+                            Toastr.info(res.data);
+                        })
+                        .catch(err => {
+                            console.log(err);
+                        });
+                });
+        }
         }
     }
 </script>
+
