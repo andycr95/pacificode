@@ -49,6 +49,7 @@ Route::group(['middleware' => ['api']], function () {
 
     //tags
     Route::get('/tags', 'TagController@getTags');
+    Route::post('/tag', 'TagController@store');
 
 
     //posts

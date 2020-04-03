@@ -27,6 +27,7 @@
     <!-- themify-icons line icon -->
     <link rel="stylesheet" type="text/css" href="/files/assets/icon/themify-icons/themify-icons.css">
     <!-- ico font -->
+    @stack('styles')
     <link rel="stylesheet" type="text/css" href="/files/assets/icon/icofont/css/icofont.css">
     <!-- feather Awesome -->
     <link rel="stylesheet" type="text/css" href="/files/assets/icon/feather/css/feather.css">

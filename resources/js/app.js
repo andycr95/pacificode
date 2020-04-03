@@ -6,7 +6,7 @@ Vue.component(
     require("./components/Comments.vue").default
 );
 
-import { routes } from "./routes";
+import router from "./routes";
 import Vuelidate from "vuelidate";
 import { ModalPlugin } from "bootstrap-vue";
 import CKEditor from "@ckeditor/ckeditor5-vue";
@@ -15,6 +15,7 @@ import VueSession from "vue-session";
 import VuejsDialog from "vuejs-dialog";
 import VueRouter from "vue-router";
 import "vuejs-dialog/dist/vuejs-dialog.min.css";
+import "vue-select/dist/vue-select.css";
 
 Vue.component("v-select", vSelect);
 Vue.use(CKEditor);
@@ -23,11 +24,6 @@ Vue.use(ModalPlugin);
 Vue.use(VueSession);
 Vue.use(VuejsDialog);
 Vue.use(VueRouter);
-
-const router = new VueRouter({
-    mode: "history",
-    routes
-});
 
 const app = new Vue({
     el: "#pcoded",

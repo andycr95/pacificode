@@ -38,7 +38,7 @@
                                 <div class="upper-box">
                                     <div class="post-date"><i class="fas fa-calendar-alt"></i>{{ $post->created_at }}</div>
                                     <h3>{{ $post->post_title }}</h3>
-                                    {{ $post->post_body }}
+                                    {!! $post->post_body !!}
                                 </div>
                                 <div class="lower-box clearfix">
                                     <div class="left-content pull-left">

@@ -12,4 +12,12 @@ class TagController extends Controller
        $tags = Tag::all();
        return response()->json($tags, 200);
     }
+
+    public function store(Request $request)
+    {
+        $tag = new Tag();
+        $tag->name = $request->tag;
+        $tag->save();
+        return response()->json(true, 200);
+    }
 }
