@@ -35,7 +35,27 @@ class DatabaseSeeder extends Seeder
 
 
         ]);
+
 */
+        
+           DB::table('services')->insert([
+            'id'=>2,
+            'service_name'=>'Diseño web',
+            'service_photo'=>'https://d1v0hpr0y8vhtu.cloudfront.net/wp-content/uploads/2018/09/creamos-pa%CC%81gina-web-a-medida-1024x689.png',
+            'service_extract'=>'Diseño y creación de sitios web a medida. diseño
+                                de tu página web totalmente personalizada en Bootstrap.
+                                Páginas web construidas en HTML, css, sass y javascript totalmente 
+                                resposive.',
+            'service_body'=>'Para diseñar una página web para mi empresa a medida y una aplicación móvil, necesitas una sistema multiplataforma. En nuestra empresa utilizamos Bootstrap, Ionic, React Native y Flutter, los mejores sistemas que existen actualmente para desarrolladores. Bootstrap facilitará el trabajo, con ella podrás construir los tres puntos claves para crear tu web:
+
+                                Nuestro equipo de profesionales lo ayudará a encontrar la 
+                                mejor opción para implementar su sitio web, en plataformas 
+                                de contenido dinámico para lograr una presencia profesional y efectiva en la red.',
+            'category_id'=>1
+
+
+
+        ]);
 
         DB::table('users')->insert([
             'id'=>1,

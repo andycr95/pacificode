@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\suscripcion;
 use Illuminate\Http\Request;
+use Newsletter;
 
 class SuscripcionController extends Controller
 {
@@ -37,6 +38,7 @@ class SuscripcionController extends Controller
     {
         $suscripcion= new Suscripcion();
         $suscripcion->email= $request->email;
+        Newsletter::subscribe($request->email);
         $suscripcion->save();
         return redirect()->back();
     }

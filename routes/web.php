@@ -16,22 +16,29 @@ Route::get('/', function () {
     return view('welcome', compact('posts'));
 })->name('home');
 
+Route::get('/about', 'AboutController@index')->name('about');
+Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripcion');
+
+//Contact
 Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact', 'ContactController@store')->name('createContact');
 
+//Portfolio
 Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
-//Route::post('/portfolio', 'ProjectController@store')->name('createProject');
 
-Route::get('/about', 'AboutController@index')->name('about');
-
+//Service
 Route::get('/service', 'ServiceController@index')->name('service');
 
-Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripcion');
-Auth::routes();
-
-Route::get('/admin/{any?}', 'AdminController@index')->name('admin');
-Route::get('/admin/{any?}/{id}', 'AdminController@index')->name('admin');
-
+//Blog
 Route::get('/blogs', 'PostController@index')->name('blogs');
 Route::get('/blogs/{id}', 'PostController@show')->name('blog');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/admin/{any?}', 'AdminController@index')->name('admin');
+    Route::get('/admin/{any?}/{id}', 'AdminController@index')->name('admin');
+});
+
+//auth
+Auth::routes();
+
 

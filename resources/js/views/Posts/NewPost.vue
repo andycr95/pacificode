@@ -161,16 +161,20 @@
                                         <div class="form-group">
                                             <label for="tags-post">Tags</label>
                                             <div class="form-group">
-                                                <b-select
+                                                <v-select
+                                                    taggable
+                                                    multiple
+                                                    label="name"
                                                     v-model="tagsSelected"
                                                     :options="tags"
-                                                    multiple
-                                                    class="form-control"
-                                                    :select-size="4"
-                                                    style="width:100%"
-                                                    value-field="id"
-                                                    text-field="name"
-                                                ></b-select>
+                                                    :create-option="
+                                                        tag => ({
+                                                            id: tag.id,
+                                                            name: tag.name
+                                                        })
+                                                    "
+                                                    @input="AddTag"
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -178,7 +182,7 @@
                                         <button
                                             type="button"
                                             style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;"
-                                            @click="savePost"
+                                            @click="AddTag"
                                             class="btn btn-primary btn-lg btn-block"
                                         >
                                             Guardar post
@@ -228,6 +232,25 @@ export default {
                 this.tags = res.data;
             });
         },
+        async AddTag(e) {
+            console.log(e[e.length - 1]);
+            this.linearSearch(e[e.length - 1], this.tags);
+
+            /* let me = this;
+            for (let j = 0; j < e.length; j++) {
+                const t2 = e[j];
+                if (typeof t2 == "string") {
+                    for (let i = 0; i < this.tags.length; i++) {
+                        const t = this.tags[i];
+                        if (t.name == t2) {
+                            console.log("Aqui está");
+                        } else {
+                            console.log("No está");
+                        }
+                    }
+                }
+            } */
+        },
         getCategories() {
             Axios.get("/api/categories").then(res => {
                 this.categories = res.data;
@@ -248,7 +271,7 @@ export default {
         },
         async savePost(e) {
             let me = this;
-            let url = "/api/post"; //Ruta que hemos creado para enviar una usuario y guardarlo
+            let url = "/api/post";
             this.$v.$touch();
             if (this.$v.$invalid) {
                 this.submitStatus = "ERROR";
@@ -259,7 +282,6 @@ export default {
                     "Authorization"
                 ] = this.$session.get("Authorization");
                 await Axios.post(url, {
-                    //estas variables son las que enviaremos para que crear el usuario
                     post_title: this.post_title,
                     post_photo: this.post_photo,
                     user_id: this.$session.get("user_id"),
@@ -293,6 +315,21 @@ export default {
             reader.readAsDataURL(file);
 
             console.log(image);
+        },
+        linearSearch(value, list) {
+            let found = false;
+            let position = -1;
+            let index = 0;
+
+            while (!found && index < list.length) {
+                if (list[index].name == value) {
+                    found = true;
+                    position = index;
+                } else {
+                    index += 1;
+                }
+            }
+            console.log(position);
         }
     },
     validations: {}
