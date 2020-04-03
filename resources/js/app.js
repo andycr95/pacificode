@@ -6,7 +6,11 @@ Vue.component(
     require("./components/Comments.vue").default
 );
 
+<<<<<<< HEAD
 import  router  from "./routes";
+=======
+import router from "./routes";
+>>>>>>> 547a88b6d4a4270eb1e5140974d899f282583961
 import Vuelidate from "vuelidate";
 import { ModalPlugin } from "bootstrap-vue";
 import CKEditor from "@ckeditor/ckeditor5-vue";
@@ -15,6 +19,7 @@ import VueSession from "vue-session";
 import VuejsDialog from "vuejs-dialog";
 import VueRouter from "vue-router";
 import "vuejs-dialog/dist/vuejs-dialog.min.css";
+import "vue-select/dist/vue-select.css";
 
 Vue.component("v-select", vSelect);
 Vue.use(CKEditor);
@@ -24,8 +29,11 @@ Vue.use(VueSession);
 Vue.use(VuejsDialog);
 Vue.use(VueRouter);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 547a88b6d4a4270eb1e5140974d899f282583961
 const app = new Vue({
     el: "#pcoded",
     router

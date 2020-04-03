@@ -58,11 +58,6 @@ export default new Router({
             component: Projects
         },
         {
-            name: "newpost",
-            path: "/admin/posts/create",
-            component: NewPosts
-        },
-        {
             name: "newservice",
             path: "/admin/services/create",
             component: NewServices
