@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-      DB::table('services')->insert([
+     /* DB::table('services')->insert([
             'id'=>1,
             'service_name'=>'Desarrollo de aplicaciones moviles',
             'service_photo'=>'https://d1v0hpr0y8vhtu.cloudfront.net/wp-content/uploads/2018/09/creamos-pa%CC%81gina-web-a-medida-1024x689.png',
@@ -100,18 +100,18 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
-
+            */
       
 
 
         DB::table('users')->insert([
-            'id'=>2,
-            'name'=>'kevin jair',
-            'email'=>'kjrichard@unipacifico.co',
+            'id'=>1,
+            'name'=>'Henry Stivent',
+            'email'=>'henrystiven7@pacificode.co',
             'password'=>Hash::make('123456'),
             'remember_token'=>'123456',
-            'created_at'=>'28-03-20',
-            'updated_at'=>'28-03-20',
+            'created_at'=>'03-03-20',
+            'updated_at'=>'03-03-20',
             'gender'=>'1',
             'state'=>'1',
             'birth_date'=>'12-02-02',

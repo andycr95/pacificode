@@ -147,7 +147,7 @@ methods: {
     },
     async updateProject(e) {
         let me = this;
-        let url = "/api/project/" + this.post_id; //Ruta que hemos creado para enviar una usuario y guardarlo
+        let url = "/api/project/" + this.project_id; //Ruta que hemos creado para enviar un proyecto y guardarlo
         await Axios.put(
             url,
             {
@@ -156,6 +156,7 @@ methods: {
                 project_title: this.project_title,
                 project_customer: this.project_customer,
                 project_autor: this.project_autor,
+                project_link: this.project_link,
                 project_extract: this.project_extract,
                 project_photo: this.project_photo,
                 project_category: this.project_category,
