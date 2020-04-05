@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\contact;
 use Illuminate\Http\Request;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -39,9 +41,9 @@ class ContactController extends Controller
         $contact->nombre= $request->nombre;
         $contact->email= $request->email;
         $contact->tema= $request->tema;
-        $contact->telefono= $request->telefono;
         $contact->mensaje= $request->mensaje;
         $contact->save();
+        Mail::to($contact->email)->send(new ContactMail($contact));
         return redirect()->back();
     }
 
