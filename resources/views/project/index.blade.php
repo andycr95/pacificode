@@ -34,84 +34,21 @@ Pacificode | Portafolio
                     </ul>
                 </div>
                 <div class="items-container row clearfix">
+                  @foreach($projects as $project)
                     <div class="col-lg-6 col-md-6 col-sm-12 masonry-item small-column all graphic design branding">
                         <div class="portfolio-block-one">
                             <div class="image-box">
-                                <figure class="image"><img src="images/gallery/projects-01.jpg" alt=""></figure>
+                                <figure class="image"><img src="{{$project->project_photo}}" alt=""></figure>
                                 <div class="content-box">
                                     <div class="inner">
-                                        <div class="title">Photo. Ui - Ux</div>
-                                        <h3><a href="portfolio-details.html">Logo Design</a></h3>
+                                        <div class="title">{{$project->project_customer}}</div>
+                                        <h3><a href="{{ route('project',$project->id)}}">{{$project->project_title}}</a></h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 masonry-item small-column all design">
-                        <div class="portfolio-block-one">
-                            <div class="image-box">
-                                <figure class="image"><img src="images/gallery/p2.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="inner">
-                                        <div class="title">Photo. Ui - Ux</div>
-                                        <h3><a href="portfolio-details.html">Logo Design</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 masonry-item small-column all graphic branding">
-                        <div class="portfolio-block-one">
-                            <div class="image-box">
-                                <figure class="image"><img src="images/gallery/p3.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="inner">
-                                        <div class="title">Photo. Ui - Ux</div>
-                                        <h3><a href="portfolio-details.html">Logo Design</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 masonry-item small-column all branding">
-                        <div class="portfolio-block-one">
-                            <div class="image-box">
-                                <figure class="image"><img src="images/gallery/p4.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="inner">
-                                        <div class="title">Photo. Ui - Ux</div>
-                                        <h3><a href="portfolio-details.html">Logo Design</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 masonry-item small-column all graphic design branding">
-                        <div class="portfolio-block-one">
-                            <div class="image-box">
-                                <figure class="image"><img src="images/gallery/p5.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="inner">
-                                        <div class="title">Photo. Ui - Ux</div>
-                                        <h3><a href="portfolio-details.html">Logo Design</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 masonry-item small-column all design graphic">
-                        <div class="portfolio-block-one">
-                            <div class="image-box">
-                                <figure class="image"><img src="images/gallery/p6.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="inner">
-                                        <div class="title">Photo. Ui - Ux</div>
-                                        <h3><a href="portfolio-details.html">Logo Design</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -136,7 +73,7 @@ Pacificode | Portafolio
                           <div class="text">Te sorprenderás con nuestros servicios con la más alta calidad, anímate ya.</div>
                           <form action="#" method="post" class="subscribe-form">
                               <div class="form-group">
-                                  <input type="email" name="email" placeholder="Introduce tu correo electrónico" required="">
+                                  <input type="email" name="email" placeholder="Introduce tu correo electrónico" required="true">
                                   <button type="submit" class="theme-btn-two">Suscríbase ahora</button>
                               </div>
                           </form>

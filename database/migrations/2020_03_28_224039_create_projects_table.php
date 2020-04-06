@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('id');
             $table->string('project_title');
             $table->string('project_customer');
-            $table->string('project_autor');
+            $table->unsignedBigInteger('user_id');
             $table->string('project_link');
             $table->mediumText('project_extract');
             $table->string('project_photo')->nullable();
@@ -25,6 +25,7 @@ class CreateProjectsTable extends Migration
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

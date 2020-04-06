@@ -43,8 +43,8 @@
                     </div>
                     <div
                         class="page-body"
-                        v-for="p in projects"
-                        v-bind:key="p.id"
+                        v-for="project in projects"
+                        v-bind:key="project.id"
                         style="padding-bottom:10px;"
                     >
                         <div class="row">
@@ -68,7 +68,7 @@
                                                         :to="{
                                                             name:
                                                                 'updateproject',
-                                                            params: { id: p.id }
+                                                            params: { id: project.id }
                                                         }"
                                                         >Actualizar
                                                         Proyecto</router-link
@@ -76,7 +76,7 @@
                                                     <a
                                                         class="dropdown-item"
                                                         @click="
-                                                            deleteProject(p.id)
+                                                            deleteProject(project.id)
                                                         "
                                                         >Eliminar Proyecto</a
                                                     >
@@ -97,13 +97,13 @@
                                                     </a>
                                                 </div>
                                                 <div class="media-body">
-                                                    <div class="chat-header">
-                                                        {{ p.project_autor }}
+                                                    <div class="chat-header" v-for="user in users" v-if="project.user_id === user.id">
+                                                        {{ user.name }}
                                                     </div>
                                                     <div
                                                         class="f-13 text-muted"
                                                     >
-                                                        {{ p.created_at }}
+                                                        {{ project.created_at }}
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,7 +114,7 @@
                                         >
                                             <a href="">
                                                 <img
-                                                    :src="p.project_photo"
+                                                    :src="project.project_photo"
                                                     class="img-fluid width-100"
                                                     alt=""
                                                 />
@@ -123,10 +123,10 @@
                                         <div class="card-block">
                                             <div class="timeline-details">
                                                 <div class="chat-header">
-                                                    {{ p.project_title }}
+                                                    {{ project.project_title }}
                                                 </div>
                                                 <p class="text-muted">
-                                                    {{ p.project_extract }}
+                                                    {{ project.project_extract }}
                                                 </p>
                                             </div>
                                         </div>
@@ -173,10 +173,12 @@ import Toastr from "toastr";
 export default {
     mounted() {
         this.getProjects();
+        this.getUsers();
     },
     data() {
         return {
             projects: [],
+            users:[],
             pagination: {}
         };
     },
@@ -190,6 +192,13 @@ export default {
                 .catch(err => {
                     console.log(err);
                 });
+        },async getUsers(){
+            await Axios.get('/api/user',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
+                this.users = res.data;
+                console.log(res.data);
+            }).catch(err =>{
+                console.log(err);
+            })
         },
         async deleteProject(id) {
             let options = {

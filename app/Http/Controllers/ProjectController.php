@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Category;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -26,9 +28,21 @@ class ProjectController extends Controller
          return response()->json($project, 200);
      }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('project.index');
+        if ($request->categories) {
+          $category = Category::find($request->category);
+          $projects = Project::all();
+          $categories = Category::all();
+          $last_projects = Project::orderBy('created_at', 'desc')->limit(6)->get();
+          return view('project.index', compact('projects','category','$last_projects'));
+        } else {
+          $projects = Project::orderBy('created_at', 'desc')->with('category')->paginate(3);
+          $categories = Category::all();
+          $last_projects = Project::orderBy('created_at', 'desc')->limit(6)->get();
+          return view('project.index', compact('projects', 'categories', 'last_projects'));
+        }
+
     }
 
     /**
@@ -52,7 +66,7 @@ class ProjectController extends Controller
       $project = new Project();
       $project->project_title = $request->project_title;
       $project->project_customer = $request->project_customer;
-      $project->project_autor = $request->project_autor;
+      $project->user_id = $request->project_autor;
       $project->project_link = $request->project_link;
       $project->project_extract = $request->project_extract;
       if ($request->project_photo) {
@@ -64,7 +78,7 @@ class ProjectController extends Controller
       }
       $project->category_id = $request->project_category;
       $project->save();
-      return response()->json(true, 200);
+      return response()->json("Proyecto guardado", 200);
     }
 
     /**
@@ -73,9 +87,13 @@ class ProjectController extends Controller
      * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show(Request $request)
     {
-        //
+      $project = Project::find($request->id);
+      $category = Category::find($project->category_id);
+      $user = User::find($project->user_id);
+      $last_projects = Project::orderBy('created_at', 'desc')->limit(3)->get();
+      return view('project.detail', compact('project','category','user','last_projects'));
         //return view('portfolio.detail');
     }
 
@@ -102,7 +120,7 @@ class ProjectController extends Controller
       $project = Project::find($request->id);
       $project->project_title = $request->project_title;
       $project->project_customer = $request->project_customer;
-      $project->project_autor = $request->project_autor;
+      $project->user_id = $request->project_autor;
       $project->project_link = $request->project_link;
       $project->project_extract = $request->project_extract;
       if ($request->project_category) {
@@ -116,9 +134,6 @@ class ProjectController extends Controller
           Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
       }
       $project->save();
-      if ($request->tags) {
-          $project->tags()->attach($request->tags);
-      }
       return response()->json("Project actualizado", 200);
     }
 

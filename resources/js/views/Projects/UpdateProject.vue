@@ -49,8 +49,11 @@
                                         <input type="text" class="form-control" name="customer-project" v-model="project_customer" aria-describedby="emailHelpId" placeholder="ingrese el nombre del cliente">
                                       </div>
                                       <div class="form-group">
-                                        <label for="customer-project">Nombre del autor</label>
-                                        <input type="text" class="form-control" name="autor-project" v-model="project_autor" aria-describedby="emailHelpId" placeholder="ingrese el nombre del autor">
+                                          <label for="project_autor"></label>
+                                          <div class="form-group">
+                                              <label for="tags-post">Nombre del autor</label>
+                                              <b-select v-model="project_autor" :options="users" class="form-control" style="width:100%" value-field="id" text-field="name"></b-select>
+                                          </div>
                                       </div>
                                       <div class="form-group">
                                         <label for="link-project">Link del proyecto</label>
@@ -110,9 +113,11 @@ export default {
 },mounted() {
     this.getCategories();
     this.getProject();
+    this.getUsers();
 },
 data() {
     return {
+        users:[],
         tagsSelected: [],
         project_photo: null,
         show_photo: false,
@@ -144,6 +149,14 @@ methods: {
             };
             reader.readAsDataURL(input.files[0]);
         }
+    },
+    async getUsers(){
+        await Axios.get('/api/user',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
+            this.users = res.data;
+            console.log(res.data);
+        }).catch(err =>{
+            console.log(err);
+        })
     },
     async updateProject(e) {
         let me = this;
@@ -201,7 +214,7 @@ methods: {
                     this.project_id = p.id;
                     this.project_title = p.project_title;
                     this.project_customer = p.project_customer;
-                    this.project_autor = p.project_autor;
+                    this.project_autor = p.user_id;
                     this.project_link = p.project_link;
                     this.project_extract = p.project_extract;
                     this.project_photo = p.project_photo;
@@ -214,7 +227,7 @@ methods: {
             });
     },
     goTo(e) {
-        location.href = `/portfolio/${e}`;
+        location.href = `/projects/${e}`;
     }
   }
 };
