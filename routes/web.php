@@ -27,6 +27,7 @@ Route::post('/contact', 'ContactController@store')->name('createContact');
 
 //Portfolio
 Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
+Route::get('/project/{id}', 'ProjectController@show')->name('project');
 
 //Service
 Route::get('/service', 'ServiceController@index')->name('services');
@@ -46,5 +47,3 @@ Route::group(['middleware' => ['auth']], function () {
 
 //auth
 Auth::routes();
-
-

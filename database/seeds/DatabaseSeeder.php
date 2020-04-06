@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-      DB::table('services')->insert([
+     /* DB::table('services')->insert([
             'id'=>1,
             'service_name'=>'Desarrollo de aplicaciones moviles',
             'service_photo'=>'https://d1v0hpr0y8vhtu.cloudfront.net/wp-content/uploads/2018/09/creamos-pa%CC%81gina-web-a-medida-1024x689.png',
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'service_body'=>'Nuestro equipo de profesionales lo ayudará a encontrar la
                                 mejor opción para implementar su sitio web, en plataformas
                                 de contenido dinámico para lograr una presencia profesional y efectiva en la red.',
-                               
+
             'category_id'=>1
 
 
@@ -91,27 +91,27 @@ class DatabaseSeeder extends Seeder
             'service_name'=>'Soporte tecnico',
             'service_photo'=>'https://d1v0hpr0y8vhtu.cloudfront.net/wp-content/uploads/2018/09/creamos-pa%CC%81gina-web-a-medida-1024x689.png',
             'service_extract'=>'Brindamos soporte tecnico a sus equipos de operacion para optimizar sus serviciosñ.',
-            'service_body'=>'Mantenimiento preventivo y soporte correctivo de sus computadoras y servidores. Reparamos todos los sistemas operativos. 
+            'service_body'=>'Mantenimiento preventivo y soporte correctivo de sus computadoras y servidores. Reparamos todos los sistemas operativos.
              Soporte técnico de PC, Mac y Linux. Limpieza fisica de computadoras y componentes.',
-            
-             'category_id'=>1 
+
+             'category_id'=>1
 
 
 
         ]);
 
+            */
 
-      
 
 
         DB::table('users')->insert([
             'id'=>2,
-            'name'=>'kevin jair',
-            'email'=>'kjrichard@unipacifico.co',
+            'name'=>'Kevin Jair',
+            'email'=>'keinn@pacificode.co',
             'password'=>Hash::make('123456'),
             'remember_token'=>'123456',
-            'created_at'=>'28-03-20',
-            'updated_at'=>'28-03-20',
+            'created_at'=>'03-03-20',
+            'updated_at'=>'03-03-20',
             'gender'=>'1',
             'state'=>'1',
             'birth_date'=>'12-02-02',

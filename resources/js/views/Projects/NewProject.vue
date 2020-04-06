@@ -49,8 +49,11 @@
                                           <input type="text" class="form-control" name="customer-project" v-model="project_customer" aria-describedby="emailHelpId" placeholder="ingrese el nombre del cliente">
                                         </div>
                                         <div class="form-group">
-                                          <label for="customer-project">Nombre del autor</label>
-                                          <input type="text" class="form-control" name="autor-project" v-model="project_autor" aria-describedby="emailHelpId" placeholder="ingrese el nombre del autor">
+                                            <label for="project_autor"></label>
+                                            <div class="form-group">
+                                                <label for="tags-post">Nombre del autor</label>
+                                                <b-select v-model="project_autor" :options="users" class="form-control" style="width:100%" value-field="id" text-field="name"></b-select>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                           <label for="link-project">Link del proyecto</label>
@@ -100,18 +103,21 @@
 <script>
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
     import Axios from 'axios';
-   import { BFormSelect, BFormSelectOption } from 'bootstrap-vue'
+    import { BFormSelect, BFormSelectOption } from 'bootstrap-vue';
+    import Toastr from "toastr"
     export default {
         components: {
             'b-select': BFormSelect,
             'b-select-option': BFormSelectOption
         },
         mounted() {
-            this.getCategories()
+            this.getCategories();
+            this.getUsers();
         },
         data(){
             return {
                 categories: [],
+                users:[],
                 project_category:null,
                 project_photo:null,
                 show_photo:false,
@@ -125,7 +131,15 @@
         methods: {
             getCategories(){
                 Axios.get('/api/categories').then(res =>{
-                    this.categories = res.data
+                    this.categories = res.data;
+                })
+            },
+            async getUsers(){
+                await Axios.get('/api/user',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
+                    this.users = res.data;
+                    console.log(res.data);
+                }).catch(err =>{
+                    console.log(err);
                 })
             },
             onImageChange(e){
@@ -160,6 +174,8 @@
                     'project_photo':me.project_photo,
                     'project_category':me.project_category,
                     }).then(function (res) {
+                        Toastr.info(res.data);
+                        me.$router.push("/admin/projects");
                         console.log(res);
                     })
                     .catch(function (error) {
