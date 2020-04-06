@@ -29,7 +29,11 @@ Route::post('/contact', 'ContactController@store')->name('createContact');
 Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
 
 //Service
-Route::get('/service', 'ServiceController@index')->name('service');
+Route::get('/service', 'ServiceController@index')->name('services');
+Route::get('/service/{id}', 'ServiceController@show')->name('service');
+
+
+
 
 //Blog
 Route::get('/blogs', 'PostController@index')->name('blogs');

@@ -3,30 +3,30 @@
         <div class="pcoded-inner-content">
             <!-- Main-body start -->
             <div class="page-wrapper">
-                    <div class="page-header">
-                        <div class="row align-items-end">
-                            <div class="col-lg-8">
-                                <div class="page-header-title">
-                                    <div class="d-inline">
-                                        <h4>Servicios</h4>
-                                        <span>En esta sección se encuentran todos los Servicios del sistema</span>
+                        <div class="page-header">
+                            <div class="row align-items-end">
+                                <div class="col-lg-8">
+                                    <div class="page-header-title">
+                                        <div class="d-inline">
+                                            <h4>Servicios</h4>
+                                            <span>En esta sección se encuentran todos los Servicios del sistema</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="page-header-breadcrumb">
+                                        <ul class="breadcrumb-title">
+                                            <li class="breadcrumb-item">
+                                                <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
+                                            </li>
+                                            <li class="breadcrumb-item"><a href="#!">Servicios</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="page-header-breadcrumb">
-                                    <ul class="breadcrumb-title">
-                                        <li class="breadcrumb-item">
-                                            <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
-                                        </li>
-                                        <li class="breadcrumb-item"><a href="#!">Servicios</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        
                         </div>
-                    
-                    </div>
 
 
                         <div class="page-body"  v-for="service in services" v-bind:key="service.id">
@@ -35,16 +35,7 @@
                                 <div class="card card mb-3">
                                     <h5 class="card-header">{{service.created_at}}</h5>
                                             <div class="card-body">
-                                                        <div
-                                                    id="lightgallery"
-                                                    class="card-img-top mb-3"
-                                                >
-                                                    <img
-                                                        :src="service.service_photo"
-                                                        class="img-fluid width-100"
-                                                        alt=""
-                                                    />
-                                                </div>
+                                                   
                                                 <h5 class="card-title">{{service.service_name}}</h5>
                                                 <p class="card-text">{{service.service_extract}}</p>
 
@@ -53,31 +44,30 @@
                                                 </router-link>
                                                 <span class="btn btn-outline-primary"  @click="showModal(service)">detalles</span>
                                                 <span class="btn btn-outline-primary" @click="deleteService(service.id)">eliminar</span>
-                                             </div>
+                                            </div>
                                 </div>
-                                </div>
+                             </div>
                             </div>
                         </div>
 
-                        <div class="page-body">
-                            <div class="card">
-
-                            </div>
-                        </div>
-                                
-                        </div>
+                      
 
                             <b-modal ref="modal-1" hide-backdrop content-class="shadow" :title="modaldata.service_name" hide-footer>
-                                        <div class="modal-body">
-                                            <p v-html="modaldata.service_body"></p>
-                                        </div>
-                                    <div class="modal-footer">
-                                    <p>{{modaldata.created_at}}</p>
+                                
+                                 <div  id="lightgallery" class="card-img-top mb-3" > 
+                                     <img :src="modaldata.service_photo"  class="img-fluid width-100"  alt="" >
+                                 </div>
+
+                                <div class="modal-body">
+                                    <p v-html="modaldata.service_body"></p>
+                                </div>
+                                <div class="modal-footer">
+                                <p>{{modaldata.created_at}}</p>
                                 </div>
                             </b-modal>
                         
-                </div>
-
+             </div>
+    
         </div>
     </div>
 </template>

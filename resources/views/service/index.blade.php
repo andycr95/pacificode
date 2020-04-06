@@ -20,7 +20,7 @@ Pacificode | Servicio
 
   @section('content')
 
-  
+  <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
 
 
       <!-- designe-process -->
@@ -28,10 +28,9 @@ Pacificode | Servicio
         <div class="image-layer" style="background-image: url(images/icons/layer-image-9.png);"></div>
         <div class="container">
             <div class="sec-title center"><h2>Your design process, in one place Appway with<br />useful features, an intuitive interface</h2></div>
-            <div class="row">
-                @foreach ($service as $services)  
+            <div class="row">  
+                @foreach ($services as $s)   
                 <div class="col-lg-4 col-md-6 col-sm-12 single-column">
-                  
                         <div class="single-item wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="left-layer"></div>
@@ -39,11 +38,11 @@ Pacificode | Servicio
                                 <div class="icon-box">
                                     <i class="fas fa-sliders-h"></i>
                                 </div>
-                                <h4><a href="{{ route('service', $services->id)}}">{{$services->service_name}}</a></h4>
-                                <div class="text">{{$services->service_extract}}</div>
+                                <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
+                                <h4><a href="{{ route('service', $s->id)}}">{{$s->service_name}}</a></h4>
+                                <div class="text">{{$s->service_extract}}</div>
                             </div>
                         </div>
-                  
                 </div>
                 @endforeach 
             </div>
@@ -57,22 +56,30 @@ Pacificode | Servicio
     <!-- designe-process-three -->
     <section class="designe-process-three service-page">
         <div class="container">
-            <div class="sec-title"><h2>Flexible design process<br />in one place.</h2></div>
+           
+        <div class="sec-title"><h2><br /></h2></div>
             <div class="inner-content">
+                
                 <div class="four-item-carousel owl-carousel owl-theme owl-dots-none">
+                    @foreach ($features as $fea) 
                     <div class="single-item">
                         <div class="inner-box">
-                            <h3><a href="#">Mail Receive</a></h3>
-                            <div class="text">Brolly off his nut A bit of how’s your father chancer in my flat chinwag bog skive.</div>
-                            <figure class="image-box"><img src="images/resource/vactor-image-5.png" alt=""></figure>
+                            <h3><a href="{{ route('service', $fea->service_id)}}">{{$fea->features_title}}</a></h3>
+                            <div class="text">{{$fea->features_body}}</div>
+                            <figure class="image-box"><img src="{{$fea->features_photo}}" alt=""></figure>
                         </div>
                     </div>
-                   
+                    @endforeach
                 </div>
+               
             </div>
+          
         </div>
+    </div>
     </section>
     <!-- designe-process-three end -->
+
+ @include('components.news_letter')
 
 <!-- clients-style-four -->
 <section class="clients-style-four style-five">

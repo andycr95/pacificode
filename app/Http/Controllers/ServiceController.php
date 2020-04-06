@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Service;
+use App\ServiceFeatures;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -23,15 +24,27 @@ class ServiceController extends Controller
     public function getservice(Request $request)
     {
         $service = Service::where('id', $request->id)->get();
+
         return response()->json($service, 200);
     }
 
 
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('service.index');
+      
+        $services = Service::All();
+        $features = serviceFeatures::All();
+        return view('service.index', compact('services','features'));
+        
 
+       
+       // return view('service.index', compact('features'));
+       
+
+
+
+      
     }
 
     /**
@@ -75,10 +88,28 @@ class ServiceController extends Controller
      * @param  \App\service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(service $service)
-    {
-        //
+    public function show(Request $request)
+     {
+        $service = Service::Find($request->id);
+        $services = Service::All();
+        //$feature = serviceFeatures::Find($request->id);
+        return view('service.detail', compact('service', 'services'));
+        
+
     }
+
+    public function navs(Request $request)
+     {
+        $navs = Service::All();
+        return view('layouts.nav-bar', compact('navs'));
+        
+
+    }
+
+    
+
+   
+
 
     /**
      * Show the form for editing the specified resource.

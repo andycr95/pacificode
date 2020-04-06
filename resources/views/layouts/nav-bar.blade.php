@@ -2,14 +2,10 @@
     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
         <ul class="navigation clearfix">
             <li {{ request()->is('servicios') ? 'class=current' : ''}}><a href="/">Inicio</a></li>
-            <li class="dropdown"><a href="{{route('service')}}">Servicios</a>
-                <ul>
-                    <li><a href="about.html">Desarrollo web</a></li>
-                    <li><a href="about.html">Dideño web</a></li>
-                    <li><a href="about.html">Soporte Tecnico</a></li>
-                    <li><a href="faq.html">Hosting y Dominio</a></li>
-                    <li><a href="error.html">Desarrollo de aplicaciones</a></li>
-                </ul>
+            <li class="dropdown"><a href="{{route('services')}}">Servicios</a>
+               
+                
+            
             </li>
             <li {{ request()->is('portfolio') ? 'class=current' : ''}} ><a href="{{route('portfolio')}}">Portafolio</a></li>
             <li {{ request()->is('about') ? 'class=current' : ''}}><a href="{{route('about')}}">Nosotros</a></li>
