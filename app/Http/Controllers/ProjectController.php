@@ -37,7 +37,7 @@ class ProjectController extends Controller
           $last_projects = Project::orderBy('created_at', 'desc')->limit(6)->get();
           return view('project.index', compact('projects','category','$last_projects'));
         } else {
-          $projects = Project::orderBy('created_at', 'desc')->with('category')->paginate(3);
+          $projects = Project::orderBy('created_at', 'desc')->with('category')->paginate(6);
           $categories = Category::all();
           $last_projects = Project::orderBy('created_at', 'desc')->limit(6)->get();
           return view('project.index', compact('projects', 'categories', 'last_projects'));
@@ -68,12 +68,27 @@ class ProjectController extends Controller
       $project->project_customer = $request->project_customer;
       $project->user_id = $request->project_autor;
       $project->project_link = $request->project_link;
+      $project->project_date = $request->project_date;
       $project->project_extract = $request->project_extract;
       if ($request->project_photo) {
           $base64_str = substr($request->project_photo, strpos($request->project_photo, ",")+1);
           $image = base64_decode($base64_str);
           $timestampName = microtime(true) . '.jpg';
           $project->project_photo ='https://cloud.pacificode.co/projects/'.$timestampName;
+          Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
+      }
+      if ($request->project_photo2) {
+          $base64_str = substr($request->project_photo2, strpos($request->project_photo2, ",")+1);
+          $image = base64_decode($base64_str);
+          $timestampName = microtime(true) . '.jpg';
+          $project->project_photo2 ='https://cloud.pacificode.co/projects/'.$timestampName;
+          Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
+      }
+      if ($request->project_photo3) {
+          $base64_str = substr($request->project_photo3, strpos($request->project_photo3, ",")+1);
+          $image = base64_decode($base64_str);
+          $timestampName = microtime(true) . '.jpg';
+          $project->project_photo3 ='https://cloud.pacificode.co/projects/'.$timestampName;
           Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
       }
       $project->category_id = $request->project_category;
@@ -92,7 +107,7 @@ class ProjectController extends Controller
       $project = Project::find($request->id);
       $category = Category::find($project->category_id);
       $user = User::find($project->user_id);
-      $last_projects = Project::orderBy('created_at', 'desc')->limit(3)->get();
+      $last_projects = Project::orderBy('created_at', 'desc')->limit(6)->get();
       return view('project.detail', compact('project','category','user','last_projects'));
         //return view('portfolio.detail');
     }
@@ -122,6 +137,7 @@ class ProjectController extends Controller
       $project->project_customer = $request->project_customer;
       $project->user_id = $request->project_autor;
       $project->project_link = $request->project_link;
+      $project->project_date = $request->project_date;
       $project->project_extract = $request->project_extract;
       if ($request->project_category) {
           $project->category_id = $request->project_category;
@@ -131,6 +147,20 @@ class ProjectController extends Controller
           $image = base64_decode($base64_str);
           $timestampName = microtime(true) . '.jpg';
           $project->project_photo ='https://cloud.pacificode.co/projects/'.$timestampName;
+          Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
+      }
+      if ($request->project_photo2 != $project->project_photo2) {
+          $base64_str = substr($request->project_photo2, strpos($request->project_photo2, ",")+1);
+          $image = base64_decode($base64_str);
+          $timestampName = microtime(true) . '.jpg';
+          $project->project_photo2 ='https://cloud.pacificode.co/projects/'.$timestampName;
+          Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
+      }
+      if ($request->project_photo3 != $project->project_photo3) {
+          $base64_str = substr($request->project_photo3, strpos($request->project_photo3, ",")+1);
+          $image = base64_decode($base64_str);
+          $timestampName = microtime(true) . '.jpg';
+          $project->project_photo3 ='https://cloud.pacificode.co/projects/'.$timestampName;
           Storage::disk('do')->put('projects/'.$timestampName, $image, 'public');
       }
       $project->save();
