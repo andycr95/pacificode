@@ -4,7 +4,7 @@
         <div class="container">
             <div class="main-box clearfix">
                 <div class="logo-box pull-left">
-                    <figure class="logo"><a href="index.html"><img src="/images/logo.png" alt=""></a></figure>
+                    <figure class="logo"><a href="/"><img src="/images/logo.png" alt=""></a></figure>
                 </div>
                 <div class="menu-area pull-right clearfix">
                     <!--Mobile Navigation Toggler-->
@@ -22,7 +22,7 @@
     <!--sticky Header-->
     <div class="sticky-header">
         <div class="container clearfix">
-            <figure class="logo-box"><a href="index.html"><img src="/images/small-logo.png" alt=""></a></figure>
+            <figure class="logo-box"><a href="/"><img src="/images/small-logo.png" alt=""></a></figure>
             <div class="menu-area">
                 <nav class="main-menu clearfix">
                     <!--Keep This Empty / Menu will come through Javascript-->
