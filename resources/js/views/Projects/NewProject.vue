@@ -49,12 +49,20 @@
                                           <input type="text" class="form-control" name="customer-project" v-model="project_customer" aria-describedby="emailHelpId" placeholder="ingrese el nombre del cliente">
                                         </div>
                                         <div class="form-group">
-                                          <label for="customer-project">Nombre del autor</label>
-                                          <input type="text" class="form-control" name="autor-project" v-model="project_autor" aria-describedby="emailHelpId" placeholder="ingrese el nombre del autor">
+                                            <label for="project_autor"></label>
+                                            <div class="form-group">
+                                                <label for="tags-post">Nombre del autor</label>
+                                                <b-select v-model="project_autor" :options="users" class="form-control" style="width:100%" value-field="id" text-field="name"></b-select>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                           <label for="link-project">Link del proyecto</label>
                                           <input type="url" class="form-control" name="link-project" v-model="project_link" aria-describedby="emailHelpId" placeholder="https://www.example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birth_date">Fecha de nacimiento</label>
+                                            <datepicker class="form-control" :format="customFormatter" :language="es" v-model="project_date" :bootstrap-styling="true">
+                                            </datepicker>
                                         </div>
                                         <div class="form-group">
                                           <label for="extract-project">Descripcion del proyecto</label>
@@ -73,7 +81,17 @@
                                         <div class="form-group">
                                             <img v-if="show_photo" style="width:100%" v-bind:src="project_photo" alt="" srcset="">
                                           <label for="image-post">Imagen principal del proyecto</label>
-                                          <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange" placeholder="" aria-describedby="fileHelpId">
+                                          <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(0, $event)" placeholder="" aria-describedby="fileHelpId">
+                                        </div>
+                                        <div class="form-group">
+                                            <img v-if="show_photo2" style="width:100%" v-bind:src="project_photo2" alt="" srcset="">
+                                          <label for="image-post">Imagen alterna del proyecto</label>
+                                          <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(1, $event)" placeholder="" aria-describedby="fileHelpId">
+                                        </div>
+                                        <div class="form-group">
+                                            <img v-if="show_photo3" style="width:100%" v-bind:src="project_photo2" alt="" srcset="">
+                                          <label for="image-post">Imagen alterna del proyecto</label>
+                                          <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(2, $event)" placeholder="" aria-describedby="fileHelpId">
                                         </div>
                                         <hr>
                                         <div class="form-group">
@@ -100,46 +118,78 @@
 <script>
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
     import Axios from 'axios';
-   import { BFormSelect, BFormSelectOption } from 'bootstrap-vue'
+    import Datepicker from 'vuejs-datepicker';
+    import {en, es} from 'vuejs-datepicker/dist/locale';
+    import moment from "moment";
+    import { BFormSelect, BFormSelectOption } from 'bootstrap-vue';
+    import Toastr from "toastr"
     export default {
         components: {
+            Datepicker,
             'b-select': BFormSelect,
             'b-select-option': BFormSelectOption
         },
         mounted() {
-            this.getCategories()
+            this.getCategories();
+            this.getUsers();
         },
         data(){
             return {
                 categories: [],
+                users:[],
                 project_category:null,
                 project_photo:null,
                 show_photo:false,
+                show_photo2:false,
+                show_photo3:false,
                 project_extract:null,
+                project_date:null,
                 project_link:null,
                 project_autor:null,
                 project_customer:null,
-                project_title:null
+                project_title:null,
+                es: es
             }
         },
         methods: {
             getCategories(){
                 Axios.get('/api/categories').then(res =>{
-                    this.categories = res.data
+                    this.categories = res.data;
                 })
             },
-            onImageChange(e){
-                let input = e.target;
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-                    let vm = this;
-                    reader.onload = e => {
-                        this.previewImageUrl = e.target.result;
-                        vm.project_photo = e.target.result;
-                        vm.show_photo = true;
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                }
+            async getUsers(){
+                await Axios.get('/api/user',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
+                    this.users = res.data;
+                    console.log(res.data);
+                }).catch(err =>{
+                    console.log(err);
+                })
+            },
+            customFormatter(date) {
+                return moment(date).format('YYYY-MM-DD');
+            },
+            onImageChange(n,e){
+                console.log(n);
+                 let input = e.target;
+                 if (input.files && input.files[0]) {
+                     var reader = new FileReader();
+                     let vm = this;
+                     reader.onload = e => {
+                         this.previewImageUrl = e.target.result;
+                         if (n == 0) {
+                           vm.project_photo = e.target.result;
+                           vm.show_photo = true;
+                         } else if ( n == 1){
+                           vm.project_photo2 = e.target.result;
+                           vm.show_photo2 = true;
+                         } else {
+                           vm.project_photo3 = e.target.result;
+                           vm.show_photo3 = true;
+                         }
+
+                     }
+                     reader.readAsDataURL(input.files[0]);
+                 }
             },
             async saveProject(e) {
                 let me =this;
@@ -156,10 +206,15 @@
                     'project_customer':me.project_customer,
                     'project_autor':me.project_autor,
                     'project_link':me.project_link,
+                    'project_date':me.customFormatter(me.project_date),
                     'project_extract':me.project_extract,
                     'project_photo':me.project_photo,
+                    'project_photo2':me.project_photo2,
+                    'project_photo3':me.project_photo3,
                     'project_category':me.project_category,
                     }).then(function (res) {
+                        Toastr.info(res.data);
+                        me.$router.push("/admin/projects");
                         console.log(res);
                     })
                     .catch(function (error) {

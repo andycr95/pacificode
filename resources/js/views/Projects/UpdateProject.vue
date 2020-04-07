@@ -49,12 +49,20 @@
                                         <input type="text" class="form-control" name="customer-project" v-model="project_customer" aria-describedby="emailHelpId" placeholder="ingrese el nombre del cliente">
                                       </div>
                                       <div class="form-group">
-                                        <label for="customer-project">Nombre del autor</label>
-                                        <input type="text" class="form-control" name="autor-project" v-model="project_autor" aria-describedby="emailHelpId" placeholder="ingrese el nombre del autor">
+                                          <label for="project_autor"></label>
+                                          <div class="form-group">
+                                              <label for="tags-post">Nombre del autor</label>
+                                              <b-select v-model="project_autor" :options="users" class="form-control" style="width:100%" value-field="id" text-field="name"></b-select>
+                                          </div>
                                       </div>
                                       <div class="form-group">
                                         <label for="link-project">Link del proyecto</label>
                                         <input type="url" class="form-control" name="link-project" v-model="project_link" aria-describedby="emailHelpId" placeholder="https://www.example.com">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="birth_date">Fecha de nacimiento</label>
+                                          <datepicker class="form-control" :format="customFormatter" :language="es" v-model="project_date" :bootstrap-styling="true">
+                                          </datepicker>
                                       </div>
                                       <div class="form-group">
                                         <label for="extract-project">Descripcion del proyecto</label>
@@ -70,11 +78,21 @@
                                       </div>
                                   </div>
                                   <div style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;">
-                                      <div class="form-group">
-                                          <img v-if="show_photo" style="width:100%" v-bind:src="project_photo" alt="" srcset="">
-                                        <label for="image-post">Imagen principal del proyecto</label>
-                                        <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange" placeholder="" aria-describedby="fileHelpId">
-                                      </div>
+                                    <div class="form-group">
+                                        <img v-if="show_photo" style="width:100%" v-bind:src="project_photo" alt="" srcset="">
+                                      <label for="image-post">Imagen principal del proyecto</label>
+                                      <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(0, $event)" placeholder="" aria-describedby="fileHelpId">
+                                    </div>
+                                    <div class="form-group">
+                                        <img v-if="show_photo2" style="width:100%" v-bind:src="project_photo2" alt="" srcset="">
+                                      <label for="image-post">Imagen alterna del proyecto</label>
+                                      <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(1, $event)" placeholder="" aria-describedby="fileHelpId">
+                                    </div>
+                                    <div class="form-group">
+                                        <img v-if="show_photo3" style="width:100%" v-bind:src="project_photo2" alt="" srcset="">
+                                      <label for="image-post">Imagen alterna del proyecto</label>
+                                      <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(2, $event)" placeholder="" aria-describedby="fileHelpId">
+                                    </div>
                                       <hr>
                                       <div class="form-group">
                                           <label for="category_post"></label>
@@ -100,30 +118,42 @@
 <script>
 import { VueEditor } from "vue2-editor";
 import Axios from "axios";
+import Datepicker from 'vuejs-datepicker';
+import {en, es} from 'vuejs-datepicker/dist/locale';
+import moment from "moment";
 import { BFormSelect, BFormSelectOption } from "bootstrap-vue";
 import Toastr from "toastr";
 export default {
   components:{
+  Datepicker,
   "b-select": BFormSelect,
   "b-select-option": BFormSelectOption,
   "vue-editor": VueEditor
 },mounted() {
     this.getCategories();
     this.getProject();
+    this.getUsers();
 },
 data() {
     return {
+        users:[],
         tagsSelected: [],
         project_photo: null,
+        project_photo2: null,
+        project_photo3: null,
         show_photo: false,
+        show_photo2: false,
+        show_photo3: false,
         categories: [],
         project_id: null,
         project_category: null,
         project_extract: null,
+        project_date: null,
         project_link: null,
         project_autor: null,
         project_customer: null,
-        project_title: null
+        project_title: null,
+        es: es
     };
 },
 methods: {
@@ -132,18 +162,37 @@ methods: {
             this.categories = res.data;
         });
     },
-    onImageChange(e) {
+    onImageChange(n,e) {
         let input = e.target;
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             let vm = this;
             reader.onload = e => {
                 this.previewImageUrl = e.target.result;
-                vm.project_photo = e.target.result;
-                vm.show_photo = true;
+                if (n == 0) {
+                  vm.project_photo = e.target.result;
+                  vm.show_photo = true;
+                } else if ( n == 1){
+                  vm.project_photo2 = e.target.result;
+                  vm.show_photo2 = true;
+                } else {
+                  vm.project_photo3 = e.target.result;
+                  vm.show_photo3 = true;
+                }
             };
             reader.readAsDataURL(input.files[0]);
         }
+    },
+    customFormatter(date) {
+        return moment(date).format('YYYY-MM-DD');
+    },
+    async getUsers(){
+        await Axios.get('/api/user',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
+            this.users = res.data;
+            console.log(res.data);
+        }).catch(err =>{
+            console.log(err);
+        })
     },
     async updateProject(e) {
         let me = this;
@@ -157,8 +206,11 @@ methods: {
                 project_customer: this.project_customer,
                 project_autor: this.project_autor,
                 project_link: this.project_link,
+                project_date: this.customFormatter(this.project_date),
                 project_extract: this.project_extract,
                 project_photo: this.project_photo,
+                project_photo2: this.project_photo2,
+                project_photo3: this.project_photo3,
                 project_category: this.project_category,
             },
             {
@@ -201,8 +253,9 @@ methods: {
                     this.project_id = p.id;
                     this.project_title = p.project_title;
                     this.project_customer = p.project_customer;
-                    this.project_autor = p.project_autor;
+                    this.project_autor = p.user_id;
                     this.project_link = p.project_link;
+                    this.project_date = p.project_date
                     this.project_extract = p.project_extract;
                     this.project_photo = p.project_photo;
                     this.project_category = p.category_id;
@@ -214,7 +267,7 @@ methods: {
             });
     },
     goTo(e) {
-        location.href = `/portfolio/${e}`;
+        location.href = `/projects/${e}`;
     }
   }
 };
