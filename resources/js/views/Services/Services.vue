@@ -56,7 +56,9 @@
                                 
                                  <div  id="lightgallery" class="card-img-top mb-3" > 
                                      <img :src="modaldata.service_photo"  class="img-fluid width-100"  alt="" >
+                                      <p class="mb-3" v-html="modaldata.service_extract"></p>
                                  </div>
+                                 
 
                                 <div class="modal-body">
                                     <p v-html="modaldata.service_body"></p>
