@@ -32,6 +32,8 @@
         <div class="outer-container">
             <div class="two-column-carousel owl-carousel owl-dots-none owl-nav-none">
                 <figure class="image"><a href="{{$project->project_photo}}" class="lightbox-image" data-fancybox="gallery"><img src="{{$project->project_photo}}" alt=""></a></figure>
+                <figure class="image"><a href="{{$project->project_photo2}}" class="lightbox-image" data-fancybox="gallery"><img src="{{$project->project_photo2}}" alt=""></a></figure>
+                <figure class="image"><a href="{{$project->project_photo3}}" class="lightbox-image" data-fancybox="gallery"><img src="{{$project->project_photo3}}" alt=""></a></figure>
             </div>
         </div>
     </div>
@@ -48,24 +50,24 @@
                             <figure class="image"><a href="{{$project->project_photo}}" class="lightbox-image" data-fancybox="gallery"><img src="{{$project->project_photo}}" alt=""></a></figure>
                         </div>
                         <div class="image-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                            <figure class="image"><a href="images/gallery/portfolio-single-2.jpg" class="lightbox-image" data-fancybox="gallery"><img src="images/gallery/portfolio-single-2.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="{{$project->project_photo2}}" class="lightbox-image" data-fancybox="gallery"><img src="{{$project->project_photo2}}" alt=""></a></figure>
                         </div>
                         <div class="image-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                            <figure class="image"><a href="images/gallery/portfolio-single-3.jpg" class="lightbox-image" data-fancybox="gallery"><img src="images/gallery/portfolio-single-3.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="{{$project->project_photo3}}" class="lightbox-image" data-fancybox="gallery"><img src="{{$project->project_photo3}}" alt=""></a></figure>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 content-column">
                     <div class="content-box">
-                        <h5>ABOUT THE PROJECT</h5>
+                        <h5>ACERCA DEL PROYECTO</h5>
                         <div class="text">
                             <p>{{$project->project_extract}}</p>
                         </div>
                         <ul class="info-list clearfix">
                             <li><span>Client</span>{{$project->project_title}}</li>
-                            <li><span>Date</span>{{$project->created_at->format('d M yy')}}</li>
+                            <li><span>Date</span>{{Carbon\Carbon::parse($project->project_date)->format('d M yy')}}</li>
                             <li><span>Categories</span>{{$category->name}}</li>
-                            <li><span>Live demo</span><a href="{{$project->project_link}}">{{$project->project_link}}</a></li>
+                            <li><span>Live demo</span><a href="https://{{$project->project_link}}">{{$project->project_link}}</a></li>
                         </ul>
                         <ul class="social-icons">
                             <li><a href="{{$user->facebook}}"><i class="fab fa-facebook-square"></i></a></li>
@@ -75,12 +77,12 @@
                     </div>
                 </div>
             </div>
-            <div class="load-more-option">
+            {{-- <div class="load-more-option">
                 <div class="clearfix">
                     <div class="prev-btn pull-left"><a href="#">Previous Project</a></div>
                     <div class="next-btn pull-right"><a href="#">Next Project</a></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
   </section>

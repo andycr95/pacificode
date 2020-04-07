@@ -6,9 +6,9 @@ Pacificode | Blog
 
 @section('name_page')
     <div class="anim-icons">
-        <div class="icon icon-1"><img src="images/icons/anim-icon-17.png" alt=""></div>
-        <div class="icon icon-2 rotate-me"><img src="images/icons/anim-icon-18.png" alt=""></div>
-        <div class="icon icon-3 rotate-me"><img src="images/icons/anim-icon-19.png" alt=""></div>
+        <div class="icon icon-1"><img src="/images/icons/anim-icon-17.png" alt=""></div>
+        <div class="icon icon-2 rotate-me"><img src="/images/icons/anim-icon-18.png" alt=""></div>
+        <div class="icon icon-3 rotate-me"><img src="/images/icons/anim-icon-19.png" alt=""></div>
         <div class="icon icon-4"></div>
     </div>
     <div class="container">
@@ -120,12 +120,12 @@ Pacificode | Blog
                             <h3 class="sidebar-title">Instagram</h3>
                             <div class="widget-content">
                                 <div class="image-list clearfix">
-                                    <figure class="image"><a href="#"><img src="images/resource/instagram-1.jpg" alt=""></a></figure>
-                                    <figure class="image"><a href="#"><img src="images/resource/instagram-2.jpg" alt=""></a></figure>
-                                    <figure class="image"><a href="#"><img src="images/resource/instagram-3.jpg" alt=""></a></figure>
-                                    <figure class="image"><a href="#"><img src="images/resource/instagram-4.jpg" alt=""></a></figure>
-                                    <figure class="image"><a href="#"><img src="images/resource/instagram-5.jpg" alt=""></a></figure>
-                                    <figure class="image"><a href="#"><img src="images/resource/instagram-6.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="#"><img src="/images/resource/instagram-1.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="#"><img src="/images/resource/instagram-2.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="#"><img src="/images/resource/instagram-3.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="#"><img src="/images/resource/instagram-4.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="#"><img src="/images/resource/instagram-5.jpg" alt=""></a></figure>
+                                    <figure class="image"><a href="#"><img src="/images/resource/instagram-6.jpg" alt=""></a></figure>
                                 </div>
                             </div>
                         </div>
@@ -134,15 +134,5 @@ Pacificode | Blog
             </div>
         </div>
     </section>
-    <section class="clients-style-four style-five">
-        <div class="image-layer" style="background-image: url(images/icons/layer-image-7.png);"></div>
-        <div class="container">
-            <div class="clients-carousel owl-carousel owl-theme owl-dots-none">
-                <figure class="image-box"><a href="#"><img src="images/clients/client-1.png" alt=""></a></figure>
-                <figure class="image-box"><a href="#"><img src="images/clients/client-2.png" alt=""></a></figure>
-                <figure class="image-box"><a href="#"><img src="images/clients/client-3.png" alt=""></a></figure>
-                <figure class="image-box"><a href="#"><img src="images/clients/client-4.png" alt=""></a></figure>
-            </div>
-        </div>
-    </section>
+    @include('components.tech')
 @endsection

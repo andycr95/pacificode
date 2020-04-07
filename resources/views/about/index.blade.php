@@ -84,7 +84,7 @@ Pacificode | Nosotros
                             <div class="text">
 
                              <P>Estamos plenamente comprometidos con las necesidades de nuestros clientes generándoles total confianza. Nuestro mayor interés es ser dignamente referenciados, en aras del aprovechamiento de las nuevas tecnologías nos encaminamos a conocer la sociedad versátil, homogénea aplicando la ética profesional que es la base de nuestros servicios, es placentero para nosotros saber que nuestros clientes se sienten satisfechos con nuestros servicios.</P>
-                           
+
 
                            </div>
 
@@ -180,19 +180,8 @@ Pacificode | Nosotros
    @include('components.news_letter')
 
 
-    <!-- clients-style-four -->
-    <section class="clients-style-four style-five">
-        <div class="image-layer" style="background-image: url(images/icons/layer-image-7.png);"></div>
-        <div class="container">
-            <div class="clients-carousel owl-carousel owl-theme owl-dots-none">
-                <figure class="image-box"><a href="#"><img src="images/clients/client-1.png" alt=""></a></figure>
-                <figure class="image-box"><a href="#"><img src="images/clients/client-2.png" alt=""></a></figure>
-                <figure class="image-box"><a href="#"><img src="images/clients/client-3.png" alt=""></a></figure>
-                <figure class="image-box"><a href="#"><img src="images/clients/client-4.png" alt=""></a></figure>
-            </div>
-        </div>
-    </section>
-    <!-- clients-style-four end -->
+
+   @include('components.tech')
 
 
 
