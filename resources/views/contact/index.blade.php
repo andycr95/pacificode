@@ -7,12 +7,12 @@ Pacificode | Contacto
 @section('name_page')
     <div class="content-box clearfix">
         <div class="title-box pull-left">
-            <h1>CONTACTA CON NOSOTROS</h1>
+            <h1>CONTACTANOS</h1>
             <p>Somos una empresa especializada en diseño de páginas web, desarrollo de aplicaciones y tiendas online.</p>
         </div>
         <ul class="bread-crumb pull-right">
-            <li>Contactenos</li>
-            <li><a href="index.html">inicio</a></li>
+            <li>Contactanos</li>
+            <li><a href="{{ route('home')}}">inicio</a></li>
         </ul>
     </div>
 @endsection
