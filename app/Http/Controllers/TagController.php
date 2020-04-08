@@ -16,7 +16,7 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $tag = new Tag();
-        $tag->name = $request->tag;
+        $tag->name = $request->name;
         $tag->save();
         return response()->json(true, 200);
     }

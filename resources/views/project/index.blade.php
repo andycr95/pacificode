@@ -20,8 +20,6 @@ Pacificode | Portafolio
 @endsection
 
 @section('content')
-
-<!-- portfolio-section -->
     <section class="portfolio-section">
         <div class="container">
             <div class="sortable-masonry">
@@ -53,8 +51,6 @@ Pacificode | Portafolio
             </div>
         </div>
     </section>
-    <!-- portfolio-section end -->
-    <!-- subscribe-style-five -->
     <section class="subscribe-style-five">
       <div class="container">
           <div class="row">
@@ -83,6 +79,4 @@ Pacificode | Portafolio
           </div>
       </div>
     </section>
-    <!-- subscribe-style-five end -->
-
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\about;
+use App\User;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -14,8 +15,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        
-        return view('about.index');
+        $users = User::all();
+        return view('about.index', compact('users'));
     }
 
     /**

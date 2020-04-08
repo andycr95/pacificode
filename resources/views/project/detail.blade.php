@@ -70,19 +70,17 @@
                             <li><span>Live demo</span><a href="https://{{$project->project_link}}">{{$project->project_link}}</a></li>
                         </ul>
                         <ul class="social-icons">
-                            <li><a href="{{$user->facebook}}"><i class="fab fa-facebook-square"></i></a></li>
-                            <li><a href="{{$user->twitter}}"><i class="fab fa-twitter-square"></i></a></li>
+                            @if ($user->facebook != null)
+                                <li><a href="{{$user->facebook}}"><i class="fab fa-facebook-square"></i></a></li>
+                            @endif
+                            @if ($user->twitter != null)
+                                <li><a href="{{$user->twitter}}"><i class="fab fa-twitter-square"></i></a></li>
+                            @endif
                             <li><a href="{{$user->linkedin}}"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            {{-- <div class="load-more-option">
-                <div class="clearfix">
-                    <div class="prev-btn pull-left"><a href="#">Previous Project</a></div>
-                    <div class="next-btn pull-right"><a href="#">Next Project</a></div>
-                </div>
-            </div> --}}
         </div>
     </div>
   </section>

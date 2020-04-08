@@ -94,8 +94,6 @@
                                             >
                                             <vue-editor
                                                 id="editor"
-                                                useCustomImageHandler
-                                                @image-added="handleImageAdded"
                                                 v-model="post_body"
                                             >
                                             </vue-editor>
@@ -182,7 +180,7 @@
                                         <button
                                             type="button"
                                             style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;"
-                                            @click="AddTag"
+                                            @click="savePost"
                                             class="btn btn-primary btn-lg btn-block"
                                         >
                                             Guardar post
@@ -223,7 +221,8 @@ export default {
             categories: [],
             category_post: null,
             post_extract: null,
-            post_title: null
+            post_title: null,
+            tagst: []
         };
     },
     methods: {
@@ -233,23 +232,29 @@ export default {
             });
         },
         async AddTag(e) {
-            console.log(e[e.length - 1]);
-            this.linearSearch(e[e.length - 1], this.tags);
-
-            /* let me = this;
-            for (let j = 0; j < e.length; j++) {
-                const t2 = e[j];
-                if (typeof t2 == "string") {
-                    for (let i = 0; i < this.tags.length; i++) {
-                        const t = this.tags[i];
-                        if (t.name == t2) {
-                            console.log("Aqui está");
-                        } else {
-                            console.log("No está");
+            let me = this;
+            if (typeof e[e.length - 1] == "string") {
+                if (me.linearSearch(e[e.length - 1], me.tags) == -1) {
+                    await Axios.post(
+                        "/api/tag",
+                        { name: e[e.length - 1] },
+                        {
+                            headers: {
+                                Accept: "aplication/json",
+                                Authorization: this.$session.get(
+                                    "Authorization"
+                                )
+                            }
                         }
-                    }
+                    )
+                        .then(function(res) {
+                            me.getTags();
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        });
                 }
-            } */
+            }
         },
         getCategories() {
             Axios.get("/api/categories").then(res => {
@@ -276,20 +281,24 @@ export default {
             if (this.$v.$invalid) {
                 this.submitStatus = "ERROR";
             } else {
-                Axios.defaults.headers.post["Content-Type"] =
-                    "multipart/form-data";
-                Axios.defaults.headers.post[
-                    "Authorization"
-                ] = this.$session.get("Authorization");
-                await Axios.post(url, {
-                    post_title: this.post_title,
-                    post_photo: this.post_photo,
-                    user_id: this.$session.get("user_id"),
-                    post_extract: this.post_extract,
-                    post_body: this.post_body,
-                    category_post: this.category_post,
-                    tags: this.tagsSelected
-                })
+                await Axios.post(
+                    url,
+                    {
+                        post_title: this.post_title,
+                        post_photo: this.post_photo,
+                        user_id: this.$session.get("user_id"),
+                        post_extract: this.post_extract,
+                        post_body: this.post_body,
+                        category_post: this.category_post,
+                        tags: this.tagsSelected
+                    },
+                    {
+                        headers: {
+                            "Content-Type": "multipart/form-data",
+                            Authorization: this.$session.get("Authorization")
+                        }
+                    }
+                )
                     .then(function(res) {
                         Toastr.success("Post registrado");
                         me.$router.push("/admin/posts");
@@ -299,22 +308,6 @@ export default {
                     });
             }
             e.preventDefault();
-        },
-        handleImageAdded: function(
-            file,
-            Editor,
-            cursorLocation,
-            resetUploader
-        ) {
-            var reader = new FileReader();
-            let image;
-            reader.onload = file => {
-                this.previewImageUrl = file.result;
-                image = file.result;
-            };
-            reader.readAsDataURL(file);
-
-            console.log(image);
         },
         linearSearch(value, list) {
             let found = false;
@@ -329,9 +322,8 @@ export default {
                     index += 1;
                 }
             }
-            console.log(position);
+            return position;
         }
-    },
-    validations: {}
+    }
 };
 </script>
