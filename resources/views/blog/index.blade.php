@@ -19,7 +19,7 @@ Pacificode | Blog
             </div>
             <ul class="bread-crumb pull-right">
                 <li>Blog</li>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/">Inicio</a></li>
             </ul>
         </div>
     </div>

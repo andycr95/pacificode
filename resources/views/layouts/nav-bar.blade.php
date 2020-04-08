@@ -3,9 +3,11 @@
         <ul class="navigation clearfix">
             <li {{ request()->is('servicios') ? 'class=current' : ''}}><a href="/">Inicio</a></li>
             <li class="dropdown"><a href="{{route('services')}}">Servicios</a>
-               
-                
-            
+                <ul>
+                    @foreach (App\Service::all() as $item)
+                        <li><a href="{{ route('service', $item->id) }}">{{$item->service_name}}</a></li>
+                    @endforeach
+                </ul>
             </li>
             <li {{ request()->is('portfolio') ? 'class=current' : ''}} ><a href="{{route('portfolio')}}">Portafolio</a></li>
             <li {{ request()->is('about') ? 'class=current' : ''}}><a href="{{route('about')}}">Nosotros</a></li>

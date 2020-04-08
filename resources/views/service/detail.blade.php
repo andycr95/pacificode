@@ -12,7 +12,7 @@
                 </div>
                 <ul class="bread-crumb pull-right">
                     <li>SERVICIOS</li>
-                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="/">INICIO</a></li>
                 </ul>
             </div>
 
@@ -29,14 +29,14 @@
                         <div class="sidebar">
                             <h3>Services</h3>
                             <div class="text">Excepteur sint occaecat cupidatat pro ident sunt culpa officia desernt mollit</div>
-                          
+
                             <ul class="list">
                                 @foreach ($services as $ser)
-                                <li><a href="{{ route('service', $ser->id)}}">{{$ser->service_name}}</a></li> 
-                                @endforeach                  
+                                <li><a href="{{ route('service', $ser->id)}}">{{$ser->service_name}}</a></li>
+                                @endforeach
                             </ul>
-                            
-                             
+
+
                         </div>
                     </div>
                 </div>
@@ -50,13 +50,13 @@
                                 <div class="text">
                                 <p>{{$service->service_extract}}</p>
                                 </div>
-                             
+
                                 <figure class="image-box"><img src="{{$service->service_photo}}" alt=""></figure>
                                 <div class="text">
                                 <p>{{$service->service_body}}</p>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>

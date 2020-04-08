@@ -20,7 +20,7 @@
             </div>
             <ul class="bread-crumb pull-right">
                 <li>Detalle</li>
-                <li><a href="index.html">Blog</a></li>
+                <li><a href="/">Blog</a></li>
             </ul>
         </div>
     </div>

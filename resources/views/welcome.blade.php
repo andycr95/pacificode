@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="main-box clearfix">
                     <div class="logo-box pull-left">
-                        <figure class="logo"><a href="index.html"><img src="images/logo-2.png" alt=""></a></figure>
+                        <figure class="logo"><a href="/"><img src="images/logo-2.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area pull-right">
                         <div class="mobile-nav-toggler">
@@ -61,7 +61,7 @@
 
         <div class="sticky-header">
             <div class="container clearfix">
-                <figure class="logo-box"><a href="index.html"><img src="images/small-logo.png" alt=""></a></figure>
+                <figure class="logo-box"><a href="/"><img src="images/small-logo.png" alt=""></a></figure>
                 <div class="menu-area">
                     <nav class="main-menu clearfix">
                     </nav>
@@ -218,12 +218,12 @@
                 <h2>Testimonios</h2>
                 <p>Enfocamos todos nuestros esfuerzos en satisfacer las necesidades de nuestros clientes<br /> y en impulsar sus negocios.</p>
             </div>
-         
+
             <div class="testimonial-carousel owl-carousel owl-theme">
                 @foreach ($testimonies as $t)
                 <div class="testimonial-inner">
                     <div class="row">
-                       
+
                         <div class="col-lg-12 col-md-12 col-sm-12 testimonial-block">
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
@@ -236,12 +236,12 @@
                                 </div>
                             </div>
                         </div>
-                      
+
                     </div>
                 </div>
                 @endforeach
             </div>
-           
+
         </div>
     </section>
 
