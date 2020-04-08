@@ -81,24 +81,7 @@ Pacificode | Servicio
 
  @include('components.news_letter')
 
-<<<<<<< HEAD
-    <!-- subscribe-style-five -->
-    @include('components.news_letter')
-    <!-- subscribe-style-five end -->
-
-=======
-<!-- clients-style-four -->
-<section class="clients-style-four style-five">
-    <div class="image-layer" style="background-image: url(images/icons/layer-image-7.png);"></div>
-    <div class="container">
-        <div class="clients-carousel owl-carousel owl-theme owl-dots-none">
-            <figure class="image-box"><a href="#"><img src="images/clients/client-1.png" alt=""></a></figure>
-
-        </div>
-    </div>
-</section>
-<!-- clients-style-four end -->
->>>>>>> 6fd687905a579e65098cb5b8571c6ad5ea7b3a0d
+@include('components.tech')
 
 
 
