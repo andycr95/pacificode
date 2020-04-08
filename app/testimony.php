@@ -9,10 +9,10 @@ class testimony extends Model
     //
     protected $table = 'testimonies';
    
-    protected $fillable = ['testimony_title', 'testimony_name', 'testimony_photo', 'testimony_extract', 'testimony_body'];
+    protected $fillable = ['testimony_name', 'testimony_photo', 'testimony_extract', 'testimony_body', 'project_id'];
 
-    public function service()
+    public function project()
     {
-        return $this->belongsTo(Service::class);
+        return $this->belongsTo(Project::class);
     }
 }

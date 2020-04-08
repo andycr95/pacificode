@@ -218,24 +218,30 @@
                 <h2>Testimonios</h2>
                 <p>Enfocamos todos nuestros esfuerzos en satisfacer las necesidades de nuestros clientes<br /> y en impulsar sus negocios.</p>
             </div>
+         
             <div class="testimonial-carousel owl-carousel owl-theme">
+                @foreach ($testimonies as $t)
                 <div class="testimonial-inner">
                     <div class="row">
+                       
                         <div class="col-lg-12 col-md-12 col-sm-12 testimonial-block">
                             <div class="testimonial-block-one">
                                 <div class="inner-box">
-                                    <figure class="image-box"><img src="images/resource/testimonial-1.png" alt=""></figure>
-                                    <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                                    <figure class="image-box "><img src="{{$t->testimony_photo}}" style="width:100%" alt=""></figure>
+                                    <div class="text">{{$t->testimony_extract}}</div>
                                     <div class="author-info">
-                                        <h5 class="name">TeamSnap</h5>
-                                        <span class="designation">VP of Customer Experience</span>
+                                        <h5 class="name">{{$t->testimony_name}}</h5>
+                                        <span class="designation">{{$t->testimony_body}}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                      
                     </div>
                 </div>
+                @endforeach
             </div>
+           
         </div>
     </section>
 

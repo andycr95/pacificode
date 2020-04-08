@@ -28,9 +28,14 @@ class TestimonyController extends Controller
     }
 
     
-    public function index()
+    
+    public function index(Request $request)
     {
-        //
+      
+        $testimonies = Testimony::All();
+        return view('welcome', compact('testimonies'));
+        //return view('./welcome', compact('testimonies'));
+    
     }
 
     /**
@@ -75,9 +80,11 @@ class TestimonyController extends Controller
      * @param  \App\testimony  $testimony
      * @return \Illuminate\Http\Response
      */
-    public function show(testimony $testimony)
+    public function show(Request $request)
     {
-        //
+        
+        $testimony = Testimony::Find($request->id);
+        return view('components.testimonial', compact('testimony'));
     }
 
     /**
