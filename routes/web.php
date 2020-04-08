@@ -13,8 +13,11 @@
 
 Route::get('/', function () {
     $posts = App\Post::orderBy('created_at', 'desc')->limit(3)->select('post_photo', 'post_title','id', 'created_at')->get();
-    return view('welcome', compact('posts'));
+    $testimonies = App\Testimony::All();
+    return view('welcome', compact('posts', 'testimonies'));
 })->name('home');
+
+
 
 
 
@@ -32,6 +35,10 @@ Route::get('/project/{id}', 'ProjectController@show')->name('project');
 //Service
 Route::get('/service', 'ServiceController@index')->name('services');
 Route::get('/service/{id}', 'ServiceController@show')->name('service');
+
+//testimonies
+Route::get('/testimonies', 'TestimonyController@index')->name('testimonies');
+Route::get('/testimony/{id}', 'TestimonyController@show')->name('testimony');
 
 
 

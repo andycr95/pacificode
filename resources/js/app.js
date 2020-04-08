@@ -25,6 +25,8 @@ Vue.use(VueSession);
 Vue.use(VuejsDialog);
 Vue.use(VueRouter);
 
+
+
 const app = new Vue({
     el: "#pcoded",
     router

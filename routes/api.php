@@ -49,6 +49,10 @@ Route::group(['middleware' => ['auth:api']], function () {
 
      //tags
      Route::post('/tag', 'TagController@store');
+
+     //testimonies
+    Route::post('/testimonies', 'TestimonyController@store');
+
 });
 
 Route::group(['middleware' => ['api']], function () {
@@ -78,6 +82,9 @@ Route::group(['middleware' => ['api']], function () {
 
     //categories
     Route::get('/categories', 'CategoryController@getCategories');
+
+    //testimonies
+    Route::get('/testimonies', 'TestimonyController@getTestimonies');
 
     //Uploads
     Route::group(['prefix' => 'upload'], function () {

@@ -4,6 +4,8 @@ import Services from "./views/Services/Services.vue";
 import NewServices from "./views/Services/NewServices.vue";
 import UpdateServices from "./views/Services/UpdateServices.vue";
 import Profile from "./views/Users/Profile.vue";
+import Testimonies from "./views/Testimonies/Testimonies.vue";
+import NewTestimony from "./views/Testimonies/NewTestimony.vue";
 import Posts from "./views/Posts/Posts.vue";
 import Post from "./views/Posts/UpdatePost.vue";
 import NewPosts from "./views/Posts/NewPost.vue";
@@ -77,11 +79,21 @@ export default new Router({
             path: "/admin/projects/:id",
             component: UpdateProject
         },
+        
         {
             name: "servicefeatures",
             path: "/admin/service_features/create",
             component: FeatureService
-        }
+        },{
+            name: "testimonies",
+            path: "/admin/testimonies",
+            component:Testimonies
+        },
+        {
+            name: "newtestimony",
+            path: "/admin/testimonies/create",
+            component: NewTestimony
+        },
     ],
     linkExactActiveClass: "active",
     mode: "history"

@@ -60,7 +60,7 @@
                         </li>
                          <li class="">
                             <router-link :to="{name: 'servicefeatures'}">
-                                <span class="pcoded-mtext">caracteristicas del servicio</span>
+                                <span class="pcoded-mtext">Nueva caracteristica</span>
                             </router-link>
                         </li>
                     </ul>
@@ -86,6 +86,27 @@
                     </ul>
                 </li>
             </ul>
+              <ul class="pcoded-item pcoded-left-item">
+                <li class="pcoded-hasmenu">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="ti-briefcase"></i></span>
+                        <span class="pcoded-mtext">Testimonios</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="">
+                            <router-link :to="{name: 'testimonies'}">
+                                <span class="pcoded-mtext">testimonios</span>
+                            </router-link>
+                        </li>
+                        <li class="">
+                            <router-link :to="{name: 'newtestimony'}">
+                                <span class="pcoded-mtext">Nuevo testimonio</span>
+                            </router-link>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+             
         </div>
     </nav>
 </template>
