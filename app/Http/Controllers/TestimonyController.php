@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\testimony;
+use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TestimonyController extends Controller
 {
@@ -50,8 +52,8 @@ class TestimonyController extends Controller
     public function store(Request $request)
     {
         $testimony = new Testimony();
-        $testimony->testimony_title = $request->testimony_title;
         $testimony->testimony_name = $request->testimony_name;
+        $testimony->project_id = $request->project_id;
         $testimony->testimony_extract = $request->testimony_extract;
         $testimony->testimony_body = $request->testimony_body;
         if ($request->testimony_photo) {
@@ -59,7 +61,7 @@ class TestimonyController extends Controller
             $image = base64_decode($base64_str);
             $timestampName = microtime(true) . '.jpg';
             $testimony->testimony_photo ='https://cloud.pacificode.co/testimonies/'.$timestampName;
-            Storage::disk('do')->put('services/'.$timestampName, $image, 'public');
+            Storage::disk('do')->put('testimonies/'.$timestampName, $image, 'public');
         }
         $testimony->save();
        

@@ -25,11 +25,8 @@ Vue.use(VueSession);
 Vue.use(VuejsDialog);
 Vue.use(VueRouter);
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> a5ebd13129805203e022017519b5d1071bf31766
 const app = new Vue({
     el: "#pcoded",
     router

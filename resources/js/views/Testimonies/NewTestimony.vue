@@ -42,7 +42,7 @@
                                     <div class="box-body" style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;">
                                         <div class="form-group">
                                           <label for="title-service">Titulo del testimonio</label>
-                                          <input type="text" class="form-control" name="name-service" v-model="testimony_title" aria-describedby="emailHelpId" placeholder="ingresa el titulo del testimonio">
+                                          <input type="text" class="form-control" name="name-service" v-model="testimony_name" aria-describedby="emailHelpId" placeholder="ingresa el titulo del testimonio">
                                         </div>
                                         <div class="form-group">
                                           <label for="">Extracto del testimonio</label>
@@ -72,15 +72,15 @@
                                         <div class="form-group">
                                             <label for="category_service"></label>
                                             <div class="form-group">
-                                                <label for="tags-post">Categorías</label>
-                                                <b-select v-model="category_service" :options="categories" class="form-control" style="width:100%" value-field="id" text-field="name"></b-select>
+                                                <label for="tags-post">proyectos</label>
+                                                <b-select v-model="project_id" :options="projects" class="form-control" style="width:100%" value-field="id" text-field="project_title"></b-select>
                                             </div>
                                         </div>
                                         <hr>
 
                                     </div>
                                     <div style="padding: 0 5px 10px;">
-                                        <button type="button" style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;" @click="saveService" class="btn btn-primary btn-lg btn-block">Guardar servicio</button>
+                                        <button type="button" style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;" @click="saveTestimony" class="btn btn-primary btn-lg btn-block">Guardar testimonio</button>
                                     </div>
                                 </div>
                             </div>
@@ -91,3 +91,85 @@
         </div>
     </div>
 </template>
+
+<script>
+    import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+    import Axios from 'axios';
+   import { BFormSelect, BFormSelectOption } from 'bootstrap-vue'
+    export default {
+        components: {
+            'b-select': BFormSelect,
+            'b-select-option': BFormSelectOption
+        },
+        mounted() {
+
+            this.getProjects()
+        },
+        data(){
+            return {
+                editor: ClassicEditor,
+                testimony_name:null,
+                testimony_extract:null,
+                testimony_body: null,
+                testimony_photo:null,
+                 project_id:null,
+                show_photo:false,
+                projects: []
+               
+              
+              
+            }
+        },
+        methods: {
+
+            getProjects(){
+                Axios.get('/api/projects').then(res =>{
+                    this.projects = res.data
+                })
+            },
+            onImageChange(e){
+                let input = e.target;
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    let vm = this;
+                    reader.onload = e => {
+                        this.previewImageUrl = e.target.result;
+                        vm.testimony_photo = e.target.result;
+                        vm.show_photo = true;
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            },
+            async saveTestimony(e) {
+                let me =this;
+                let url = '/api/testimonies' //Ruta que hemos creado para enviar una usuario y guardarlo
+                this.$v.$touch()
+                if (this.$v.$invalid) {
+                    this.submitStatus = 'ERROR'
+                } else {
+                    console.log(this.$session.get('Authorization'));
+                    Axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
+                    Axios.defaults.headers.post['Authorization'] = this.$session.get('Authorization');
+                    await Axios.post(url,{ //estas variables son las que enviaremos para que crear el usuario
+                    'testimony_name':this.testimony_name,
+                    'testimony_photo':this.testimony_photo,
+                    'testimony_extract':this.testimony_extract,
+                    'testimony_body':this.testimony_body,
+                    'project_id':this.project_id,
+                    }).then(function (res) {
+                        console.log(res);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                }
+                e.preventDefault();
+
+            },
+        },
+        validations: {
+
+        }
+    }
+</script>
+
