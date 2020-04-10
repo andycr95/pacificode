@@ -60,8 +60,8 @@
                                          <td>{{faq.name}}</td>
                                         <td>{{faq.questions}}</td>
                                         <td>
-                                             <a class="btn btn-xs btn-info" @click="showModal"><i class="fa fa-pencil"></i></a>
-                                             <a class="btn btn-xs btn-danger" href="#"><i class="fa fa-pencil"></i></a>
+                                             <a class="btn btn-xs btn-info" @click="showModal"><i class="ti-pencil-alt2"></i></a>
+                                             <a class="btn btn-xs btn-danger" href="#"><i class="ti-close"></i></a>
                                         </td>
                                         </tr>
                                       

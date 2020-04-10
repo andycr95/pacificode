@@ -27,10 +27,11 @@ class AnswerController extends Controller
     }
 
     public function index()
-    {
-        $answers = Answer::All();
-        $faqs= Faq::All();
-        return view('Faq.index', compact('answers', 'faqs'));
+    { $answer = Answer::Find($request->id);
+        $answers= Answer::All();
+        $faq = Faq::Find($request->id);
+        $faqs = Faq::All();
+        return view('Faq.index', compact('answer', 'answers', 'faq','faqs'));
         
     }
 
@@ -65,13 +66,15 @@ class AnswerController extends Controller
      * @param  \App\answer  $answer
      * @return \Illuminate\Http\Response
      */
-    public function show(Requesr $request)
+    public function show(Request $request)
     {
                 $answers= Answer::All();
                 $answer = Answer::Find($request->id);
                 $faq = Faq::Find($request->id);
+                $faqs = Faq::All();
+
         
-        return view('Faq.index', compact('answer', 'answers', 'faq'));
+        return view('Faq.index', compact('answer', 'answers', 'faq','faqs'));
     }
 
     /**

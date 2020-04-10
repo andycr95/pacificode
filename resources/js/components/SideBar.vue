@@ -44,7 +44,7 @@
             <ul class="pcoded-item pcoded-left-item">
                 <li class="pcoded-hasmenu">
                     <a href="javascript:void(0)">
-                        <span class="pcoded-micon"><i class="feather icon-message-square"></i></span>
+                        <span class="pcoded-micon"><i class="ti-world"></i></span>
                         <span class="pcoded-mtext">Servicios</span>
                     </a>
                     <ul class="pcoded-submenu">
@@ -89,7 +89,7 @@
               <ul class="pcoded-item pcoded-left-item">
                 <li class="pcoded-hasmenu">
                     <a href="javascript:void(0)">
-                        <span class="pcoded-micon"><i class="ti-briefcase"></i></span>
+                        <span class="pcoded-micon"><i class="ti-comments-smiley"></i></span>
                         <span class="pcoded-mtext">Testimonios</span>
                     </a>
                     <ul class="pcoded-submenu">
@@ -109,7 +109,7 @@
              <ul class="pcoded-item pcoded-left-item">
                 <li class="pcoded-hasmenu">
                     <a href="javascript:void(0)">
-                        <span class="pcoded-micon"><i class="ti-briefcase"></i></i></span>
+                        <span class="pcoded-micon"><i class="ti-layout-grid2"></i></span>
                         <span class="pcoded-mtext">Categorias</span>
                     </a>
                     <ul class="pcoded-submenu">
@@ -131,7 +131,7 @@
              <ul class="pcoded-item pcoded-left-item">
                 <li class="pcoded-hasmenu">
                     <a href="javascript:void(0)">
-                        <span class="pcoded-micon"><i class="ti-briefcase"></i></i></span>
+                        <span class="pcoded-micon"><i class="ti-help-alt"></i></span>
                         <span class="pcoded-mtext">preguntas</span>
                     </a>
                     <ul class="pcoded-submenu">

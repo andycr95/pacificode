@@ -17,11 +17,11 @@ class FaqController extends Controller
      */
     public function index(Request $request)
     {
+        $answer = Answer::Find($request->id);
+        $answers= Answer::All();
+        $faq = Faq::Find($request->id);
         $faqs = Faq::All();
-        //$answers = Answer::All();
-        /*$faq = Faq::Find($request->id);
-        $answer= Answer::Find($request->id);*/
-        return view('faq.index'); 
+        return view('Faq.index', compact('answer', 'answers', 'faq','faqs'));
      
     }
 
@@ -75,11 +75,10 @@ class FaqController extends Controller
      */
     public function show(Request $request)
     { 
-        $faqs = Faq::All();
-        $answers = Answer::All();
+        $answer = Answer::Find($request->id);
         $faq = Faq::Find($request->id);
-        $answer= Answer::Find($request->id);
-        return view('faq.index', compact('faqs','faq', 'answer', 'answers')); 
+        
+        return view('Faq.index', compact('answer',  'faq'));
     }
 
     /**

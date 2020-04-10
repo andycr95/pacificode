@@ -98,13 +98,7 @@ class ServiceController extends Controller
 
     }
 
-    public function navs(Request $request)
-     {
-        $navs = Service::All();
-        return view('layouts.nav-bar', compact('navs'));
-        
-
-    }
+   
 
     
 

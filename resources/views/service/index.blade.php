@@ -50,6 +50,7 @@ Pacificode | Servicio
     </section>
     <!-- designe-precess end -->
   
+  
 
  @include('components.news_letter')
 

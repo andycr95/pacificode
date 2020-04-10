@@ -8,10 +8,10 @@ Pacificode | Questions
     <div class="content-box clearfix">
         <div class="title-box pull-left">
             <h1>Preguntas mas frecuentes</h1>
-            <p></p>
+            <p>Póngase en contacto con los servicios de TI más confiables.</p>
         </div>
         <ul class="bread-crumb pull-right">
-            <li></li>
+            <li>Formula tu pregunta</li>
             <li><a href="{{ route('home')}}">inicio</a></li>
         </ul>
     </div>
@@ -24,32 +24,32 @@ Pacificode | Questions
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 sidebar-column">
-                    <div class="faq-sidebar">
-                        <h3>Quick Navigation</h3>
-                        <div class="online-purchase"><a href="#">Purchasing Online</a></div>
-                        <ul class="list-item">
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Pricing & Support</a></li>
-                            <li><a href="#">Care & Repair</a></li>
-                        </ul>
+                    <div id="iamge_block_01">
+                        <div class="image-box float-bob-y">
+                            <figure class="image wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/resource/app_dev.png" alt=""></figure>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 content-column">
                     <div class="faq-content">
-                        <div class="sec-title"><h2>How To Purchase</h2></div>
+                        <div class="sec-title"><h2>Estamos atentos a tus consultas</h2></div>
+                        @foreach ($faqs as $i)
                         <ul class="accordion-box">
                             <li class="accordion block">
                                  <div class="acc-btn">
-                                    <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                 <h4>pregunta</h4>
+                                 <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                                 <h4>{{$i->questions}}</h4>
                                 </div>
+                                @foreach ($answers as $i)
                                 <div class="acc-content">
                                     <div class="content">
-                                    <div class="text">respuesta</div>
+                                    <div class="text">{{$i->name}}</div>
                                     </div>
                                 </div>
+                                @endforeach
                             </li>
                         </ul>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -65,8 +65,8 @@ Pacificode | Questions
             <div class="row">
                 <div class="col-lg-10 col-md-12 col-sm-12 offset-lg-1 inner-column">
                     <div class="sec-title center">
-                        <h2>Tell Us Any Question</h2>
-                        <p>We provide best service for our customer check the list now.</p>
+                        <h2>Cuéntanos cualquier pregunta</h2>
+                        <p>Brindamos el mejor servicio para que nuestros clientes cuentanos.</p>
                     </div>
                     <div class="question-form">
                         <form action="{{route('createFaq')}}" method="post">

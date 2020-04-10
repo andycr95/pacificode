@@ -36,7 +36,7 @@ Route::post('/faq', 'FaqController@store')->name('createFaq');
 
 //Answer
 //Route::get('/answer', 'AnswerController@index')->name('answer');
-//Route::get('/answer/{id}', 'AnswerController@show')->name('answer');
+Route::get('/answers/{id}', 'AnswerController@show')->name('answers');
 
 
 //Portfolio

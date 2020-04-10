@@ -7,7 +7,7 @@
   @section('name_page')
   <div class="content-box clearfix">
                 <div class="title-box pull-left">
-                    <h1>SERVICIOS</h1>
+                    <h1>{{$service->service_name}}</h1>
                 <p></p>
                 </div>
                 <ul class="bread-crumb pull-right">
