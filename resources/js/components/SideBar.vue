@@ -106,6 +106,49 @@
                     </ul>
                 </li>
             </ul>
+             <ul class="pcoded-item pcoded-left-item">
+                <li class="pcoded-hasmenu">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="ti-briefcase"></i></i></span>
+                        <span class="pcoded-mtext">Categorias</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="">
+                            <router-link :to="{name: 'categories'}">
+                                <span class="pcoded-mtext">Categorias</span>
+                            </router-link>
+                        </li>
+                        <li class="">
+                            <router-link :to="{name: 'newcategory'}">
+                                <span class="pcoded-mtext">Nueva Categoria</span>
+                            </router-link>
+                             
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+             <ul class="pcoded-item pcoded-left-item">
+                <li class="pcoded-hasmenu">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="ti-briefcase"></i></i></span>
+                        <span class="pcoded-mtext">preguntas</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="">
+                            <router-link :to="{name: 'faqs'}">
+                                <span class="pcoded-mtext">Reguntas</span>
+                            </router-link>
+                        </li>
+                          <li class="">
+                            <router-link :to="{name: 'answer'}">
+                                <span class="pcoded-mtext">Respuestas</span>
+                            </router-link>
+                        </li>
+                      
+                    </ul>
+                </li>
+            </ul>
              
         </div>
     </nav>

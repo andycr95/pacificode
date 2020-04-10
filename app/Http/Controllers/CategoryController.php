@@ -36,7 +36,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category();
+        $category->name = $request->name;
+        $category->save();
+        return response()->json(true, 200);
     }
 
     /**
@@ -79,8 +82,10 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Request $request)
     {
-        //
+        $category = Category::find($request->id);
+        $category->delete();
+        return response()->json("categoria eliminada", 200);
     }
 }

@@ -28,6 +28,17 @@ Route::post('/suscripcion', 'SuscripcionController@store')->name('createSuscripc
 Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact', 'ContactController@store')->name('createContact');
 
+
+//faq
+Route::get('/faq', 'FaqController@index')->name('faq');
+Route::post('/faq', 'FaqController@store')->name('createFaq');
+//Route::get('/faq/{id}', 'FaqController@show')->name('faq');
+
+//Answer
+//Route::get('/answer', 'AnswerController@index')->name('answer');
+//Route::get('/answer/{id}', 'AnswerController@show')->name('answer');
+
+
 //Portfolio
 Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
 Route::get('/project/{id}', 'ProjectController@show')->name('project');

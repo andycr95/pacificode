@@ -111,7 +111,9 @@ Pacificode | Contacto
     </section>
     <!-- contact-section end -->
 
-
+    <!-- faq-section star -->
+   @include('components.faq')
+    <!-- section end -->
     <!-- map-section -->
     <section class="map-section">
         <div class="google-map-area">
