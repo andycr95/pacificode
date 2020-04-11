@@ -109,7 +109,7 @@
    import moment from "moment";
    import { BModal, VBModal } from 'bootstrap-vue'
    import { required, minLength, sameAs } from 'vuelidate/lib/validators'
-     import { BFormSelect, BFormSelectOption } from 'bootstrap-vue'
+   import { BFormSelect, BFormSelectOption } from 'bootstrap-vue'
 
     export default {
         components: {

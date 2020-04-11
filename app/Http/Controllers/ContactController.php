@@ -42,6 +42,7 @@ class ContactController extends Controller
         $contact->email= $request->email;
         $contact->tema= $request->tema;
         $contact->mensaje= $request->mensaje;
+        $contact->telefono= $request->telefono;
         $contact->save();
         Mail::to($contact->email)->send(new ContactMail($contact));
         return redirect()->back();
