@@ -105,8 +105,8 @@
                             <div class="widget-content">
                                 @foreach ($last_posts as $l_p)
                                     <div class="post">
-                                        <figure class="image"><a href="{{route('blog', $l_p->id)}}"><img src="{{$l_p->post_photo}}" alt="{{$l_p->post_title}}"></a></figure>
-                                        <h5><a href="{{route('blog', $l_p->id)}}">{{$l_p->post_title}}</a></h5>
+                                        <figure class="image"><a href="{{route('blog', $l_p)}}"><img src="{{$l_p->post_photo}}" alt="{{$l_p->post_title}}"></a></figure>
+                                        <h5><a href="{{route('blog', $l_p)}}">{{$l_p->post_title}}</a></h5>
                                         <span class="post-date">{{$l_p->created_at->diffForHumans()}}</span>
                                     </div>
                                 @endforeach

@@ -7,6 +7,7 @@ use App\Category;
 use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -32,7 +33,7 @@ class PostController extends Controller
             $last_posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
             return view('blog.index', compact('posts', 'categories', 'last_posts', 'tags', 'category'));
         } else {
-            $posts = Post::orderBy('created_at', 'desc')->with('tags', 'category', 'user')->paginate(3);
+            $posts = Post::orderBy('created_at', 'desc')->with('tags', 'category', 'user', 'comments')->paginate(3);
             $categories = Category::all();
             $tags = Tag::all();
             $last_posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
@@ -67,6 +68,7 @@ class PostController extends Controller
     {
         $post = new Post();
         $post->post_title = $request->post_title;
+        $post->slug = Str::slug($request->post_title, '-');
         $post->post_extract = $request->post_extract;
         $post->user_id = $request->user_id;
         $post->post_body = $request->post_body;
@@ -89,9 +91,9 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show(Post $post)
     {
-        $post = Post::find($request->id);
+        $post = Post::find($post->id);
         $categories = Category::all();
         $tags = Tag::all();
         $last_posts = Post::orderBy('created_at', 'desc')->limit(3)->get();

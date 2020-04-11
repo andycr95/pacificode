@@ -35,7 +35,7 @@
                     <div class="dropdown-primary dropdown">
                         <div class="dropdown-toggle" data-toggle="dropdown">
                             <i class="feather icon-bell"></i>
-                            <span class="badge bg-c-pink">5</span>
+                            {{-- <span class="badge bg-c-pink">5</span> --}}
                         </div>
                         <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                             <li>
@@ -79,15 +79,15 @@
                     <div class="dropdown-primary dropdown">
                         <div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
                             <i class="feather icon-message-square"></i>
-                            <span class="badge bg-c-green">3</span>
+                            {{-- <span class="badge bg-c-green">3</span> --}}
                         </div>
                     </div>
                 </li>
                 <li class="user-profile header-notification">
                     <div class="dropdown-primary dropdown">
                         <div class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                            <span>John Doe</span>
+                            <img src="{{ Auth::user()->photo_profile}}" class="img-radius" alt="User-Profile-Image">
+                            <span>{{ Auth::user()->name}}</span>
                             <i class="feather icon-chevron-down"></i>
                         </div>
                         <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
@@ -99,16 +99,6 @@
                             <li>
                                 <a href="user-profile.htm">
                                     <i class="feather icon-user"></i> Profile
-                                </a>
-                            </li>
-                            <li>
-                                <a href="email-inbox.htm">
-                                    <i class="feather icon-mail"></i> My Messages
-                                </a>
-                            </li>
-                            <li>
-                                <a href="auth-lock-screen.htm">
-                                    <i class="feather icon-lock"></i> Lock Screen
                                 </a>
                             </li>
                             <li>

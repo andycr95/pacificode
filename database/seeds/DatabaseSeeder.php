@@ -105,23 +105,20 @@ class DatabaseSeeder extends Seeder
 
 
         DB::table('users')->insert([
-            'id'=>2,
-            'name'=>'Kevin Jair',
-            'email'=>'keinn@pacificode.co',
-            'password'=>Hash::make('123456'),
-            'remember_token'=>'123456',
-            'created_at'=>'03-03-20',
-            'updated_at'=>'03-03-20',
+            'id'=>1,
+            'name'=>'Andy Caicedo Rivas',
+            'email'=>'andy.caicedo@pacificode.co',
+            'password'=>Hash::make('andycr19'),
             'gender'=>'1',
             'state'=>'1',
-            'birth_date'=>'12-02-02',
-            'position'=>'desarrollador front-end',
+            'birth_date'=>'1995-03-19',
+            'position'=>'Gerente general',
             'marital_status'=>'1',
-            'address'=>'carmelita por la linea',
-            'phone'=>'3188027594',
-            'twitter'=>'https://www.twitter.com/HenryRos7',
-            'facebook'=>'https://www.facebook.com/henrypes',
-            'linkedin'=>'https://www.linkedin.com/in/henry-ramirez-178a1415b/'
+            'address'=>'Cr 62 #6c-65',
+            'phone'=>'3128978597',
+            'twitter'=>'https://www.facebook.com/andy.c.rivas',
+            'facebook'=>'https://twitter.com/AndyCaiicedo',
+            'linkedin'=>'https://www.linkedin.com/in/andy-caicedo-70613815b/'
         ]);
     }
 }

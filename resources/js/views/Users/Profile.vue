@@ -595,7 +595,6 @@
                 if (this.$v.$invalid) {
                     this.submitStatus = 'ERROR'
                 } else {
-                    Axios.defaults.headers.put['Content-Type'] = 'multipart/form-data';
                     Axios.put(`/api/user/${this.user.id}`,{
                     'name':this.name,
                     'email':this.email,
@@ -611,7 +610,7 @@
                     'position':this.position,
                     'password_confirmation':this.password_confirmation,
                     'gender':this.gender,
-                    }).then(function (res) {
+                    },{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(function (res) {
                         me.clearForm()
                         toastr.success('Usuario Actualizado');
                         me.getUser()
@@ -629,10 +628,9 @@
                 if (me.photo_profile == null) {
                     me.submitStatus = 'ERROR'
                 } else {
-                    Axios.defaults.headers.put['Content-Type'] = 'multipart/form-data';
                     Axios.put(`/api/user/photo/${me.user.id}`,{
                     'photo_profile':me.photo_profile
-                    }).then(function (res) {
+                    },{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(function (res) {
                         me.clearForm()
                         me.getUser()
                         toastr.success('Foto de perfil Actualizada');
@@ -649,10 +647,9 @@
                 if (me.photo_port == null) {
                     me.submitStatus = 'ERROR'
                 } else {
-                    Axios.defaults.headers.put['Content-Type'] = 'multipart/form-data';
                     Axios.put(`/api/user/photoport/${me.user.id}`,{
                     'photo_port':me.photo_port
-                    }).then(function (res) {
+                    },{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(function (res) {
                         me.getUser()
                         me.clearForm()
                         toastr.success('Foto de portada Actualizada');
@@ -671,7 +668,7 @@
                 } else {
                     Axios.put(`/api/user/desc/${me.user.id}`,{
                     'description':me.description
-                    }).then(function (res) {
+                    },{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(function (res) {
                         me.getUser()
                         me.EditDesc()
                         toastr.success('Descripción Actualizada');

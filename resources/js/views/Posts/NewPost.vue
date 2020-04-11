@@ -1,10 +1,18 @@
 <template>
     <div class="pcoded-content">
+        <div v-if="spinner" class="loader animation-start" style="position: absolute;z-index: 100;top: 40%;">
+            <span class="circle delay-1 size-2"></span>
+            <span class="circle delay-2 size-4"></span>
+            <span class="circle delay-3 size-6"></span>
+            <span class="circle delay-4 size-7"></span>
+            <span class="circle delay-5 size-7"></span>
+            <span class="circle delay-6 size-6"></span>
+            <span class="circle delay-7 size-4"></span>
+            <span class="circle delay-8 size-2"></span>
+        </div>
         <div class="pcoded-inner-content">
-            <!-- Main-body start -->
             <div class="main-body">
                 <div class="page-wrapper">
-                    <!-- Page-header start -->
                     <div class="page-header">
                         <div class="row align-items-end">
                             <div class="col-lg-8">
@@ -50,8 +58,7 @@
                                 >
                                     <div
                                         class="box-header"
-                                        style="color: #444;display: block;  padding: 10px; position: relative;border-bottom: 1px solid #f4f4f4;"
-                                    >
+                                        style="color: #444;display: block;  padding: 10px; position: relative;border-bottom: 1px solid #f4f4f4;">
                                         <div
                                             class="box-title"
                                             style="display: inline-block; font-size: 18px;  margin: 0; line-height: 1;"
@@ -61,8 +68,7 @@
                                     </div>
                                     <div
                                         class="box-body"
-                                        style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;"
-                                    >
+                                        style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;">
                                         <div class="form-group">
                                             <label for="title-post"
                                                 >Titulo del post</label
@@ -102,89 +108,36 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div
-                                    style="border-top-color: #00a65a;position: relative;border-radius: 3px; background: #ffffff;border-top: 3px solid #d2d6de; margin-bottom: 20px;width: 100%; box-shadow: 0 1px 1px rgba(0,0,0,0.1);"
-                                >
-                                    <div
-                                        style="color: #444;display: block;  padding: 10px; position: relative;border-bottom: 1px solid #f4f4f4;"
-                                    >
-                                        <div
-                                            style="display: inline-block; font-size: 18px;  margin: 0; line-height: 1;"
-                                        >
+                                <div style="border-top-color: #00a65a;position: relative;border-radius: 3px; background: #ffffff;border-top: 3px solid #d2d6de; margin-bottom: 20px;width: 100%; box-shadow: 0 1px 1px rgba(0,0,0,0.1);">
+                                    <div style="color: #444;display: block;  padding: 10px; position: relative;border-bottom: 1px solid #f4f4f4;">
+                                        <div style="display: inline-block; font-size: 18px;  margin: 0; line-height: 1;">
                                             Adicionales
                                         </div>
                                     </div>
-                                    <div
-                                        style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;"
-                                    >
+                                    <div style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;">
                                         <div class="form-group">
-                                            <img
-                                                v-if="show_photo"
-                                                style="width:100%"
-                                                v-bind:src="post_photo"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                            <label for="image-post"
-                                                >Imagen principal del
-                                                post</label
-                                            >
-                                            <input
-                                                type="file"
-                                                class="form-control-file"
-                                                name="image-post"
-                                                v-on:change="onImageChange"
-                                                placeholder=""
-                                                aria-describedby="fileHelpId"
-                                            />
+                                            <img v-if="show_photo" style="width:100%" v-bind:src="post_photo" />
+                                            <label for="image-post">Imagen principal del post</label>
+                                            <input type="file" class="form-control-file" name="image-post" v-on:change="onImageChange" />
                                         </div>
                                         <hr />
                                         <div class="form-group">
                                             <label for="category_post"></label>
                                             <div class="form-group">
-                                                <label for="tags-post"
-                                                    >Categorías</label
-                                                >
-                                                <b-select
-                                                    v-model="category_post"
-                                                    :options="categories"
-                                                    class="form-control"
-                                                    style="width:100%"
-                                                    value-field="id"
-                                                    text-field="name"
-                                                ></b-select>
+                                                <label for="tags-post">Categorías</label>
+                                                <b-select v-model="category_post" :options="categories" class="form-control" style="width:100%" value-field="id" text-field="name"></b-select>
                                             </div>
                                         </div>
                                         <hr />
                                         <div class="form-group">
                                             <label for="tags-post">Tags</label>
                                             <div class="form-group">
-                                                <v-select
-                                                    taggable
-                                                    multiple
-                                                    label="name"
-                                                    v-model="tagsSelected"
-                                                    :options="tags"
-                                                    :create-option="
-                                                        tag => ({
-                                                            id: tag.id,
-                                                            name: tag.name
-                                                        })
-                                                    "
-                                                    @input="AddTag"
-                                                />
+                                                <v-select taggable multiple label="name" v-model="tagsSelected" :options="tags" :create-option=" tag => ({ id: tag.id, name: tag.name }) " @input="AddTag"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div style="padding: 0 5px 10px;">
-                                        <button
-                                            type="button"
-                                            style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;"
-                                            @click="savePost"
-                                            class="btn btn-primary btn-lg btn-block"
-                                        >
-                                            Guardar post
-                                        </button>
+                                        <button type="button" style="padding:5px;background-color: #3c8dbc; border-color: #367fa9;" @click="savePost" class="btn btn-primary btn-lg btn-block" > Guardar post </button>
                                     </div>
                                 </div>
                             </div>
@@ -216,13 +169,15 @@ export default {
             post_body: "",
             tags: [],
             tagsSelected: [],
+            tagsS: [],
             post_photo: null,
             show_photo: false,
             categories: [],
             category_post: null,
             post_extract: null,
             post_title: null,
-            tagst: []
+            tagst: [],
+            spinner: false
         };
     },
     methods: {
@@ -275,38 +230,32 @@ export default {
             }
         },
         async savePost(e) {
-            let me = this;
-            let url = "/api/post";
-            this.$v.$touch();
-            if (this.$v.$invalid) {
-                this.submitStatus = "ERROR";
-            } else {
-                await Axios.post(
-                    url,
-                    {
-                        post_title: this.post_title,
-                        post_photo: this.post_photo,
-                        user_id: this.$session.get("user_id"),
-                        post_extract: this.post_extract,
-                        post_body: this.post_body,
-                        category_post: this.category_post,
-                        tags: this.tagsSelected
-                    },
-                    {
-                        headers: {
-                            "Content-Type": "multipart/form-data",
-                            Authorization: this.$session.get("Authorization")
-                        }
-                    }
-                )
-                    .then(function(res) {
-                        Toastr.success("Post registrado");
-                        me.$router.push("/admin/posts");
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                    });
+            for (let i = 0; i < this.tagsSelected.length; i++) {
+                const e = this.tagsSelected[i];
+                this.tagsS.push(e.id)
             }
+            let me = this;
+            me.spinner = !me.spinner
+            e.target.disabled = true
+            await Axios.post('/api/post',
+                {
+                    post_title: this.post_title,
+                    post_photo: this.post_photo,
+                    user_id: this.$session.get("user_id"),
+                    post_extract: this.post_extract,
+                    post_body: this.post_body,
+                    category_post: this.category_post,
+                    tags: this.tagsS
+                },{headers: {"Content-Type": "aplication/json",Authorization: this.$session.get("Authorization")}})
+                .then(function(res) {
+                    Toastr.success("Post registrado");
+                    me.spinner = !me.spinner;
+                    e.target.disabled = false;
+                    me.$router.push("/admin/posts");
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
             e.preventDefault();
         },
         linearSearch(value, list) {

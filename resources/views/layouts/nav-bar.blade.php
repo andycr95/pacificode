@@ -4,7 +4,7 @@
             <li {{ request()->is('servicios') ? 'class=current' : ''}}><a href="/">Inicio</a></li>
             <li class="dropdown"><a href="{{route('services')}}">Servicios</a>
                 <ul>
-                    @foreach (App\Service::all() as $item)
+                    @foreach (App\service::all() as $item)
                         <li><a href="{{ route('service', $item->id) }}">{{$item->service_name}}</a></li>
                     @endforeach
                 </ul>

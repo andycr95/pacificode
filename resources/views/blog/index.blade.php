@@ -34,11 +34,11 @@ Pacificode | Blog
                         @foreach ($posts as $post)
                             <div class="single-blog-content">
                                 <div class="inner-box">
-                                    <figure class="image-box"><a href="{{ route('blog', $post->id)}}"><img src="{{$post->post_photo}}" alt=""></a></figure>
+                                    <figure class="image-box"><a href="{{ route('blog', $post)}}"><img src="{{$post->post_photo}}" alt=""></a></figure>
                                     <div class="lower-content">
                                         <div class="upper-box">
                                             <div class="post-date"><i class="fas fa-calendar-alt"></i>{{$post->created_at->diffForHumans()}}</div>
-                                            <h3><a href="{{ route('blog', $post->id)}}">{{$post->post_title}}</a></h3>
+                                            <h3><a href="{{ route('blog', $post)}}">{{$post->post_title}}</a></h3>
                                             <div class="text">{{$post->post_extract}}</div>
                                             <div class="right-content pull-right">
                                                 @foreach ($post->tags as $tag)
@@ -52,7 +52,7 @@ Pacificode | Blog
                                                 <span class="admin-name">Por {{$post->user->name}}</span>
                                             </div>
                                             <ul class="right-content pull-right">
-                                                <li><a href="#">30 &nbsp;<i class="far fa-comments"></i></a></li>
+                                                <li><a href="#">{{ $post->comments->count() }} &nbsp;<i class="far fa-comments"></i></a></li>
                                                 <li class="share">
                                                     <a href="#"><i class="fas fa-share-alt"></i></a>
                                                     <ul class="social-links">
@@ -99,8 +99,8 @@ Pacificode | Blog
                             <div class="widget-content">
                                 @foreach ($last_posts as $l_p)
                                     <div class="post">
-                                        <figure class="image"><a href="{{route('blog', $l_p->id)}}"><img src="{{$l_p->post_photo}}" alt="{{$l_p->post_title}}"></a></figure>
-                                        <h5><a href="{{route('blog', $l_p->id)}}">{{$l_p->post_title}}</a></h5>
+                                        <figure class="image"><a href="{{route('blog', $l_p)}}"><img src="{{$l_p->post_photo}}" alt="{{$l_p->post_title}}"></a></figure>
+                                        <h5><a href="{{route('blog', $l_p)}}">{{$l_p->post_title}}</a></h5>
                                         <span class="post-date">{{$l_p->created_at->diffForHumans()}}</span>
                                     </div>
                                 @endforeach
