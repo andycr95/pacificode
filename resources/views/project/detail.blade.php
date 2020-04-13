@@ -64,10 +64,10 @@
                             <p>{{$project->project_extract}}</p>
                         </div>
                         <ul class="info-list clearfix">
-                            <li><span>Client</span>{{$project->project_title}}</li>
-                            <li><span>Date</span>{{Carbon\Carbon::parse($project->project_date)->format('d M yy')}}</li>
-                            <li><span>Categories</span>{{$category->name}}</li>
-                            <li><span>Live demo</span><a href="https://{{$project->project_link}}">{{$project->project_link}}</a></li>
+                            <li><span>Cliente</span>{{$project->project_title}}</li>
+                            <li><span>Fecha</span>{{Carbon\Carbon::parse($project->project_date)->format('d M yy')}}</li>
+                            <li><span>Categoria</span>{{$category->name}}</li>
+                            <li><span>Link</span><a href="https://{{$project->project_link}}">{{$project->project_link}}</a></li>
                         </ul>
                         <ul class="social-icons">
                             @if ($user->facebook != null)

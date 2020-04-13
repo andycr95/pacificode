@@ -189,7 +189,6 @@ methods: {
     async getUsers(){
         await Axios.get('/api/user',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
             this.users = res.data;
-            console.log(res.data);
         }).catch(err =>{
             console.log(err);
         })
