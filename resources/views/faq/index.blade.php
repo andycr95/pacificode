@@ -40,10 +40,10 @@ Pacificode | Preguntas frecuentes
                                  <div class="icon-outer"><i class="fas fa-plus"></i></div>
                                  <h4>{{$i->questions}}</h4>
                                 </div>
-                                @foreach ($answers as $i)
+                                @foreach ($i->answer as $a)
                                 <div class="acc-content">
                                     <div class="content">
-                                    <div class="text">{{$i->name}}</div>
+                                    <div class="text">{!!$a->name!!}</div>
                                     </div>
                                 </div>
                                 @endforeach

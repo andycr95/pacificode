@@ -187,7 +187,6 @@ export default {
             await Axios.get("/api/projects")
                 .then(res => {
                     this.projects = res.data;
-                    console.log(this.projects);
                 })
                 .catch(err => {
                     console.log(err);
@@ -195,7 +194,6 @@ export default {
         },async getUsers(){
             await Axios.get('/api/user',{headers:{'Authorization':this.$session.get('Authorization'), 'Accept':'application/json'}}).then(res =>{
                 this.users = res.data;
-                console.log(res.data);
             }).catch(err =>{
                 console.log(err);
             })

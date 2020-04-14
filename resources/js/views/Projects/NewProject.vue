@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="box-body" style="border-top-left-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;padding: 10px;">
                                         <div class="form-group">
-                                          <label for="title-project">Titulo del proyecto</label>
+                                          <label for="title-project">T&iacute;tulo del proyecto</label>
                                           <input type="text" class="form-control" name="title-project" v-model="project_title" aria-describedby="emailHelpId" placeholder="ingresa el titulo del proyecto">
                                         </div>
                                         <div class="form-group">
@@ -60,12 +60,12 @@
                                           <input type="url" class="form-control" name="link-project" v-model="project_link" aria-describedby="emailHelpId" placeholder="https://www.example.com">
                                         </div>
                                         <div class="form-group">
-                                            <label for="birth_date">Fecha de nacimiento</label>
+                                            <label for="birth_date">Fecha de creaci&oacute;n</label>
                                             <datepicker class="form-control" :format="customFormatter" :language="es" v-model="project_date" :bootstrap-styling="true">
                                             </datepicker>
                                         </div>
                                         <div class="form-group">
-                                          <label for="extract-project">Descripcion del proyecto</label>
+                                          <label for="extract-project">Descripci&oacute;n del proyecto</label>
                                           <textarea class="form-control" name="extract-project" v-model="project_extract" rows="5" placeholder="ingresa una descripcion del proyecto"></textarea>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@
                                           <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(1, $event)" placeholder="" aria-describedby="fileHelpId">
                                         </div>
                                         <div class="form-group">
-                                            <img v-if="show_photo3" style="width:100%" v-bind:src="project_photo2" alt="" srcset="">
+                                            <img v-if="show_photo3" style="width:100%" v-bind:src="project_photo3" alt="" srcset="">
                                           <label for="image-post">Imagen alterna del proyecto</label>
                                           <input type="file" class="form-control-file"  name="image-post" v-on:change="onImageChange(2, $event)" placeholder="" aria-describedby="fileHelpId">
                                         </div>
@@ -97,7 +97,7 @@
                                         <div class="form-group">
                                             <label for="category_post"></label>
                                             <div class="form-group">
-                                                <label for="tags-post">Categorías</label>
+                                                <label for="tags-post">Categor&iacute;as</label>
                                                 <b-select v-model="project_category" :options="categories" class="form-control" style="width:100%" value-field="id" text-field="name"></b-select>
                                             </div>
                                         </div>
@@ -169,7 +169,6 @@
                 return moment(date).format('YYYY-MM-DD');
             },
             onImageChange(n,e){
-                console.log(n);
                  let input = e.target;
                  if (input.files && input.files[0]) {
                      var reader = new FileReader();
@@ -215,7 +214,7 @@
                     }).then(function (res) {
                         Toastr.info(res.data);
                         me.$router.push("/admin/projects");
-                        console.log(res);
+
                     })
                     .catch(function (error) {
                         console.log(error);

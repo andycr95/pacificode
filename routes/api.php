@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     //Answer
     Route::post('/answer', 'AnswerController@store');
+    Route::post('/answer', 'AnswerController@store');
     Route::post('/answer/{id}', 'AnswerController@show');
 
      //features services

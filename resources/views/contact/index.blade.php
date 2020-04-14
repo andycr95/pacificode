@@ -112,7 +112,7 @@ Pacificode | Contacto
     <!-- contact-section end -->
 
     <!-- faq-section star -->
-   @include('components.faq')
+ 
     <!-- section end -->
     <!-- map-section -->
     <section class="map-section">

@@ -30,7 +30,7 @@
                     <ul class="pcoded-submenu">
                         <li :class="{ 'active': $route.name == 'posts'}">
                             <router-link :to="{name: 'posts'}" >
-                                <span class="pcoded-mtext">posts</span>
+                                <span class="pcoded-mtext">Posts</span>
                             </router-link>
                         </li>
                         <li  :class="{ 'active': $route.name == 'newpost'}" >
@@ -50,7 +50,7 @@
                     <ul class="pcoded-submenu">
                         <li class="">
                             <router-link :to="{name: 'services'}">
-                                <span class="pcoded-mtext">servicios</span>
+                                <span class="pcoded-mtext">Servicios</span>
                             </router-link>
                         </li>
                         <li class="">
@@ -70,12 +70,12 @@
                 <li class="pcoded-hasmenu">
                     <a href="javascript:void(0)">
                         <span class="pcoded-micon"><i class="ti-briefcase"></i></span>
-                        <span class="pcoded-mtext">Portfolio</span>
+                        <span class="pcoded-mtext">Portafolio</span>
                     </a>
                     <ul class="pcoded-submenu">
                         <li class="">
                             <router-link :to="{name: 'projects'}">
-                                <span class="pcoded-mtext">proyectos</span>
+                                <span class="pcoded-mtext">Proyectos</span>
                             </router-link>
                         </li>
                         <li class="">
@@ -95,7 +95,7 @@
                     <ul class="pcoded-submenu">
                         <li class="">
                             <router-link :to="{name: 'testimonies'}">
-                                <span class="pcoded-mtext">testimonios</span>
+                                <span class="pcoded-mtext">Testimonios</span>
                             </router-link>
                         </li>
                         <li class="">
@@ -122,7 +122,7 @@
                             <router-link :to="{name: 'newcategory'}">
                                 <span class="pcoded-mtext">Nueva Categoria</span>
                             </router-link>
-                             
+
                         </li>
                     </ul>
                 </li>
@@ -145,11 +145,11 @@
                                 <span class="pcoded-mtext">Respuestas</span>
                             </router-link>
                         </li>
-                      
+
                     </ul>
                 </li>
             </ul>
-             
+
         </div>
     </nav>
 </template>
