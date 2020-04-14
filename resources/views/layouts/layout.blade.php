@@ -71,7 +71,6 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/owl.js"></script>
 <script src="/js/wow.js"></script>
-<script src="/js/validation.js"></script>
 <script src="/js/jquery.fancybox.js"></script>
 <script src="/js/appear.js"></script>
 <script src="/js/circle-progress.js"></script>
@@ -82,11 +81,7 @@
 <script src="/js/tilt.jquery.js"></script>
 <script src="/js/isotope.js"></script>
 <script src="{{ asset('/js/app.js') }}"></script>
-
-<!-- map script -->
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
-<script src="/js/gmaps.js"></script>
-<script src="/js/map-helper.js"></script>
+@stack('scripts')
 
 <!-- main-js -->
 <script src="/js/script.js"></script>

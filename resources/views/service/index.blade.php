@@ -4,7 +4,7 @@
 Pacificode | Servicio
 @endsection
 
-@section('name_page')
+  @section('name_page')
     <div class="content-box clearfix">
         <div class="title-box pull-left">
             <h1>SERVICIOS</h1>
@@ -12,19 +12,19 @@ Pacificode | Servicio
         </div>
         <ul class="bread-crumb pull-right">
             <li>SERVICIOS</li>
-            <li><a href="/">INICIO</a></li>
+            <li><a href="index.html">INICIO</a></li>
         </ul>
     </div>
-@endsection
+  @endsection
 
-@section('content')
-    @if ($services->count() > 0)
-        <section class="designe-process service-page">
-            <div class="image-layer" style="background-image: url(images/icons/layer-image-9.png);"></div>
-            <div class="container">
-                <div class="sec-title center"><h2>Your design process, in one place Appway with<br />useful features, an intuitive interface</h2></div>
-                <div class="row">
-                    @foreach ($services as $s)
+  @section('content')
+    <!-- designe-process -->
+    <section class="designe-process service-page">
+        <div class="image-layer" style="background-image: url(images/icons/layer-image-9.png);"></div>
+        <div class="container">
+            <div class="sec-title center"><h2>Your design process, in one place Appway with<br />useful features, an intuitive interface</h2></div>
+            <div class="row">
+                @foreach ($services as $s)
                     <div class="col-lg-4 col-md-6 col-sm-12 single-column">
                         <div class="single-item wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
@@ -39,32 +39,23 @@ Pacificode | Servicio
                             </div>
                         </div>
                     </div>
-                    @endforeach
-                </div>
+                @endforeach
             </div>
-        </section>
-    @endif
-    @if ($features->count() > 0)
-        <section class="designe-process-three service-page">
-            <div class="container">
-                <div class="sec-title"><h2><br /></h2></div>
-                    <div class="inner-content">
-                        <div class="four-item-carousel owl-carousel owl-theme owl-dots-none">
-                            @foreach ($features as $fea)
-                            <div class="single-item">
-                                <div class="inner-box">
-                                    <h3><a href="{{ route('service', $fea->service_id)}}">{{$fea->features_title}}</a></h3>
-                                    <div class="text">{{$fea->features_body}}</div>
-                                    <figure class="image-box"><img src="{{$fea->features_photo}}" alt=""></figure>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    @endif
+        </div>
+    </section>
+    <!-- designe-precess end -->
+  
+  
+
+ @include('components.news_letter')
+
+    <!-- subscribe-style-five -->
     @include('components.news_letter')
-    @include('components.tech')
+    <!-- subscribe-style-five end -->
+
+
+
+
 @endsection
+
+

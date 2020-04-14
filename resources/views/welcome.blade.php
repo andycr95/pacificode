@@ -83,7 +83,7 @@
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-sm-12 content-column">
                     <div class="content-box">
-                        <h3>Hagamos el cambio, juntos</h3>
+                        <h3>Hagamos el cambio juntos</h3>
                         <h1>Creamos productos y servicios digitales brillantes</h1>
                         <div class="text">Nuestro equipo combina estrategia, conocimiento  e ingeniería tecnológica, creando experiencias digitales que cambian el juego para usted y sus clientes.</div>
                         <div class="btn-box"><a href="{{route('contact')}}" class="theme-btn-two">Contáctanos</a></div>
@@ -123,7 +123,7 @@
                                             <div class="bg-layer" style="background-image: url(images/resource/case-1.png);"></div>
                                             <div class="icon-box"><i class="flaticon-app-1"></i></div>
                                             <h5><a href="#">Estrategia</a></h5>
-                                            <div class="text">Entendemos las necesidades de su negocio y nuestra experiencia nos permite remomendarle una solución web que genere mejores resultados a corto plazo.</div>
+                                            <div class="text">Entendemos las necesidades de su negocio y nuestra experiencia nos permite recomendarle una solución web que genere mejores resultados a corto plazo.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
@@ -169,7 +169,7 @@
                                 <div class="content-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                                     <div class="sec-title"><h2>Aplicaciones móviles redefinidas</h2></div>
                                     <div class="text">
-                                        <p>Desarrollamos aplicaciones móviles multiplataforma (iOS / Android) debido a las ventajas que ofrecen sobre otras alternativas: <br/> de usuario mejorada, acceso a todas las funcionalidades del dispositivo sin restricciones y excelente rendimiento.</p>
+                                        <p>Desarrollamos aplicaciones móviles multiplataforma (iOS / Android) debido a las ventajas que ofrecen sobre otras alternativas <br/> de usuario mejorada, acceso a todas las funcionalidades del dispositivo sin restricciones y excelente rendimiento.</p>
                                     </div>
                                     <div class="btn-box"><a href="#" class="theme-btn">Mas detalles<i class="fas fa-angle-right"></i></a></div>
                                 </div>

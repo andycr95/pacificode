@@ -7,9 +7,13 @@ import Profile from "./views/Users/Profile.vue";
 import Testimonies from "./views/Testimonies/Testimonies.vue";
 import NewTestimony from "./views/Testimonies/NewTestimony.vue";
 import Posts from "./views/Posts/Posts.vue";
+import Faqs from "./views/Faqs/Faqs.vue";
+import Answer from "./views/answer/Answer.vue";
 import Post from "./views/Posts/UpdatePost.vue";
 import NewPosts from "./views/Posts/NewPost.vue";
 import Projects from "./views/Projects/Projects.vue";
+import Categories from "./views/categories/categories.vue";
+import NewCategory from "./views/categories/NewCategory.vue";
 import NewProjects from "./views/Projects/NewProject.vue";
 import UpdateProject from "./views/Projects/UpdateProject.vue";
 import FeatureService from "./views/Services/FeatureService.vue";
@@ -94,6 +98,31 @@ export default new Router({
             path: "/admin/testimonies/create",
             component: NewTestimony
         },
+        {
+            name: "categories",
+            path: "/admin/categories",
+            component:Categories
+        },
+        {
+            name: "newcategory",
+            path: "/admin/categories/create",
+            component: NewCategory
+        },
+        {
+            name: "faqs",
+            path: "/admin/faqs",
+            component:Faqs
+        },
+        {
+            name: "answer",
+            path: "/admin/answer/create",
+            component:Answer
+        },
+        {
+            name: "answer",
+            path: "/admin/answer/create:id",
+            component:Answer
+        }
     ],
     linkExactActiveClass: "active",
     mode: "history"

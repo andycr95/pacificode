@@ -14,7 +14,7 @@
                 <div id="content_block_41">
                     <div class="content-box">
                         <div class="sec-title"><h2>Suscríbete a nuestro boletín</h2></div>
-                        <div class="text">Te sorprenderás con nuestros servicios con la más alta calidad, anímate ya. </div>
+                        <div class="text">Te sorprenderás con nuestros servicios de la más alta calidad, anímate ya. </div>
 
                         <form action="{{route('createSuscripcion')}}" method="post" class="subscribe-form">
                             @csrf

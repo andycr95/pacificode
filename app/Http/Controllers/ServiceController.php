@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Service;
-use App\ServiceFeatures;
+use App\service;
+use App\serviceFeatures;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -17,13 +17,13 @@ class ServiceController extends Controller
 
     public function getServices()
     {
-        $services = Service::all();
+        $services = service::all();
         return response()->json($services, 200);
     }
 
     public function getservice(Request $request)
     {
-        $service = Service::where('id', $request->id)->get();
+        $service = service::where('id', $request->id)->get();
 
         return response()->json($service, 200);
     }
@@ -33,7 +33,7 @@ class ServiceController extends Controller
     public function index(Request $request)
     {
       
-        $services = Service::All();
+        $services = service::All();
         $features = serviceFeatures::All();
         return view('service.index', compact('services','features'));
         
@@ -90,21 +90,15 @@ class ServiceController extends Controller
      */
     public function show(Request $request)
      {
-        $service = Service::Find($request->id);
-        $services = Service::All();
+        $service = service::Find($request->id);
+        $services = service::All();
         //$feature = serviceFeatures::Find($request->id);
         return view('service.detail', compact('service', 'services'));
         
 
     }
 
-    public function navs(Request $request)
-     {
-        $navs = Service::All();
-        return view('layouts.nav-bar', compact('navs'));
-        
-
-    }
+   
 
     
 

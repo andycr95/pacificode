@@ -44,14 +44,25 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::put('/service/{id}', 'ServiceController@updateService');
     Route::delete('/service/{id}', 'ServiceController@destroy');
 
+    //Answer
+    Route::post('/answer', 'AnswerController@store');
+    Route::post('/answer/{id}', 'AnswerController@show');
+
      //features services
      Route::post('/service_features', 'ServicefeaturesController@store');
+
+     //categorias
+     Route::post('/categories', 'CategoryController@store');
+     Route::delete('/categories/{id}', 'CategoryController@destroy');
 
      //tags
      Route::post('/tag', 'TagController@store');
 
      //testimonies
     Route::post('/testimonies', 'TestimonyController@store');
+
+    //faq
+   // Route::post('/faq', 'FaqController@store');
 
 });
 
@@ -85,6 +96,14 @@ Route::group(['middleware' => ['api']], function () {
 
     //testimonies
     Route::get('/testimonies', 'TestimonyController@getTestimonies');
+
+     //categories
+     Route::get('/categories', 'CategoryController@getCategories');
+
+      //Faqs
+    Route::get('/faqs', 'FaqController@getFaqs');
+    //Route::get('/faq/{id}', 'FaqController@getFaq');
+
 
     //Uploads
     Route::group(['prefix' => 'upload'], function () {

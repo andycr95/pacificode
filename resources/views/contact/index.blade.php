@@ -111,7 +111,9 @@ Pacificode | Contacto
     </section>
     <!-- contact-section end -->
 
-
+    <!-- faq-section star -->
+   @include('components.faq')
+    <!-- section end -->
     <!-- map-section -->
     <section class="map-section">
         <div class="google-map-area">
@@ -132,3 +134,9 @@ Pacificode | Contacto
     </section>
     <!-- map-section end -->
 @endsection
+@push('scripts')
+<!-- map script -->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
+<script src="/js/gmaps.js"></script>
+<script src="/js/map-helper.js"></script>
+@endpush

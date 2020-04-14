@@ -20,13 +20,12 @@
                         </div>
                         <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                             <div class="links-widget footer-widget">
-                                <h4 class="widget-title">Soporte</h4>
+                                <h4 class="widget-title">servicios</h4>
                                 <div class="widget-content">
                                     <ul class="list clearfix">
-                                        <li><a href="#">Enviar un ticket</a></li>
-                                        <li><a href="#">Sistema de apoyo</a></li>
-                                        <li><a href="#">Politica de reembolso</a></li>
-                                        <li><a href="#">Servicio Profesional</a></li>
+                                        @foreach (App\Service::all() as $item)
+                                        <li><a href="{{ route('service', $item->id) }}">{{$item->service_name}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -52,10 +51,9 @@
                                 <h4 class="widget-title">Compañia</h4>
                                 <div class="widget-content">
                                     <ul class="list clearfix">
-                                        <li><a href="#">Pacificode en linea</a></li>
-                                        <li><a href="#">Nuestro liderazgo</a></li>
-                                        <li><a href="#">Carreras</a></li>
-                                        <li><a href="{{ route('about')}}">Lo que hacemos</a></li>
+                                     
+                                        <li><a href="{{ route('faq')}}">Preguntas mas frecuentes</a></li>
+                                        <li><a href="{{ route('about')}}">Empresa</a></li>
                                         <li><a href="{{ route('login')}}">Login</a></li>
                                     </ul>
                                 </div>
